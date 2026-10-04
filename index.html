@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>حلواني فيستيفال | Festival Pastry - أصل الحلو، كل يوم عرض جديد</title>
+  <meta name="description" content="حلواني فيستيفال في الهرم - أفخر أنواع الحلويات الشرقية والغربية والتورت والجاتوه بالسمن البلدي الطبيعي بأعلى جودة وطعم أصيل تحت إشراف الشيف أحمد الجبلاوي." />
+  
+  <!-- Favicon / Brand Icon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%233E2723' stroke='%23D4AF37' stroke-width='4'/%3E%3Cpath d='M30 65 L35 42 L45 52 L50 35 L55 52 L65 42 L70 65 Z' fill='%23F59E0B' stroke='%23D4AF37' stroke-width='2'/%3E%3Ccircle cx='50' cy='32' r='4' fill='%23D4AF37'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Cairo, Tajawal, Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;600;700;800&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              chocolate: '#2B1712',
+              brown: '#3E2723',
+              brownLight: '#5D4037',
+              gold: '#D4AF37',
+              goldHover: '#B89428',
+              amber: '#F59E0B',
+              amberLight: '#FEF3C7',
+              berry: '#E11D48',
+              berryDark: '#BE123C',
+              cream: '#FFFDF9',
+              creamSoft: '#FBF7EE',
+              cardBg: '#FFFFFF',
+            }
+          },
+          fontFamily: {
+            cairo: ['Cairo', 'sans-serif'],
+            tajawal: ['Tajawal', 'sans-serif'],
+            outfit: ['Outfit', 'sans-serif'],
+          },
+          boxShadow: {
+            'gold-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+            'gold-glow-lg': '0 0 40px rgba(212, 175, 55, 0.4)',
+            'berry-glow': '0 0 25px rgba(225, 29, 72, 0.3)',
+            'premium': '0 20px 40px -15px rgba(62, 39, 35, 0.12)',
+            'card-hover': '0 22px 35px -10px rgba(62, 39, 35, 0.18)',
+          },
+          animation: {
+            'float-slow': 'float 4s ease-in-out infinite',
+            'pulse-glow': 'pulseGlow 2s infinite',
+            'shine': 'shine 2.5s infinite',
+            'spin-slow': 'spin 14s linear infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-8px)' },
+            },
+            pulseGlow: {
+              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
+              '50%': { opacity: '0.85', transform: 'scale(1.05)' },
+            },
+            shine: {
+              '0%': { backgroundPosition: '200% 0' },
+              '100%': { backgroundPosition: '-200% 0' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Global Styles & Luxury Enhancements */
+    body {
+      font-family: 'Cairo', 'Tajawal', sans-serif;
+      background-color: #FFFDF9;
+      color: #2B1712;
+      overflow-x: hidden;
+      selection-background-color: #D4AF37;
+    }
+    ::selection {
+      background: #D4AF37;
+      color: #2B1712;
+    }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FBF7EE;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #3E2723;
+      border-radius: 5px;
+      border: 2px solid #D4AF37;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D4AF37;
+    }
+
+    /* Glassmorphism */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(212, 175, 55, 0.22);
+    }
+    .glass-card-dark {
+      background: rgba(43, 23, 18, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(212, 175, 55, 0.35);
+    }
+
+    /* Gold Gradient Text */
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #D4AF37 0%, #F59E0B 50%, #C99700 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Shimmer Animation Button */
+    .btn-gold-shimmer {
+      background: linear-gradient(90deg, #D4AF37, #F59E0B, #E6A122, #D4AF37);
+      background-size: 300% 100%;
+      transition: all 0.4s ease-in-out;
+    }
+    .btn-gold-shimmer:hover {
+      background-position: 100% 0;
+      box-shadow: 0 8px 25px rgba(212, 175, 55, 0.45);
+      transform: translateY(-2px);
+    }
+
+    /* Geometric Arabic Pattern Backdrop */
+    .arabesque-pattern {
+      background-color: #FFFDF9;
+      background-image: radial-gradient(rgba(212, 175, 55, 0.12) 1px, transparent 1px), radial-gradient(rgba(62, 39, 35, 0.04) 1px, #FFFDF9 1px);
+      background-size: 28px 28px;
+      background-position: 0 0, 14px 14px;
+    }
+    .arabesque-dark-pattern {
+      background-color: #23120E;
+      background-image: radial-gradient(rgba(212, 175, 55, 0.15) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+
+    /* Badge Pulse Animation */
+    .deal-badge-pulse {
+      animation: pulseDeal 2s infinite ease-in-out;
+    }
+    @keyframes pulseDeal {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.5); }
+      50% { transform: scale(1.04); box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
+    }
+
+    /* Smooth Active Tab */
+    .tab-btn.active {
+      background-color: #3E2723;
+      color: #D4AF37;
+      border-color: #D4AF37;
+      box-shadow: 0 6px 18px rgba(62, 39, 35, 0.25);
+    }
+
+    /* Image zoom on hover */
+    .img-zoom-container img {
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .img-zoom-container:hover img {
+      transform: scale(1.08);
+    }
+
+    /* Welcome Splash Animation Keyframes */
+    @keyframes splashAppear {
+      0% { opacity: 0; transform: scale(0.92) translateY(20px); }
+      100% { opacity: 1; transform: scale(1) translateY(0px); }
+    }
+    .splash-content-appear {
+      animation: splashAppear 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes rotateRay {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .animate-ray {
+      animation: rotateRay 25s linear infinite;
+    }
+
+    /* Mobile Bottom Safe Area */
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 74px; /* Space for the floating bottom dock */
+      }
+    }
+  </style>
+</head>
+<body class="arabesque-pattern antialiased text-brand-chocolate">
+
+  <!-- ========================================== -->
+  <!-- LUXURY WELCOME INTRO SPLASH ANIMATION (أنيميشن ترحيبي راقي يحمل اسم البراند) -->
+  <!-- ========================================== -->
+  <div id="welcomeSplash" class="fixed inset-0 z-[100] flex flex-col items-center justify-center overflow-hidden transition-all duration-700 select-none" style="background: radial-gradient(circle at center, #3E2723 0%, #241410 60%, #120705 100%);">
+    
+    <!-- Rotating Golden Ambient Circles & Light Beams -->
+    <div class="absolute w-[600px] h-[600px] sm:w-[850px] sm:h-[850px] rounded-full border border-brand-gold/15 animate-ray pointer-events-none opacity-40"></div>
+    <div class="absolute w-[450px] h-[450px] sm:w-[680px] sm:h-[680px] rounded-full border border-brand-gold/25 pointer-events-none opacity-30 animate-pulse"></div>
+    <div class="absolute w-[300px] h-[300px] sm:w-[480px] sm:h-[480px] rounded-full border border-dashed border-brand-gold/20 animate-spin-slow pointer-events-none opacity-30"></div>
+    
+    <!-- Central Golden Glow Radial Core -->
+    <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-brand-gold/20 blur-3xl pointer-events-none animate-pulse-glow"></div>
+
+    <!-- Intro Content Box -->
+    <div class="relative z-10 flex flex-col items-center text-center px-6 max-w-lg mx-auto splash-content-appear">
+      
+      <!-- Crown Crest Container with Golden Arch -->
+      <div class="relative mb-6">
+        <!-- Floating Crown Medallion -->
+        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-brand-gold bg-brand-chocolate/80 backdrop-blur-md p-2.5 shadow-gold-glow flex items-center justify-center relative overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-tr from-brand-gold/30 via-transparent to-brand-amber/20 animate-spin-slow"></div>
+          
+          <!-- Detailed Royal Crown SVG matching Festival Pastry Brand -->
+          <svg class="w-16 h-16 sm:w-20 sm:h-20 drop-shadow-xl" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="44" stroke="#D4AF37" stroke-width="2" stroke-dasharray="3 3" />
+            <!-- Royal Crown Spikes -->
+            <path d="M22 66 L28 36 L40 48 L50 24 L60 48 L72 36 L78 66 Z" fill="url(#crownGoldGrad)" stroke="#D4AF37" stroke-width="2" />
+            <!-- Jewels / Pearls -->
+            <circle cx="50" cy="20" r="4" fill="#FEF08A" stroke="#D4AF37" stroke-width="1.5" />
+            <circle cx="28" cy="32" r="3" fill="#FEF08A" stroke="#D4AF37" stroke-width="1.5" />
+            <circle cx="72" cy="32" r="3" fill="#FEF08A" stroke="#D4AF37" stroke-width="1.5" />
+            <circle cx="40" cy="48" r="2" fill="#D4AF37" />
+            <circle cx="60" cy="48" r="2" fill="#D4AF37" />
+            <!-- Base Golden Arch -->
+            <path d="M20 72 C35 78, 65 78, 80 72" stroke="#F59E0B" stroke-width="3.5" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="crownGoldGrad" x1="20" y1="20" x2="80" y2="70" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDE047" />
+                <stop offset="0.5" stop-color="#F59E0B" />
+                <stop offset="1" stop-color="#D4AF37" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Twinkling Sparkle Elements -->
+        <span class="absolute -top-1 -right-1 text-brand-gold text-sm animate-ping">
+          <i class="fa-solid fa-sparkles"></i>
+        </span>
+        <span class="absolute -bottom-1 -left-1 text-brand-amber text-xs animate-pulse">
+          <i class="fa-solid fa-star"></i>
+        </span>
+      </div>
+
+      <!-- Brand Arabic Title with Metallic Gold Gradient -->
+      <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-2 drop-shadow-lg">
+        حلواني <span class="text-gold-gradient">فيستيفال</span>
+      </h1>
+
+      <!-- English Subtitle in Royal Tracking -->
+      <div class="text-xs sm:text-sm font-bold text-brand-gold tracking-[0.25em] font-outfit uppercase mb-3">
+        Festival Pastry
+      </div>
+
+      <!-- Slogan Badge -->
+      <div class="inline-flex items-center gap-2 bg-brand-gold/15 border border-brand-gold/40 px-4 py-1.5 rounded-full text-xs sm:text-sm font-bold text-brand-amber mb-4 shadow-inner">
+        <i class="fa-solid fa-crown text-brand-gold text-xs"></i>
+        <span>أصل الحلو - كل يوم عرض جديد</span>
+      </div>
+
+      <!-- Chef Leadership Endorsement -->
+      <p class="text-xs text-gray-300 font-medium mb-6">
+        بإدارة وتوجيه الشيف المبدع: <strong class="text-brand-amber font-bold">أحمد الجبلاوي</strong>
+      </p>
+
+      <!-- Liquid Gold Progress Loader -->
+      <div class="w-56 sm:w-64 h-1.5 bg-black/60 rounded-full overflow-hidden border border-brand-gold/30 mb-3 relative">
+        <div id="splashProgressBar" class="h-full bg-gradient-to-r from-brand-gold via-brand-amber to-brand-berry rounded-full w-0 transition-all duration-300"></div>
+      </div>
+      <div id="splashProgressText" class="text-[11px] text-gray-400 font-medium mb-5">
+        جاري تجهيز أشهى الحلويات والتورت...
+      </div>
+
+      <!-- Fast Enter / Skip Button -->
+      <button onclick="dismissWelcomeSplash()" class="text-xs font-bold text-white/90 hover:text-brand-gold transition-colors flex items-center gap-2 py-1.5 px-4 rounded-xl border border-white/10 hover:border-brand-gold/40 hover:bg-white/5 shadow-sm">
+        <span>دخول فوري للموقع</span>
+        <i class="fa-solid fa-arrow-left text-[10px]"></i>
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- ========================================== -->
+  <!-- TOP ANNOUNCEMENT BAR (عروض وتوصيل فوري) -->
+  <!-- ========================================== -->
+  <aside aria-label="شريط العروض اليومية" class="bg-gradient-to-r from-brand-chocolate via-brand-brown to-brand-chocolate text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-gold/30 relative z-40">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-center sm:text-right">
+      <div class="flex items-center gap-2 mx-auto sm:mx-0">
+        <span class="inline-flex items-center justify-center bg-brand-berry text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full animate-pulse">
+          <i class="fa-solid fa-gift ml-1.5 text-[10px]"></i> عرض اليوم
+        </span>
+        <span class="text-brand-amber font-semibold">أصل الحلو - كل يوم عرض جديد!</span>
+        <span class="hidden md:inline text-white/80">| خصومات خاصة على التورت والدست والتشكيلات الشرقية</span>
+        <!-- Replay Intro Splash Button -->
+        <button onclick="replayWelcomeSplash()" class="hidden sm:inline-flex items-center gap-1 text-[11px] text-brand-gold hover:text-white mr-2 underline decoration-brand-gold/50" title="إعادة تشغيل شاشة الترحيب">
+          <i class="fa-solid fa-rotate-right text-[10px]"></i>
+          <span>شاهد الترحيب</span>
+        </button>
+      </div>
+      <div class="flex items-center justify-center gap-4 text-xs font-medium text-white/90 mx-auto sm:mx-0">
+        <a href="tel:01093916372" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-motorcycle text-brand-gold"></i>
+          <span>توصيل الهرم وفيصل: <strong class="font-bold text-white tracking-wider" dir="ltr">01093916372</strong></span>
+        </a>
+        <span class="text-brand-gold/40">|</span>
+        <a href="https://www.facebook.com/share/19nLkgnVAB/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors flex items-center gap-1" title="صفحتنا على فيسبوك">
+          <i class="fa-brands fa-facebook text-blue-400"></i>
+          <span class="hidden lg:inline">فيسبوك فيستيفال</span>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================== -->
+  <!-- NAVBAR HEADER (الهيدر والشعار والقائمة) -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-brand-gold/20 shadow-sm transition-all duration-300" id="mainHeader">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Brand Logo & Name -->
+        <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+          <!-- Circular Crown Logo Container -->
+          <div class="relative w-14 h-14 rounded-full border-2 border-brand-gold shadow-md bg-brand-cream overflow-hidden flex items-center justify-center p-1 group-hover:border-brand-amber group-hover:shadow-gold-glow transition-all duration-300">
+            <!-- Brand Logo Graphic (Direct Image + Local user-upload + High fidelity SVG fallback) -->
+            <img id="navLogoImg" 
+                 src="./assets/festival-logo.jpg" 
+                 onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791109995300.jpg', () => { this.style.display='none'; document.getElementById('svgLogoFallback').style.display='block'; })" 
+                 alt="شعار حلواني فيستيفال" 
+                 class="w-full h-full object-contain transform group-hover:scale-105 transition-transform" />
+            <!-- SVG Logo Fallback (Exact Royal Festival Pastry Badge) -->
+            <svg id="svgLogoFallback" class="w-full h-full hidden" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="46" fill="#FFFDF9" stroke="#3E2723" stroke-width="4"/>
+              <path d="M22 68 C22 38, 78 38, 78 68 C68 76, 32 76, 22 68 Z" fill="#FFF8EE" stroke="#3E2723" stroke-width="3"/>
+              <!-- Crown -->
+              <path d="M25 45 L35 20 L50 34 L65 20 L75 45 L25 45 Z" fill="#F59E0B" stroke="#D4AF37" stroke-width="2"/>
+              <circle cx="50" cy="18" r="3" fill="#D4AF37"/>
+              <circle cx="35" cy="18" r="2.5" fill="#D4AF37"/>
+              <circle cx="65" cy="18" r="2.5" fill="#D4AF37"/>
+              <!-- Text -->
+              <text x="50" y="62" font-size="12" font-weight="900" fill="#3E2723" text-anchor="middle" font-family="'Cairo', sans-serif">فيستيفال</text>
+              <text x="50" y="74" font-size="8" font-weight="700" fill="#D4AF37" text-anchor="middle" font-family="'Cairo', sans-serif">حلواني</text>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <div class="flex items-center gap-1.5">
+              <span class="text-xl sm:text-2xl font-black text-brand-chocolate tracking-tight group-hover:text-brand-gold transition-colors">
+                حلواني فيستيفال
+              </span>
+              <span class="inline-block w-2 h-2 rounded-full bg-brand-berry animate-pulse"></span>
+            </div>
+            <span class="text-[11px] sm:text-xs font-semibold text-brand-gold font-outfit uppercase tracking-widest" dir="ltr">
+              Festival Pastry • أصل الحلو
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+          <a href="#hero" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">الرئيسية</a>
+          <a href="#about" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">من نحن</a>
+          <a href="#menu" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">المنيو والأسعار</a>
+          <a href="#gallery" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">بعض منتجاتنا</a>
+          <a href="#branches" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">فروعنا</a>
+          <a href="#contact" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">تواصل معنا</a>
+        </nav>
+
+        <!-- Header Actions: Cart + WhatsApp Direct CTA -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Cart Button -->
+          <button id="openCartBtn" onclick="toggleCartModal(true)" class="relative p-2.5 rounded-full bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-amberLight hover:text-brand-gold transition-all duration-300 shadow-sm" title="سلة الطلبات">
+            <i class="fa-solid fa-basket-shopping text-lg"></i>
+            <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-brand-berry text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white hidden">0</span>
+          </button>
+
+          <!-- WhatsApp Click-to-chat Header Button -->
+          <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" 
+             target="_blank" 
+             rel="noopener noreferrer"
+             class="btn-gold-shimmer text-brand-chocolate font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-full flex items-center gap-2 border border-brand-gold/60 shadow-md hover:shadow-gold-glow transition-all">
+            <i class="fa-brands fa-whatsapp text-green-700 text-lg"></i>
+            <span class="hidden sm:inline">اطلب الآن عبر واتساب</span>
+            <span class="sm:hidden">اطلب واتساب</span>
+          </a>
+
+          <!-- Mobile Hamburger Menu Button -->
+          <button id="mobileMenuBtn" onclick="toggleMobileMenu()" class="lg:hidden p-2 rounded-lg text-brand-chocolate hover:bg-brand-amberLight/50 focus:outline-none" aria-label="فتح القائمة">
+            <i class="fa-solid fa-bars text-xl" id="menuIcon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white/98 border-b border-brand-gold/30 px-6 py-5 shadow-xl transition-all">
+      <div class="flex flex-col gap-3">
+        <a href="#hero" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold border-b border-gray-100">
+          <i class="fa-solid fa-house text-brand-gold w-5"></i> الرئيسية
+        </a>
+        <a href="#about" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold border-b border-gray-100">
+          <i class="fa-solid fa-award text-brand-gold w-5"></i> عن فيستيفال & إدارة الشيف
+        </a>
+        <a href="#menu" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold border-b border-gray-100">
+          <i class="fa-solid fa-utensils text-brand-gold w-5"></i> المنيو الشامل والأسعار
+        </a>
+        <a href="#gallery" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold border-b border-gray-100">
+          <i class="fa-solid fa-camera-retro text-brand-gold w-5"></i> معرض بعض منتجاتنا
+        </a>
+        <a href="#branches" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold border-b border-gray-100">
+          <i class="fa-solid fa-location-dot text-brand-gold w-5"></i> فروعنا بالهرم والتوصيل
+        </a>
+        <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold">
+          <i class="fa-solid fa-phone text-brand-gold w-5"></i> تواصل معنا
+        </a>
+        <div class="pt-3 flex flex-col gap-2">
+          <a href="tel:01093916372" class="w-full text-center bg-brand-chocolate text-white py-2.5 rounded-xl font-bold flex items-center justify-center gap-2">
+            <i class="fa-solid fa-phone-volume text-brand-gold"></i> اتصال مباشر: 01093916372
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- HERO SECTION (قسم الواجهة الرئيسي) -->
+  <!-- ========================================== -->
+  <section id="hero" class="relative pt-8 pb-16 lg:pt-16 lg:pb-24 overflow-hidden">
+    <!-- Decorative Luxury Glow Background Elements -->
+    <div class="absolute top-10 right-[-10%] w-96 h-96 bg-brand-gold/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-10 left-[-10%] w-96 h-96 bg-brand-berry/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Right Column: Welcome Header & Typography & CTAs (7 cols) -->
+        <div class="lg:col-span-7 text-center lg:text-right space-y-6">
+          
+          <!-- Floating Deal & Status Badge -->
+          <div class="inline-flex items-center gap-2 bg-gradient-to-r from-brand-amberLight via-white to-brand-amberLight border border-brand-gold/40 px-4 py-1.5 rounded-full shadow-sm text-xs sm:text-sm font-semibold text-brand-chocolate deal-badge-pulse">
+            <span class="w-2.5 h-2.5 rounded-full bg-brand-berry"></span>
+            <span>كل يوم عرض جديد |</span>
+            <i class="fa-solid fa-crown text-brand-gold mr-1"></i>
+          </div>
+
+          <!-- Main H1 Header -->
+          <div class="space-y-2">
+            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-brand-chocolate tracking-tight leading-tight">
+              حلواني فيستيفال
+              <span class="block text-gold-gradient font-black mt-1">
+                أصل الحلو في قلب الهرم
+              </span>
+            </h1>
+            <p class="text-lg sm:text-xl font-bold text-brand-brownLight/90 font-outfit" dir="ltr">
+              Festival Pastry • Authentic Royal Confectionery
+            </p>
+          </div>
+
+          <!-- Tagline & Description -->
+          <p class="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            أفخر أنواع الحلويات الشرقية والغربية في قلب الهرم بأعلى جودة وطعم أصيل يبهج حواسك. تشكيلات فريدة من التورت المصممة لأغلى مناسباتكم، وصواني شرقية فاخرة بالسمن البلدي والمكسرات المنتقاة بعناية.
+          </p>
+
+          <!-- Feature Highlights Quick Pills -->
+          <div class="grid grid-cols-3 gap-3 pt-2 pb-2 max-w-lg mx-auto lg:mx-0">
+            <div class="bg-white/80 border border-brand-gold/25 rounded-2xl p-3 text-center shadow-sm hover:border-brand-gold transition-colors">
+              <i class="fa-solid fa-star text-brand-gold text-lg mb-1"></i>
+              <div class="font-black text-brand-chocolate text-sm sm:text-base">+40 صنف</div>
+              <div class="text-[11px] text-gray-500 font-medium">تشكيلة يومية</div>
+            </div>
+            <div class="bg-white/80 border border-brand-gold/25 rounded-2xl p-3 text-center shadow-sm hover:border-brand-gold transition-colors">
+              <i class="fa-solid fa-award text-brand-gold text-lg mb-1"></i>
+              <div class="font-black text-brand-chocolate text-sm sm:text-base">سمن بلدي 100%</div>
+              <div class="text-[11px] text-gray-500 font-medium">مكونات نقية</div>
+            </div>
+            <div class="bg-white/80 border border-brand-gold/25 rounded-2xl p-3 text-center shadow-sm hover:border-brand-gold transition-colors">
+              <i class="fa-solid fa-bolt-lightning text-brand-berry text-lg mb-1"></i>
+              <div class="font-black text-brand-chocolate text-sm sm:text-base">توصيل سريع</div>
+              <div class="text-[11px] text-gray-500 font-medium">فرعان بالهرم</div>
+            </div>
+          </div>
+
+          <!-- CTAs Buttons -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+            <!-- Browse Menu CTA -->
+            <a href="#menu" class="btn-gold-shimmer text-brand-chocolate font-black px-7 py-3.5 rounded-2xl text-base shadow-lg hover:shadow-gold-glow flex items-center gap-3 group">
+              <i class="fa-solid fa-book-open text-brand-brown group-hover:scale-110 transition-transform"></i>
+              <span>تصفح المنيو الشامل والأسعار</span>
+            </a>
+            <!-- Quick WhatsApp Delivery CTA -->
+            <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AE%D8%AF%D9%85%D8%A9%20%D8%A7%D9%84%D8%AA%D9%88%D8%B5%D9%8A%D9%84%20%D8%A7%D9%84%D8%B3%D8%B1%D9%8A%D8%B9%20%D9%85%D9%86%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="bg-brand-chocolate hover:bg-brand-brown text-white font-bold px-7 py-3.5 rounded-2xl text-base shadow-md hover:shadow-xl transition-all flex items-center gap-3 border border-brand-gold/40">
+              <i class="fa-solid fa-motorcycle text-brand-amber"></i>
+              <span>خدمة التوصيل السريع</span>
+            </a>
+          </div>
+
+          <!-- Chef Endorsement Ribbon in Hero -->
+          <div class="pt-2 flex items-center justify-center lg:justify-start gap-3 text-xs sm:text-sm text-gray-600">
+            <span class="inline-flex items-center gap-1.5 font-bold text-brand-chocolate bg-white/70 px-3 py-1.5 rounded-lg border border-brand-gold/20">
+              <i class="fa-solid fa-user-tie text-brand-gold"></i>
+              المكان تحت إدارة وتوجيه الشيف: <strong class="text-brand-berry">أحمد الجبلاوي</strong>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Left Column: Interactive Pastry Media & Showcase Presentation (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="relative mx-auto max-w-md lg:max-w-none">
+            
+            <!-- Outer Gold Ornamental Frame -->
+            <div class="absolute -inset-2 bg-gradient-to-r from-brand-gold via-brand-amber to-brand-berry rounded-3xl opacity-40 blur-lg animate-pulse-glow"></div>
+            
+            <!-- Main Video & Media Container -->
+            <div class="relative bg-brand-chocolate rounded-3xl overflow-hidden shadow-2xl border-2 border-brand-gold/50">
+              
+              <!-- Video / Cinematic Showcase Player -->
+              <div class="relative aspect-[4/3] sm:aspect-square w-full bg-black overflow-hidden group" id="heroMediaContainer">
+                <!-- Video Element with autoplay loop muted preview -->
+                <video id="heroPastryVideo" autoplay loop muted playsinline poster="./assets/hero-tortes.jpg" class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105">
+                  <source src="https://claude.ai/artifact/Szt9WoPzAuPui5Rd7XBsjb" type="video/mp4" />
+                  <!-- Fallback Image if Video doesn't load -->
+                  <img src="./assets/hero-tortes.jpg" alt="حلويات وتورت فيستيفال" class="w-full h-full object-cover" />
+                </video>
+
+                <!-- Media Overlay Gradient -->
+                <div class="absolute inset-0 bg-gradient-to-t from-brand-chocolate via-transparent to-black/30 pointer-events-none"></div>
+
+                <!-- Interactive Media Controls Bar -->
+                <div class="absolute top-4 right-4 flex items-center gap-2 z-20">
+                  <button id="toggleAudioBtn" onclick="toggleHeroVideoAudio(event)" class="w-9 h-9 rounded-full bg-black/60 backdrop-blur-md text-white border border-brand-gold/40 flex items-center justify-center hover:bg-brand-gold hover:text-brand-chocolate transition-colors shadow-md" title="تشغيل / كتم الصوت">
+                    <i class="fa-solid fa-volume-xmark text-sm" id="audioIcon"></i>
+                  </button>
+                  <button id="togglePlayBtn" onclick="toggleHeroVideoPlay(event)" class="w-9 h-9 rounded-full bg-black/60 backdrop-blur-md text-white border border-brand-gold/40 flex items-center justify-center hover:bg-brand-gold hover:text-brand-chocolate transition-colors shadow-md" title="إيقاف / تشغيل">
+                    <i class="fa-solid fa-pause text-sm" id="playIcon"></i>
+                  </button>
+                  <button onclick="openCinemaVideoModal(event)" class="w-9 h-9 rounded-full bg-black/60 backdrop-blur-md text-white border border-brand-gold/40 flex items-center justify-center hover:bg-brand-gold hover:text-brand-chocolate transition-colors shadow-md" title="مشاهدة سينمائية مكبرة">
+                    <i class="fa-solid fa-expand text-xs"></i>
+                  </button>
+                </div>
+
+                <!-- Floating Bottom Card on Video -->
+                <div class="absolute bottom-4 inset-x-4 p-4 rounded-2xl glass-card-dark text-white z-20 flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-xl bg-brand-gold/20 border border-brand-gold flex items-center justify-center text-brand-gold text-2xl flex-shrink-0">
+                      <i class="fa-solid fa-cake-candles"></i>
+                    </div>
+                    <div>
+                      <h2 class="font-bold text-sm sm:text-base text-brand-gold">تورتات وتشكيلات فيستيفال</h2>
+                      <p class="text-xs text-white/80">لوتس، شوكولاتة، فستق، فواكه، كراميل طازجة</p>
+                    </div>
+                  </div>
+                  <a href="#gallery" class="px-3 py-1.5 rounded-lg bg-brand-berry text-white text-xs font-bold hover:bg-brand-berryDark transition-colors whitespace-nowrap">
+                    شاهد الصور
+                  </a>
+                </div>
+              </div>
+
+              <!-- Secondary Live Photo Carousel Bar Under Video -->
+              <div class="p-3 bg-brand-chocolate/95 border-t border-brand-gold/30 grid grid-cols-3 gap-2">
+                <div onclick="switchHeroMedia('tortes')" class="cursor-pointer group rounded-xl overflow-hidden border border-brand-gold/40 hover:border-brand-gold transition-all relative">
+                  <img src="./assets/hero-tortes.jpg" 
+                       onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791109995309.jpg', 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=400&auto=format&fit=crop&q=80')" 
+                       alt="تورت فيستيفال" 
+                       class="w-full h-16 object-cover group-hover:scale-110 transition-transform" />
+                  <span class="absolute inset-0 bg-black/40 flex items-center justify-center text-[10px] text-white font-bold group-hover:bg-black/20">تورت فاخرة</span>
+                </div>
+
+                <div onclick="switchHeroMedia('platter')" class="cursor-pointer group rounded-xl overflow-hidden border border-brand-gold/40 hover:border-brand-gold transition-all relative">
+                  <img src="./assets/oriental-platter.jpg" 
+                       onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791110023828.jpg', 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400&auto=format&fit=crop&q=80')" 
+                       alt="صينية مشكل شرقي" 
+                       class="w-full h-16 object-cover group-hover:scale-110 transition-transform" />
+                  <span class="absolute inset-0 bg-black/40 flex items-center justify-center text-[10px] text-white font-bold group-hover:bg-black/20">صواني ملكية</span>
+                </div>
+
+                <div onclick="switchHeroMedia('box')" class="cursor-pointer group rounded-xl overflow-hidden border border-brand-gold/40 hover:border-brand-gold transition-all relative">
+                  <img src="./assets/festival-box-ad.jpg" 
+                       onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791109995292.jpg', 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=400&auto=format&fit=crop&q=80')" 
+                       alt="بوكس الشرقية الفاخرة" 
+                       class="w-full h-16 object-cover group-hover:scale-110 transition-transform" />
+                  <span class="absolute inset-0 bg-black/40 flex items-center justify-center text-[10px] text-white font-bold group-hover:bg-black/20">بوكس التشكيلة</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Floating Quality Seals -->
+            <div class="absolute -bottom-6 -right-6 hidden sm:flex items-center gap-2 bg-white/95 border-2 border-brand-gold p-3 rounded-2xl shadow-xl backdrop-blur-md animate-float-slow">
+              <div class="w-10 h-10 rounded-full bg-brand-amberLight flex items-center justify-center text-brand-gold text-xl">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <div class="text-right">
+                <div class="text-xs font-bold text-brand-chocolate">ضمان الطزاجة والجودة</div>
+                <div class="text-[10px] text-gray-500">نخب أول من أجود المكونات</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- ABOUT SECTION (إدارة وتوجيه الشيف أحمد الجبلاوي) -->
+  <!-- ========================================== -->
+  <section id="about" class="py-16 sm:py-24 bg-gradient-to-b from-white via-brand-creamSoft to-white relative border-y border-brand-gold/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-brand-berry bg-brand-berry/10 px-3 py-1 rounded-full">
+          أصالة المذاق والخبرة
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-black text-brand-chocolate">
+          سر التميز في <span class="text-gold-gradient">حلواني فيستيفال</span>
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          نجمع بين عراقة الحلواني الشرقي الأصيل وأحدث فنون صناعة الباستري والكيك العالمية لنقدم لكم تجربة استثنائية في كل قضمة.
+        </p>
+      </div>
+
+      <!-- Chef Spotlight & Value Cards Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Chef Feature Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="glass-card-dark rounded-3xl p-8 sm:p-10 text-white relative overflow-hidden shadow-2xl border-2 border-brand-gold">
+            <!-- Background Watermark Pattern -->
+            <div class="absolute -right-10 -bottom-10 opacity-10 text-brand-gold text-9xl pointer-events-none">
+              <i class="fa-solid fa-hat-chef"></i>
+            </div>
+
+            <!-- Chef Badge -->
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-tr from-brand-gold to-brand-amber flex items-center justify-center text-brand-chocolate text-3xl font-black shadow-lg shadow-gold-glow flex-shrink-0">
+                <i class="fa-solid fa-kitchen-set"></i>
+              </div>
+              <div>
+                <span class="text-xs text-brand-amber font-bold tracking-widest uppercase block">رؤية وإشراف احترافي</span>
+                <h3 class="text-2xl font-black text-white">الشيف: أحمد الجبلاوي</h3>
+                <span class="text-xs text-gray-300">خبير صناعة الحلويات الشرقية والغربية</span>
+              </div>
+            </div>
+
+            <!-- Chef Quote -->
+            <blockquote class="text-gray-200 text-sm sm:text-base leading-relaxed mb-6 border-r-2 border-brand-gold pr-4 italic">
+              "الحلو مش مجرد سكر ومكونات.. الحلو فن وأمانة. في فيستيفال كل صينية بتطلع بحب، وبسمن بلدي صافي وأعلى معايير نظافة وطعم يفرح عائلتك وضيوفك."
+            </blockquote>
+
+            <!-- Direct Contact Button for Chef -->
+            <div class="space-y-3 pt-2">
+              <div class="text-xs text-brand-amber font-semibold">تواصل مباشر ومناسبات خاصة مع الشيف:</div>
+              <div class="flex flex-wrap gap-2">
+                <a href="tel:+201093916372" class="flex-1 bg-white hover:bg-brand-amberLight text-brand-chocolate font-bold py-2.5 px-4 rounded-xl text-center text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-sm">
+                  <i class="fa-solid fa-phone-volume text-brand-chocolate"></i>
+                  <span>اتصال: 01093916372</span>
+                </a>
+                <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%A7%D9%84%D8%B4%D9%8A%D9%81%20%D8%A3%D8%AD%D9%85%D8%AF%20%D8%A7%D9%84%D8%AC%D8%A8%D9%84%D8%A7%D9%88%D9%8A%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%AD%D8%AC%D8%B2%20%D8%A3%D9%88%D8%B1%D8%AF%D8%B1%20%D8%AE%D8%A7%D8%B5" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-2 transition-all shadow-sm">
+                  <i class="fa-brands fa-whatsapp text-base"></i>
+                  <span>واتساب الشيف</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Core Pillars Cards (7 cols) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+          
+          <!-- Pillar 1 -->
+          <div class="glass-card rounded-2xl p-6 hover:shadow-card-hover transition-all duration-300 border-r-4 border-r-brand-gold group">
+            <div class="w-12 h-12 rounded-xl bg-brand-amberLight flex items-center justify-center text-brand-gold text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-jar"></i>
+            </div>
+            <h4 class="text-lg font-bold text-brand-chocolate mb-2">سمن بلدي طبيعي 100%</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              لا نساوم على النقاء؛ نستخدم أجود أنواع السمن البلدي الطبيعي لإعطاء الكنافة والبسبوسة والجلاش رائحة ونكهة الأصالة الشرقية التي لا تقاوم.
+            </p>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="glass-card rounded-2xl p-6 hover:shadow-card-hover transition-all duration-300 border-r-4 border-r-brand-berry group">
+            <div class="w-12 h-12 rounded-xl bg-pink-100 flex items-center justify-center text-brand-berry text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <h4 class="text-lg font-bold text-brand-chocolate mb-2">إبداع غربي وتورت خاصة</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              تورت لكل مناسباتكم بأحدث التصاميم العصرية؛ كريمة غنية، شوكولاتة بلجيكية فاخرة، وفواكه طبيعية طازجة تُصنع يومياً حسب رغبتكم.
+            </p>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="glass-card rounded-2xl p-6 hover:shadow-card-hover transition-all duration-300 border-r-4 border-r-brand-gold group">
+            <div class="w-12 h-12 rounded-xl bg-brand-amberLight flex items-center justify-center text-brand-gold text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h4 class="text-lg font-bold text-brand-chocolate mb-2">تغليف فاخر وعصري</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              علب وتغليف أنيق يحفظ قرمشة الحلويات وطراوتها ويشرفك أمام ضيوفك وفي كل العزائم والهدايا والمناسبات.
+            </p>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="glass-card rounded-2xl p-6 hover:shadow-card-hover transition-all duration-300 border-r-4 border-r-green-600 group">
+            <div class="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center text-green-700 text-2xl mb-4 group-hover:scale-110 transition-transform">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h4 class="text-lg font-bold text-brand-chocolate mb-2">سرعة التوصيل والأمان</h4>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              أسطول توصيل خاص لتغطية كافة شوارع الهرم وفيصل والمناطق المجاورة بسيارات ومعدات تضمن وصول التورتة سليمة 100%.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- INTERACTIVE MENU SECTION (المنيو الشامل بالأسعار) -->
+  <!-- ========================================== -->
+  <section id="menu" class="py-16 sm:py-24 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Title & Search Bar -->
+      <div class="text-center max-w-3xl mx-auto mb-10 space-y-4">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-brand-gold bg-brand-chocolate text-brand-amber px-4 py-1 rounded-full shadow-sm">
+          قائمة الأسعار المعتمدة الرسمية
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-brand-chocolate">
+          منيو <span class="text-gold-gradient">حلواني فيستيفال</span>
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          تصفح أسعار حلوياتنا الشرقية والغربية والتورت والدست. يمكنك البحث بالاسم أو الضغط على الصنف لطلبه فوراً!
+        </p>
+
+        <!-- Live Search Input -->
+        <div class="relative max-w-md mx-auto pt-2">
+          <input type="text" 
+                 id="menuSearchInput" 
+                 oninput="filterMenuItems()" 
+                 placeholder="ابحث عن صنفك المفضل (مثال: بسبوسة، تورتة، كنافة، إكلير...)" 
+                 class="w-full pl-10 pr-12 py-3 rounded-2xl border-2 border-brand-gold/40 focus:border-brand-gold focus:outline-none focus:ring-2 focus:ring-brand-gold/30 bg-white shadow-sm text-sm font-medium transition-all" />
+          <i class="fa-solid fa-magnifying-glass absolute right-4 top-5 text-gray-400"></i>
+          <button id="clearSearchBtn" onclick="clearSearch()" class="absolute left-3 top-4 text-gray-400 hover:text-brand-berry hidden text-sm" title="مسح">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Main Tabs Buttons -->
+      <div class="flex flex-wrap items-center justify-center gap-3 mb-10">
+        <!-- Tab 1: Oriental -->
+        <button id="tabBtnOriental" 
+                onclick="switchMenuTab('oriental')" 
+                class="tab-btn active px-6 py-3 rounded-2xl font-black text-sm sm:text-base border-2 border-brand-gold/40 bg-brand-chocolate text-brand-gold transition-all duration-300 flex items-center gap-2.5 shadow-md">
+          <i class="fa-solid fa-plate-wheat"></i>
+          <span>الحلويات الشرقية (23 صنف)</span>
+        </button>
+
+        <!-- Tab 2: Western & Tortes -->
+        <button id="tabBtnWestern" 
+                onclick="switchMenuTab('western')" 
+                class="tab-btn px-6 py-3 rounded-2xl font-black text-sm sm:text-base border-2 border-brand-gold/40 bg-white text-brand-chocolate hover:bg-brand-amberLight/40 transition-all duration-300 flex items-center gap-2.5 shadow-sm">
+          <i class="fa-solid fa-cake-candles text-brand-gold"></i>
+          <span>الحلويات الغربية والتورت</span>
+        </button>
+      </div>
+
+      <!-- TAB 1 CONTENT: الحلويات الشرقية (Oriental Sweets) -->
+      <div id="orientalMenuContent" class="menu-tab-pane">
+        
+        <!-- Oriental Category Sub-Filter Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-8 text-xs font-bold">
+          <button onclick="filterOrientalSubCategory('all')" class="oriental-filter-btn active bg-brand-chocolate text-brand-gold px-3.5 py-1.5 rounded-xl border border-brand-gold/30 transition-all">الكل</button>
+          <button onclick="filterOrientalSubCategory('مشكل')" class="oriental-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">تشكيلات مشكل</button>
+          <button onclick="filterOrientalSubCategory('بسبوسة')" class="oriental-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">بسبوسة</button>
+          <button onclick="filterOrientalSubCategory('كنافة')" class="oriental-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">كنافة</button>
+          <button onclick="filterOrientalSubCategory('بقلاوة')" class="oriental-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">بقلاوة وجلاش</button>
+          <button onclick="filterOrientalSubCategory('أصناف شرقية')" class="oriental-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">رواني وبلح الشام وغيرها</button>
+        </div>
+
+        <!-- Oriental Items Grid (Populated Dynamically via JS with full 23 items) -->
+        <div id="orientalGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <!-- Items inserted via JS -->
+        </div>
+
+      </div>
+
+      <!-- TAB 2 CONTENT: الحلويات الغربية والتورت (Western & Cakes) -->
+      <div id="westernMenuContent" class="menu-tab-pane hidden space-y-12">
+        
+        <!-- Sub-section A: تورتات دائرية -->
+        <div class="bg-white/90 rounded-3xl p-6 sm:p-8 border border-brand-gold/30 shadow-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-brand-gold/20">
+            <div class="w-10 h-10 rounded-xl bg-brand-amberLight flex items-center justify-center text-brand-gold text-xl">
+              <i class="fa-solid fa-circle-notch"></i>
+            </div>
+            <div>
+              <h3 class="text-xl sm:text-2xl font-black text-brand-chocolate">التورتات الدائرية اليومية</h3>
+              <p class="text-xs sm:text-sm text-gray-500">أشكال ومقاسات تناسب الجمعات العائلية وأعياد الميلاد اليومية</p>
+            </div>
+          </div>
+          <div id="circularTortesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Sub-section B: تورت المناسبات والأحجام الخاصة -->
+        <div class="bg-white/90 rounded-3xl p-6 sm:p-8 border border-brand-gold/30 shadow-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-brand-gold/20">
+            <div class="w-10 h-10 rounded-xl bg-pink-100 flex items-center justify-center text-brand-berry text-xl">
+              <i class="fa-solid fa-cake-candles"></i>
+            </div>
+            <div>
+              <h3 class="text-xl sm:text-2xl font-black text-brand-chocolate">تورت المناسبات والأحجام الكبيرة</h3>
+              <p class="text-xs sm:text-sm text-gray-500">مقاسات خاصة للحفلات والأفراح متوفرة بصورة وبدون صورة حسب اختيارك</p>
+            </div>
+          </div>
+          <div id="specialTortesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Sub-section C: قطع الجاتوه والدست -->
+        <div class="bg-white/90 rounded-3xl p-6 sm:p-8 border border-brand-gold/30 shadow-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-brand-gold/20">
+            <div class="w-10 h-10 rounded-xl bg-brand-amberLight flex items-center justify-center text-brand-amber text-xl">
+              <i class="fa-solid fa-cookie-bite"></i>
+            </div>
+            <div>
+              <h3 class="text-xl sm:text-2xl font-black text-brand-chocolate">قطع الجاتوه والدست الفاخرة</h3>
+              <p class="text-xs sm:text-sm text-gray-500">جاتوه لوكس، سوبر، ملفيه وإكلير طازج يومياً بالقطعة وبالدستة</p>
+            </div>
+          </div>
+          <div id="gateauxGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FEATURED PRODUCTS GALLERY ("بعض منتجاتنا") -->
+  <!-- ========================================== -->
+  <section id="gallery" class="py-16 sm:py-24 bg-gradient-to-b from-brand-chocolate via-[#351e18] to-brand-chocolate text-white relative overflow-hidden">
+    <!-- Arabesque luxury background -->
+    <div class="absolute inset-0 arabesque-dark-pattern opacity-40 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-14 space-y-3">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-brand-gold bg-brand-gold/10 px-4 py-1 rounded-full border border-brand-gold/30">
+          معرض الإبداع والتصوير الواقعي
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white">
+          بعض منتجاتنا <span class="text-gold-gradient">من الفرن إليك</span>
+        </h2>
+        <p class="text-gray-300 text-sm sm:text-base">
+          شاهد صوراً حية لأفخر أطباقنا وصوانينا وتشكيلات التورت المعدة بأيادي شيفات فيستيفال المحترفين.
+        </p>
+      </div>
+
+      <!-- Gallery Grid Showcase -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: 10 Torte Array (User Uploaded Cake Showcase) -->
+        <div class="glass-card-dark rounded-3xl overflow-hidden border border-brand-gold/40 shadow-xl group hover:border-brand-gold transition-all duration-300 flex flex-col justify-between">
+          <div class="relative overflow-hidden aspect-[4/3] img-zoom-container">
+            <img src="./assets/hero-tortes.jpg" 
+                 onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791109995309.jpg', 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80')" 
+                 alt="تشكيلات التورت المتنوعة فيستيفال" 
+                 class="w-full h-full object-cover" />
+            <div class="absolute top-3 right-3 bg-brand-berry text-white text-[11px] font-black px-2.5 py-1 rounded-full shadow-md">
+              الأكثر طلباً
+            </div>
+            <button onclick="openImageModal(this.previousElementSibling.previousElementSibling ? this.previousElementSibling.previousElementSibling.src : './assets/hero-tortes.jpg', 'تشكيلات التورت المتنوعة (لوتس، شوكولاتة، فستق، فواكه، كراميل)')" class="absolute bottom-3 left-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+              <i class="fa-solid fa-expand text-xs"></i>
+            </button>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-brand-gold group-hover:text-brand-amber transition-colors">تشكيلات التورت المتنوعة</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mt-1">
+                لوتس، شوكولاتة، فستق، فواكه طبيعية، وكراميل بمقاسات مختلفة لتناسب كل الحفلات.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+              <span class="text-xs font-semibold text-brand-amber">تبدأ من 140 ج.م</span>
+              <button onclick="orderViaWhatsApp('تشكيلات التورت المتنوعة')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-bold text-xs px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>اطلب هذا الصنف</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Royal Mandala Oriental Platter (User Uploaded Platter) -->
+        <div class="glass-card-dark rounded-3xl overflow-hidden border border-brand-gold/40 shadow-xl group hover:border-brand-gold transition-all duration-300 flex flex-col justify-between">
+          <div class="relative overflow-hidden aspect-[4/3] img-zoom-container">
+            <img src="./assets/oriental-platter.jpg" 
+                 onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791110023828.jpg', 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&auto=format&fit=crop&q=80')" 
+                 alt="صينية الشرقية الملكية المزينة بشكل حلزوني" 
+                 class="w-full h-full object-cover" />
+            <div class="absolute top-3 right-3 bg-brand-gold text-brand-chocolate text-[11px] font-black px-2.5 py-1 rounded-full shadow-md">
+              صواني العزائم
+            </div>
+            <button onclick="openImageModal(this.previousElementSibling.previousElementSibling ? this.previousElementSibling.previousElementSibling.src : './assets/oriental-platter.jpg', 'صواني وأطباق شرقية مشكلة ومزينة بشكل حلزوني أنيق بالسمن البلدي')" class="absolute bottom-3 left-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+              <i class="fa-solid fa-expand text-xs"></i>
+            </button>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-brand-gold group-hover:text-brand-amber transition-colors">صينية الشرقية الملكية</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mt-1">
+                صواني وأطباق شرقية مشكلة ومزينة بشكل حلزوني أنيق؛ بسبوسة، كنافة، زنود، رموش الست ومكسرات.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+              <span class="text-xs font-semibold text-brand-amber">مشكل مكسرات 220 ج.م</span>
+              <button onclick="orderViaWhatsApp('صينية الشرقية الملكية الحلزونية')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-bold text-xs px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>اطلب هذا الصنف</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Festival Sweet Box Tray (User Uploaded Box) -->
+        <div class="glass-card-dark rounded-3xl overflow-hidden border border-brand-gold/40 shadow-xl group hover:border-brand-gold transition-all duration-300 flex flex-col justify-between">
+          <div class="relative overflow-hidden aspect-[4/3] img-zoom-container">
+            <img src="./assets/festival-box-ad.jpg" 
+                 onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791109995292.jpg', 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80')" 
+                 alt="تشكيلة فاخرة من أجود الحلويات الشرقية فيستيفال" 
+                 class="w-full h-full object-cover" />
+            <div class="absolute top-3 right-3 bg-green-600 text-white text-[11px] font-black px-2.5 py-1 rounded-full shadow-md">
+              تغليف هدايا فاخر
+            </div>
+            <button onclick="openImageModal(this.previousElementSibling.previousElementSibling ? this.previousElementSibling.previousElementSibling.src : './assets/festival-box-ad.jpg', 'بوكس التشكيلة الفاخرة من حلواني فيستيفال - جودة مضمونة وطعم لا يُنسى')" class="absolute bottom-3 left-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+              <i class="fa-solid fa-expand text-xs"></i>
+            </button>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-brand-gold group-hover:text-brand-amber transition-colors">بوكس التشكيلة الفاخرة</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mt-1">
+                تغليف ذهبي فاخر لعرض أنيق وحفظ مثالي لكل قطعة، مع كولكشن مشكل ساده ومكسرات منتقاة.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+              <span class="text-xs font-semibold text-brand-amber">مشكل ساده ومكسرات 170 ج.م</span>
+              <button onclick="orderViaWhatsApp('بوكس التشكيلة الفاخرة')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-bold text-xs px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>اطلب هذا الصنف</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Gateaux & Eclair Deluxe -->
+        <div class="glass-card-dark rounded-3xl overflow-hidden border border-brand-gold/40 shadow-xl group hover:border-brand-gold transition-all duration-300 flex flex-col justify-between">
+          <div class="relative overflow-hidden aspect-[4/3] img-zoom-container">
+            <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&auto=format&fit=crop&q=80" 
+                 alt="قطع الجاتوه والإكلير والملفيه الفاخر" 
+                 class="w-full h-full object-cover" />
+            <div class="absolute top-3 right-3 bg-brand-amber text-brand-chocolate text-[11px] font-black px-2.5 py-1 rounded-full shadow-md">
+              طازج يومياً
+            </div>
+            <button onclick="openImageModal('https://images.unsplash.com/photo-1587314168485-3236d6710814?w=900&auto=format&fit=crop&q=80', 'قطع الجاتوه والإكلير والملفيه الفاخر من حلواني فيستيفال')" class="absolute bottom-3 left-3 w-8 h-8 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+              <i class="fa-solid fa-expand text-xs"></i>
+            </button>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between space-y-3">
+            <div>
+              <h3 class="font-bold text-lg text-brand-gold group-hover:text-brand-amber transition-colors">دستة جاتوه سوبر لوكس</h3>
+              <p class="text-xs text-gray-300 leading-relaxed mt-1">
+                12 قطعة فاخرة من الجاتوه السوبر، الملفيه المقرمش، والإكلير الفرنسي المحشو بالباستري كريم اللذيذ.
+              </p>
+            </div>
+            <div class="pt-3 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+              <span class="text-xs font-semibold text-brand-amber">الدستة 240.00 ج.م</span>
+              <button onclick="orderViaWhatsApp('دستة جاتوه سوبر لوكس 12 قطعة')" class="bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-bold text-xs px-3.5 py-2 rounded-xl transition-all flex items-center gap-1.5 shadow-sm">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>اطلب هذا الصنف</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- BRANCHES & DELIVERY DETAILS (فروعنا والتوصيل) -->
+  <!-- ========================================== -->
+  <section id="branches" class="py-16 sm:py-24 relative bg-brand-creamSoft">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest text-brand-chocolate bg-brand-gold/30 px-4 py-1 rounded-full">
+          فروع فيستيفال في قلب الهرم
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-brand-chocolate">
+          زورونا أو اطلبوا <span class="text-gold-gradient">توصيل سريع</span>
+        </h2>
+        <p class="text-gray-600 text-sm sm:text-base">
+          فرعان رئيسيان لخدمتكم يومياً، مع أسطول دليفري يغطي كافة مناطق الهرم وفيصل والجيزة بأقصى سرعة.
+        </p>
+      </div>
+
+      <!-- Two Branches Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        
+        <!-- BRANCH 1: اللبيني المجزر الآلي -->
+        <div class="bg-white rounded-3xl p-8 border-2 border-brand-gold/40 shadow-xl hover:shadow-gold-glow transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -top-12 -left-12 w-32 h-32 bg-brand-gold/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+
+          <div>
+            <!-- Branch Badge -->
+            <div class="flex items-center justify-between gap-3 mb-5">
+              <span class="inline-flex items-center gap-1.5 bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1 rounded-full">
+                <i class="fa-solid fa-store"></i> الفرع الأول (الرئيسي)
+              </span>
+              <span class="text-xs font-semibold text-green-600 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> مفتوح الآن
+              </span>
+            </div>
+
+            <!-- Branch Title & Address -->
+            <h3 class="text-2xl font-black text-brand-chocolate mb-3">فرع اللبيني - المجزر الآلي</h3>
+            <p class="text-gray-700 text-sm sm:text-base flex items-start gap-2.5 mb-6">
+              <i class="fa-solid fa-location-dot text-brand-berry text-lg mt-0.5 flex-shrink-0"></i>
+              <span>الهرم - اللبيني - شارع المجزر الآلي - أولاد رجب - بجوار مول سارة.</span>
+            </p>
+
+            <!-- Phones & WhatsApp -->
+            <div class="space-y-3 bg-brand-cream p-4 rounded-2xl border border-brand-gold/20 mb-6">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-600 flex items-center gap-2">
+                  <i class="fa-solid fa-phone text-brand-chocolate"></i> التليفون الأرضي:
+                </span>
+                <a href="tel:0233866415" class="font-bold text-brand-chocolate hover:text-brand-gold font-outfit" dir="ltr">
+                  0233866415
+                </a>
+              </div>
+              <div class="flex items-center justify-between text-sm pt-2 border-t border-gray-200">
+                <span class="text-gray-600 flex items-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-green-600"></i> خدمة التوصيل / واتساب:
+                </span>
+                <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%84%D8%A8%D9%8A%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="font-bold text-green-700 hover:text-green-800 font-outfit" dir="ltr">
+                  01093916372
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons for Branch 1 -->
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <a href="tel:0233866415" class="bg-brand-chocolate hover:bg-brand-brown text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
+              <i class="fa-solid fa-phone"></i> اتصال بالأرضي
+            </a>
+            <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%81%D8%B1%D8%B9%20%D8%A7%D9%84%D9%84%D8%A8%D9%8A%D9%86%D9%8A" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-base"></i> اطلب من الفرع
+            </a>
+          </div>
+        </div>
+
+        <!-- BRANCH 2: شارع زغلول كوبري السوق -->
+        <div class="bg-white rounded-3xl p-8 border-2 border-brand-gold/40 shadow-xl hover:shadow-gold-glow transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -top-12 -left-12 w-32 h-32 bg-brand-amber/10 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+
+          <div>
+            <!-- Branch Badge -->
+            <div class="flex items-center justify-between gap-3 mb-5">
+              <span class="inline-flex items-center gap-1.5 bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1 rounded-full">
+                <i class="fa-solid fa-store"></i> الفرع الثاني
+              </span>
+              <span class="text-xs font-semibold text-green-600 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> مفتوح الآن
+              </span>
+            </div>
+
+            <!-- Branch Title & Address -->
+            <h3 class="text-2xl font-black text-brand-chocolate mb-3">فرع شارع زغلول - كوبري السوق</h3>
+            <p class="text-gray-700 text-sm sm:text-base flex items-start gap-2.5 mb-6">
+              <i class="fa-solid fa-location-dot text-brand-berry text-lg mt-0.5 flex-shrink-0"></i>
+              <span>الهرم - شارع زغلول - كوبري السوق (موقع متميز وسهل الوصول).</span>
+            </p>
+
+            <!-- Phones & WhatsApp -->
+            <div class="space-y-3 bg-brand-cream p-4 rounded-2xl border border-brand-gold/20 mb-6">
+              <div class="flex items-center justify-between text-sm">
+                <span class="text-gray-600 flex items-center gap-2">
+                  <i class="fa-brands fa-whatsapp text-green-600"></i> خدمة التوصيل / واتساب:
+                </span>
+                <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D8%B9%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="font-bold text-green-700 hover:text-green-800 font-outfit" dir="ltr">
+                  01093916372
+                </a>
+              </div>
+              <div class="flex items-center justify-between text-sm pt-2 border-t border-gray-200">
+                <span class="text-gray-600 flex items-center gap-2">
+                  <i class="fa-solid fa-headset text-brand-berry"></i> خط الشكاوى والمقترحات:
+                </span>
+                <a href="tel:01093916372" class="font-bold text-brand-berry hover:underline font-outfit" dir="ltr">
+                  01093916372
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Buttons for Branch 2 -->
+          <div class="grid grid-cols-2 gap-3 pt-2">
+            <a href="tel:01093916372" class="bg-brand-chocolate hover:bg-brand-brown text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
+              <i class="fa-solid fa-phone"></i> اتصال هاتفي
+            </a>
+            <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%81%D8%B1%D8%B9%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%B2%D8%BA%D9%84%D9%88%D9%84" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
+              <i class="fa-brands fa-whatsapp text-base"></i> اطلب من الفرع
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Complaints & Customer Care Banner -->
+      <div class="bg-gradient-to-r from-brand-chocolate via-brand-brown to-brand-chocolate rounded-3xl p-6 sm:p-8 text-white border border-brand-gold/40 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-right">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-brand-gold/20 border border-brand-gold flex items-center justify-center text-brand-gold text-2xl flex-shrink-0">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <div>
+            <h4 class="text-lg sm:text-xl font-black text-white">رضاكم هو هدفنا الأول دائماً</h4>
+            <p class="text-xs sm:text-sm text-gray-300 mt-1">خط مخصص لتلقي مقترحاتكم وشكواكم والرد الفوري من إدارة حلواني فيستيفال</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a href="tel:01093916372" class="bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-black px-6 py-3 rounded-2xl text-sm transition-all flex items-center gap-2 shadow-md">
+            <i class="fa-solid fa-phone"></i>
+            <span>01093916372</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================== -->
+  <!-- FOOTER & SOCIAL CHANNELS (الفوتر والتواصل) -->
+  <!-- ========================================== -->
+  <footer id="contact" class="bg-brand-chocolate text-white pt-16 pb-8 border-t-2 border-brand-gold/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Top Footer Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-brand-gold/20">
+        
+        <!-- Brand Info (5 cols) -->
+        <div class="lg:col-span-5 space-y-4 text-center md:text-right">
+          <div class="flex items-center justify-center md:justify-start gap-3">
+            <div class="w-12 h-12 rounded-full border-2 border-brand-gold bg-brand-cream overflow-hidden flex items-center justify-center p-1">
+              <img src="./assets/festival-logo.jpg" 
+                   onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791109995300.jpg', 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=160&auto=format&fit=crop&q=80')" 
+                   alt="شعار فيستيفال" 
+                   class="w-full h-full object-contain" />
+            </div>
+            <div>
+              <span class="text-2xl font-black text-white block">حلواني فيستيفال</span>
+              <span class="text-xs text-brand-gold font-outfit uppercase tracking-widest block" dir="ltr">Festival Pastry</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-300 leading-relaxed max-w-sm mx-auto md:mx-0">
+            أصل الحلو في قلب الهرم. نقدم لكم أفخر الحلويات الشرقية والغربية والتورت المصنوعة بالسمن البلدي الطبيعي وأجود الخامات بإشراف الشيف أحمد الجبلاوي.
+          </p>
+          <!-- Social Icons -->
+          <div class="flex items-center justify-center md:justify-start gap-3 pt-2">
+            <a href="https://www.facebook.com/share/19nLkgnVAB/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-blue-600 text-white flex items-center justify-center transition-all border border-white/20 hover:border-blue-600 shadow-sm" title="صفحة فيسبوك الرسمية">
+              <i class="fa-brands fa-facebook-f text-lg"></i>
+            </a>
+            <a href="https://wa.me/201093916372" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-green-600 text-white flex items-center justify-center transition-all border border-white/20 hover:border-green-600 shadow-sm" title="واتساب الشيف أحمد الجبلاوي">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+            </a>
+            <a href="tel:01093916372" class="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-chocolate text-white flex items-center justify-center transition-all border border-white/20 shadow-sm" title="اتصال مباشر">
+              <i class="fa-solid fa-phone text-base"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links (3 cols) -->
+        <div class="lg:col-span-3 space-y-3 text-center md:text-right">
+          <h4 class="text-base font-black text-brand-gold uppercase tracking-wider">روابط سريعة</h4>
+          <ul class="space-y-2 text-sm text-gray-300 font-medium">
+            <li><a href="#hero" class="hover:text-brand-gold transition-colors">الرئيسية</a></li>
+            <li><a href="#about" class="hover:text-brand-gold transition-colors">عن فيستيفال & إدارة الشيف</a></li>
+            <li><a href="#menu" class="hover:text-brand-gold transition-colors">المنيو وقائمة الأسعار</a></li>
+            <li><a href="#gallery" class="hover:text-brand-gold transition-colors">معرض بعض منتجاتنا</a></li>
+            <li><a href="#branches" class="hover:text-brand-gold transition-colors">فروع الهرم والتوصيل</a></li>
+          </ul>
+        </div>
+
+        <!-- Working Hours & Direct Numbers (4 cols) -->
+        <div class="lg:col-span-4 space-y-4 text-center md:text-right">
+          <h4 class="text-base font-black text-brand-gold uppercase tracking-wider">أرقام التوصيل والتشغيل</h4>
+          <div class="space-y-2 text-sm text-gray-300">
+            <div class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-clock text-brand-amber"></i>
+              <span>يومياً: من 9:00 صباحاً حتى 2:00 بعد منتصف الليل</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-phone text-brand-amber"></i>
+              <span>الأرضي: <strong class="font-outfit text-white" dir="ltr">0233866415</strong></span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-brands fa-whatsapp text-green-400"></i>
+              <span>موبايل وواتساب: <strong class="font-outfit text-white" dir="ltr">01093916372</strong></span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-user-tie text-brand-gold"></i>
+              <span>واتساب الشيف أحمد الجبلاوي: <strong class="font-outfit text-white" dir="ltr">+201093916372</strong></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Developer & Rights Ribbon (Directed & Developed By Omar Dev) -->
+      <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-400 text-center md:text-right">
+        <div>
+          جميع الحقوق محفوظة &copy; <span id="currentYear"></span> <strong>حلواني فيستيفال | Festival Pastry</strong>
+        </div>
+
+        <!-- Dedicated Developer Credits Badge with direct tel and whatsapp -->
+        <div class="inline-flex flex-wrap items-center justify-center gap-2 bg-white/5 border border-brand-gold/30 px-4 py-2 rounded-2xl text-white">
+          <span class="text-brand-gold font-bold">Directed & Developed By:</span>
+          <span class="font-black text-white">Omar Dev</span>
+          <span class="text-white/40">|</span>
+          <span class="font-semibold text-gray-300 font-outfit" dir="ltr">Phone: +201221576360</span>
+          <!-- Direct Call Icon -->
+          <a href="tel:+201221576360" class="w-6 h-6 rounded-full bg-brand-gold text-brand-chocolate flex items-center justify-center hover:scale-110 transition-transform ml-1" title="اتصال مباشر بالمطور عمر يحيى">
+            <i class="fa-solid fa-phone text-[10px]"></i>
+          </a>
+          <!-- Direct WhatsApp Icon -->
+          <a href="https://wa.me/201221576360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%B9%D9%85%D8%B1%D8%8C%20%D8%AA%D9%88%D8%A7%D8%B5%D9%84%D8%AA%20%D9%85%D8%B9%D9%83%20%D9%85%D9%86%20%D8%AE%D9%84%D8%A7%D9%84%20%D9%85%D9%88%D9%82%D8%B9%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center hover:scale-110 transition-transform" title="واتساب المطور عمر يحيى">
+            <i class="fa-brands fa-whatsapp text-xs"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- FLOATING WHATSAPP ORDERING BUTTON -->
+  <!-- ========================================== -->
+  <div class="fixed bottom-20 left-4 md:bottom-6 md:left-6 z-40 flex flex-col items-end gap-2.5">
+    <!-- Unread Pulse Tooltip -->
+    <div id="waTooltip" class="bg-white text-brand-chocolate text-[11px] sm:text-xs font-bold px-3 py-1.5 rounded-xl shadow-lg border border-brand-gold/40 flex items-center gap-1.5 animate-bounce">
+      <span class="w-2 h-2 rounded-full bg-green-500"></span>
+      <span>اطلب حلوياتك طازجة الآن!</span>
+    </div>
+    
+    <!-- Big WhatsApp Circle Button -->
+    <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B9%D9%85%D9%84%20%D8%B7%D9%84%D8%A8%20%D8%AA%D9%88%D8%B5%D9%8A%D9%84" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-tr from-green-600 to-green-500 text-white flex items-center justify-center text-2xl sm:text-3xl shadow-2xl hover:scale-110 hover:shadow-gold-glow transition-all duration-300 relative group"
+       title="محادثة واتساب مباشرة">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="absolute -top-1 -right-1 bg-brand-berry text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white">1</span>
+    </a>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- MOBILE BOTTOM NAVIGATION DOCK (شريط التنقل السريع للهواتف) -->
+  <!-- ========================================== -->
+  <nav aria-label="شريط التنقل السريع للهواتف" class="md:hidden fixed bottom-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-t border-brand-gold/30 shadow-[0_-4px_25px_rgba(43,23,18,0.12)] px-2 py-1.5 flex items-center justify-around select-none">
+    <a href="#hero" class="flex flex-col items-center justify-center text-brand-chocolate hover:text-brand-gold py-1 px-2 transition-colors">
+      <i class="fa-solid fa-house text-base"></i>
+      <span class="text-[10px] font-bold mt-0.5">الرئيسية</span>
+    </a>
+    <a href="#menu" class="flex flex-col items-center justify-center text-brand-chocolate hover:text-brand-gold py-1 px-2 transition-colors">
+      <i class="fa-solid fa-utensils text-base"></i>
+      <span class="text-[10px] font-bold mt-0.5">المنيو</span>
+    </a>
+    <!-- Prominent Center WA Order Trigger -->
+    <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%AA%D9%88%D8%B5%D9%8A%D9%84" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="-mt-6 w-14 h-14 rounded-full bg-gradient-to-tr from-green-600 to-green-500 border-2 border-brand-gold text-white flex items-center justify-center shadow-xl hover:scale-105 transition-transform" 
+       title="اطلب عبر واتساب">
+      <i class="fa-brands fa-whatsapp text-2xl"></i>
+    </a>
+    <!-- Cart -->
+    <button onclick="toggleCartModal(true)" class="relative flex flex-col items-center justify-center text-brand-chocolate hover:text-brand-gold py-1 px-2 transition-colors">
+      <i class="fa-solid fa-basket-shopping text-base"></i>
+      <span class="text-[10px] font-bold mt-0.5">السلة</span>
+      <span id="mobileCartCountBadge" class="absolute -top-1 right-2 bg-brand-berry text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center hidden">0</span>
+    </button>
+    <!-- Branches -->
+    <a href="#branches" class="flex flex-col items-center justify-center text-brand-chocolate hover:text-brand-gold py-1 px-2 transition-colors">
+      <i class="fa-solid fa-location-dot text-base"></i>
+      <span class="text-[10px] font-bold mt-0.5">الفروع</span>
+    </a>
+  </nav>
+
+  <!-- ========================================== -->
+  <!-- INTERACTIVE CART DRAWER MODAL -->
+  <!-- ========================================== -->
+  <div id="cartModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex justify-end transition-opacity">
+    <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col justify-between transform transition-transform duration-300" id="cartContentPanel">
+      
+      <!-- Cart Header -->
+      <div class="p-5 bg-brand-chocolate text-white flex items-center justify-between border-b-2 border-brand-gold/40">
+        <div class="flex items-center gap-2.5">
+          <i class="fa-solid fa-basket-shopping text-brand-gold text-xl"></i>
+          <div>
+            <h3 class="font-black text-lg">سلة طلباتك من فيستيفال</h3>
+            <span class="text-xs text-brand-amber">أصل الحلو - كل يوم عرض جديد</span>
+          </div>
+        </div>
+        <button onclick="toggleCartModal(false)" class="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Cart Item List -->
+      <div class="p-5 flex-1 overflow-y-auto space-y-3" id="cartItemsList">
+        <!-- Rendered via JS -->
+        <div class="text-center py-16 text-gray-400 space-y-3">
+          <i class="fa-solid fa-basket-shopping text-5xl text-gray-300"></i>
+          <p class="font-bold text-gray-500">سلتك فارغة حالياً</p>
+          <p class="text-xs text-gray-400">تصفح المنيو واضغط "أضف للطلب" لاختيار حلوياتك المفضلة</p>
+        </div>
+      </div>
+
+      <!-- Cart Footer & Checkout Form -->
+      <div class="p-5 bg-brand-cream border-t border-brand-gold/30 space-y-4">
+        <!-- Total -->
+        <div class="flex items-center justify-between text-base font-black text-brand-chocolate pb-2 border-b border-gray-200">
+          <span>إجمالي الأصناف:</span>
+          <span id="cartTotalPrice" class="text-xl text-brand-berry font-outfit">0 ج.م</span>
+        </div>
+
+        <!-- Branch Selection -->
+        <div>
+          <label for="orderBranchSelect" class="block text-xs font-bold text-gray-700 mb-1">اختر الفرع الأقرب لك:</label>
+          <select id="orderBranchSelect" class="w-full text-xs font-medium py-2 px-3 rounded-xl border border-gray-300 bg-white focus:outline-none focus:border-brand-gold">
+            <option value="فرع اللبيني - المجزر الآلي">فرع اللبيني - المجزر الآلي (الهرم)</option>
+            <option value="فرع شارع زغلول - كوبري السوق">فرع شارع زغلول - كوبري السوق (الهرم)</option>
+          </select>
+        </div>
+
+        <!-- Customer Name / Address Note -->
+        <div>
+          <input type="text" id="customerAddressInput" placeholder="اسمك وعنوان التوصيل (اختياري)" class="w-full text-xs py-2 px-3 rounded-xl border border-gray-300 bg-white focus:outline-none focus:border-brand-gold" />
+        </div>
+
+        <!-- WhatsApp Checkout Trigger Button -->
+        <button onclick="sendCartOrderViaWhatsApp()" class="btn-gold-shimmer w-full py-3.5 rounded-2xl font-black text-brand-chocolate text-sm flex items-center justify-center gap-2 shadow-lg">
+          <i class="fa-brands fa-whatsapp text-lg text-green-800"></i>
+          <span>إرسال الطلب وحسابه عبر واتساب</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- LIGHTBOX IMAGE MODAL -->
+  <!-- ========================================== -->
+  <div id="imageLightboxModal" class="fixed inset-0 z-50 bg-black/90 backdrop-blur-md hidden flex items-center justify-center p-4" onclick="closeImageModal()">
+    <div class="max-w-4xl w-full bg-brand-chocolate rounded-3xl overflow-hidden border-2 border-brand-gold shadow-2xl relative" onclick="event.stopPropagation()">
+      <button onclick="closeImageModal()" class="absolute top-4 left-4 z-20 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-berry transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="max-h-[75vh] overflow-hidden flex items-center justify-center bg-black">
+        <img id="lightboxImg" src="" alt="صورة مكبرة" class="max-h-[75vh] w-auto object-contain" />
+      </div>
+      <div class="p-5 bg-brand-chocolate text-white flex items-center justify-between gap-4">
+        <p id="lightboxCaption" class="text-sm font-bold text-brand-amber"></p>
+        <button id="lightboxOrderBtn" onclick="" class="bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-bold text-xs px-4 py-2 rounded-xl transition-all flex items-center gap-1.5 whitespace-nowrap">
+          <i class="fa-brands fa-whatsapp text-base"></i> اطلب الآن
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- CINEMA VIDEO MODAL (مشغل الفيديو السينمائي) -->
+  <!-- ========================================== -->
+  <div id="cinemaVideoModal" class="fixed inset-0 z-50 bg-black/95 backdrop-blur-lg hidden flex items-center justify-center p-3 sm:p-6" onclick="closeCinemaVideoModal()">
+    <div class="max-w-4xl w-full bg-brand-chocolate rounded-3xl overflow-hidden border-2 border-brand-gold shadow-2xl relative" onclick="event.stopPropagation()">
+      <button onclick="closeCinemaVideoModal()" class="absolute top-4 left-4 z-20 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-berry transition-colors">
+        <i class="fa-solid fa-xmark text-lg"></i>
+      </button>
+      <div class="aspect-video w-full bg-black relative">
+        <video id="cinemaVideoPlayer" controls playsinline class="w-full h-full object-contain">
+          <source src=" type="video/mp4" />
+        </video>
+      </div>
+      <div class="p-4 sm:p-5 bg-brand-chocolate text-white flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="font-bold text-base sm:text-lg text-brand-gold">صناعة التورت والحلويات - حلواني فيستيفال</h4>
+          <p class="text-xs text-gray-300">أصل الحلو بالسمن البلدي الطبيعي وأجود الخامات بإشراف الشيف أحمد الجبلاوي</p>
+        </div>
+        <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84%D8%8C%20%D8%B4%D8%A7%D9%87%D8%AF%D8%AA%20%D9%81%D9%8A%D8%AF%D9%8A%D9%88%20%D8%A7%D9%84%D8%AA%D9%88%D8%B1%D8%AA%20%D9%88%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn-gold-shimmer text-brand-chocolate font-bold text-xs sm:text-sm px-5 py-2.5 rounded-xl flex items-center gap-2 whitespace-nowrap shadow-md">
+          <i class="fa-brands fa-whatsapp text-lg text-green-800"></i>
+          <span>اطلب تورتتك الآن</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- JAVASCRIPT LOGIC & INTERACTIVITY -->
+  <!-- ========================================== -->
+  <script>
+    // Set dynamic current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Universal multi-tier image fallback handler
+    function handleImageFallback(imgElement, localPath, finalFallback) {
+      if (!imgElement.dataset.triedLocal) {
+        imgElement.dataset.triedLocal = 'true';
+        imgElement.src = localPath;
+      } else {
+        if (typeof finalFallback === 'function') {
+          finalFallback();
+        } else if (typeof finalFallback === 'string') {
+          imgElement.src = finalFallback;
+        }
+      }
+    }
+
+    // ==========================================
+    // MENU DATA MODEL (EXACT SPECIFICATIONS)
+    // ==========================================
+    
+    // 1. الحلويات الشرقية (Oriental Sweets - 23 items exactly as requested)
+    const orientalItems = [
+      { id: 'o-1', name: 'مشكل ساده', price: '140 ج.م', numPrice: 140, category: 'مشكل', desc: 'تشكيلة شرقية فاخرة ساده بالسمن البلدي الطبيعي', badge: 'كلاسيك' },
+      { id: 'o-2', name: 'مشكل ساده ومكسرات', price: '170 ج.م', numPrice: 170, category: 'مشكل', desc: 'مزيج رائع من القطع السادة مع تشكيلة مكسرات فاخرة', badge: 'الأكثر مبيعاً' },
+      { id: 'o-3', name: 'مشكل مكسرات', price: '220 ج.م', numPrice: 220, category: 'مشكل', desc: 'أفخر تشكيلة حلويات شرقية محشوة ومغطاة بالمكسرات الفاخرة', badge: 'سوبر مكسرات' },
+      { id: 'o-4', name: 'بسبوسه سادة', price: '140 ج.م', numPrice: 140, category: 'بسبوسة', desc: 'بسبوسة دايبة ومرملة بالسمن البلدي والشربات المظبوط', badge: 'طازج' },
+      { id: 'o-5', name: 'بسبوسة بندق', price: '200 ج.م', numPrice: 200, category: 'بسبوسة', desc: 'بسبوسة مرملة غنية بحبات البندق المحمص الفاخر', badge: 'مميز' },
+      { id: 'o-6', name: 'بسبوسة نوتيلا', price: '180 ج.م', numPrice: 180, category: 'بسبوسة', desc: 'بسبوسة فيستيفال مع شلال نوتيلا أصلي غني', badge: 'عشاق الشوكولاتة' },
+      { id: 'o-7', name: 'كنافة سادة', price: '150 ج.م', numPrice: 150, category: 'كنافة', desc: 'كنافة ذهبية مقرمشة بالسمن البلدي الفاخر', badge: '' },
+      { id: 'o-8', name: 'كنافة كريمة', price: '130 ج.م', numPrice: 130, category: 'كنافة', desc: 'كنافة طرية بحشوة القشطة والكريمة الغنية', badge: 'خفيفة ولذيذة' },
+      { id: 'o-9', name: 'كنافة مكسرات', price: '220 ج.م', numPrice: 220, category: 'كنافة', desc: 'كنافة مقرمشة محشوة بأجود أنواع المكسرات المحمصة', badge: 'ملكي' },
+      { id: 'o-10', name: 'كنافة مانجا', price: '180 ج.م', numPrice: 180, category: 'كنافة', desc: 'كنافة مع طبقات الكريمة وقطع المانجو الطبيعية المنعشة', badge: 'منعش' },
+      { id: 'o-11', name: 'كيلو رواني', price: '140 ج.م', numPrice: 140, category: 'أصناف شرقية', desc: 'كيكة الرواني الذهبية الهشة المسقية بالشربات الخفيف', badge: '' },
+      { id: 'o-12', name: 'رموش الست', price: '170 ج.م', numPrice: 170, category: 'أصناف شرقية', desc: 'رموش الست الدايبة دوبان بالسمن البلدي المحمص', badge: 'دايبة' },
+      { id: 'o-13', name: 'شكلمة', price: '240 ج.م', numPrice: 240, category: 'أصناف شرقية', desc: 'شكلمة جوز هند طرية وذهبية بأعلى نسبة جوز هند', badge: 'طعم أصيل' },
+      { id: 'o-14', name: 'مدلعـة', price: '160 ج.م', numPrice: 160, category: 'أصناف شرقية', desc: 'طبقات بسبوسة وكنافة وقشطة وكراميل وشوكولاتة', badge: 'اختراع فيستيفال' },
+      { id: 'o-15', name: 'زنود سادة', price: '170 ج.م', numPrice: 170, category: 'أصناف شرقية', desc: 'أصابع زنود مقرمشة وخفيفة', badge: '' },
+      { id: 'o-16', name: 'جلاش مكسرات', price: '240 ج.م', numPrice: 240, category: 'بقلاوة', desc: 'رقائق جلاش مورقة مقرمشة بالسمن والمكسرات', badge: 'مورق' },
+      { id: 'o-17', name: 'بقلاوة بأنواعها', price: '290 ج.م', numPrice: 290, category: 'بقلاوة', desc: 'تشكيلة بقلاوة تركي ومصري بأنواعها وحشواتها الفاخرة', badge: 'ملوكي' },
+      { id: 'o-18', name: 'بلح الشام وصوابع زينب', price: '140 ج.م', numPrice: 140, category: 'أصناف شرقية', desc: 'بلح الشام المقرمش الذهبي وصوابع زينب اللذيذة', badge: 'مقرمش' },
+      { id: 'o-19', name: 'نابلسية بالجبنة', price: '220 ج.م', numPrice: 220, category: 'كنافة', desc: 'كنافة نابلسية بالجبنة العكاوي السايحة والمطاطية', badge: 'ساخنة' },
+      { id: 'o-20', name: 'هريسة محشية', price: '190 ج.م', numPrice: 190, category: 'بسبوسة', desc: 'هريسة إسكندراني محشية مكسرات بالسمن البلدي', badge: '' },
+      { id: 'o-21', name: 'كيلو كريمات', price: '120 ج.م', numPrice: 120, category: 'أصناف شرقية', desc: 'حلويات الكريمة الطازجة والغنية بالحليب', badge: 'اقتصادي' },
+      { id: 'o-22', name: 'لينزا', price: '150 ج.م', numPrice: 150, category: 'أصناف شرقية', desc: 'لينزا فاخرة بجوز الهند وحشوة القشطة والمربى', badge: '' },
+      { id: 'o-23', name: 'عزيزية', price: '120 ج.م', numPrice: 120, category: 'أصناف شرقية', desc: 'عزيزية مكرونة بالحليب والقشطة محمرة في الفرن', badge: '' },
+    ];
+
+    // 2. الحلويات الغربية والتورت (Western & Cakes)
+    // A. تورتات دائرية
+    const circularTortes = [
+      { id: 'tc-2', name: 'تورتة مدور مقاس 18', price: '170 - 190 ج.م', numPrice: 180, desc: 'مقاس مناسب لـ 4 إلى 6 أفراد بتشكيلة فواكه أو شوكولاتة' },
+      { id: 'tc-3', name: 'تورتة مدور مقاس 20', price: '220 - 250 ج.م', numPrice: 235, desc: 'مقاس مناسب لـ 6 إلى 8 أفراد نكهات متعددة' },
+      { id: 'tc-4', name: 'تورتة مدور مقاس 22', price: '290 ج.م', numPrice: 290, desc: 'مقاس عائلي لـ 8 إلى 10 أفراد تشكيلات ميكس' },
+      { id: 'tc-5', name: 'تورتة مدور مقاس 24', price: '370 ج.م', numPrice: 370, desc: 'مقاس كبير لـ 10 إلى 12 فرد فواكه وشوكولاتة ولوتس' },
+      { id: 'tc-6', name: 'تورتة مدور مقاس 26', price: '420 ج.م', numPrice: 420, desc: 'مقاس حفلات لـ 12 إلى 15 فرد تزيين ملكي' },
+      { id: 'tc-7', name: 'تورتة مدور مقاس 28', price: '450 ج.م', numPrice: 450, desc: 'المقاس الدائري الأكبر لـ 15 إلى 18 فرد' },
+    ];
+
+    // B. تورت المناسبات والأحجام الخاصة
+    const specialTortes = [
+      { id: 'ts-1', name: 'تورتة مقاس 30×20', price: 'من غير صورة 450 ج.م / بصورة 520 ج.م', numPrice: 450, desc: 'تورتة مستطيلة للحفلات الصغيرة، إمكانية إضافة صورة صالحة للأكل' },
+      { id: 'ts-2', name: 'تورتة مقاس 30×30', price: 'من غير صورة 550 ج.م / بصورة 620 ج.م', numPrice: 550, desc: 'تورتة مربعة فخمة لأعياد الميلاد والتخرج' },
+      { id: 'ts-3', name: 'تورتة مقاس 40×30', price: 'من غير صورة 850 ج.م / بصورة 920 ج.م', numPrice: 850, desc: 'حجم كبير مخصص للمناسبات والعزائم تكفي حتى 25 فرد' },
+      { id: 'ts-4', name: 'تورتة مقاس 40×40', price: 'من غير صورة 950 ج.م / بصورة 1050 ج.م', numPrice: 950, desc: 'تورتة مربعة ضخمة تكفي حتى 35 فرد تزيين خاص' },
+      { id: 'ts-5', name: 'تورتة مقاس 60×40', price: 'من غير صورة 1300 ج.م / بصورة 1400 ج.م', numPrice: 1300, desc: 'مقاس أفراح واحتفالات كبرى تكفي أكثر من 50 فرد' },
+      { id: 'ts-6', name: 'تورتة مقاس 60×60', price: 'من غير صورة 2200 ج.م / بصورة 2300 ج.م', numPrice: 2200, desc: 'أضخم تورتة مناسبات بالهرم تكفي حتى 80 فرد' },
+      { id: 'ts-7', name: 'تورتة قلب رومانسية', price: 'كبير 450 ج.م - وسط 390 ج.م - صغير 270 ج.م', numPrice: 390, desc: 'تورتة قلب للأعياد الرومانسية والمناسبات الخاصة' },
+      { id: 'ts-8', name: 'تورتة تفاحة مبهجة', price: 'كبير 450 ج.م - وسط 350 ج.م', numPrice: 350, desc: 'تصميم ثلاثي الأبعاد مجسم على شكل تفاحة شيك' },
+    ];
+
+    // C. قطع الجاتوه والدست
+    const gateauxItems = [
+      { id: 'g-1', name: 'قطعة جاتو لوكس', price: '15.00 ج.م', numPrice: 15, desc: 'قطعة جاتوه كلاسيك طازجة شوكولاتة أو فانيليا أو فراولة' },
+      { id: 'g-2', name: 'قطعة جاتو سوبر', price: '20.00 ج.م', numPrice: 20, desc: 'قطعة جاتوه سوبر فاخرة بطبقات موس غنية وصوصات خاصة' },
+      { id: 'g-3', name: 'قطعة ملفية', price: '25.00 ج.م', numPrice: 25, desc: 'رقائق ملفيه فرنسي مقرمش بحشوة الباستري كريم والسكر البودرة' },
+      { id: 'g-4', name: 'قطعة إكلير', price: '25.00 ج.م', numPrice: 25, desc: 'إكلير فرنسي طازج محشو كريمة غنية ومغطى بجناش شوكولاتة' },
+      { id: 'g-5', name: 'دستة جاتوه لوكس', price: '180.00 ج.م', numPrice: 180, desc: 'علبة دستة (12 قطعة) منوعة من تشكيلات الجاتوه اللوكس' },
+      { id: 'g-6', name: 'دستة جاتوه سوبر لوكس', price: '240.00 ج.م', numPrice: 240, desc: 'دستة فاخرة (12 قطعة) تشمل سوبر لوكس وإكلير وملفيه' },
+    ];
+
+    // ==========================================
+    // RENDER FUNCTIONS
+    // ==========================================
+    let currentOrientalFilter = 'all';
+    let searchQuery = '';
+
+    function renderOrientalMenu() {
+      const grid = document.getElementById('orientalGrid');
+      grid.innerHTML = '';
+
+      const filtered = orientalItems.filter(item => {
+        const matchesCategory = currentOrientalFilter === 'all' || item.category === currentOrientalFilter || (currentOrientalFilter === 'مشكل' && item.name.includes('مشكل')) || (currentOrientalFilter === 'بسبوسة' && item.name.includes('بسبوس')) || (currentOrientalFilter === 'كنافة' && item.name.includes('كناف')) || (currentOrientalFilter === 'بقلاوة' && (item.name.includes('بقلاو') || item.name.includes('جلاش')));
+        const matchesSearch = !searchQuery || item.name.includes(searchQuery) || item.desc.includes(searchQuery);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-12 text-gray-500">
+            <i class="fa-solid fa-cookie text-4xl text-gray-300 mb-2"></i>
+            <p class="font-bold">لم نجد أصنافاً مطابقة للبحث في الحلويات الشرقية</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-white rounded-2xl p-5 border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
+        card.innerHTML = `
+          <div>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-bold text-base sm:text-lg text-brand-chocolate group-hover:text-brand-gold transition-colors">${item.name}</h4>
+              ${item.badge ? `<span class="bg-brand-amberLight text-brand-amber text-[10px] font-black px-2 py-0.5 rounded-full whitespace-nowrap">${item.badge}</span>` : ''}
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">${item.desc}</p>
+          </div>
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+            <span class="font-black text-brand-berry text-base font-outfit">${item.price}</span>
+            <div class="flex items-center gap-1.5">
+              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center text-xs" title="أضف للسلة">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate hover:bg-brand-brown text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all" title="اطلب عبر واتساب">
+                <i class="fa-brands fa-whatsapp text-green-400"></i>
+                <span>اطلب</span>
+              </button>
+            </div>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function renderWesternMenu() {
+      // 1. Circular Tortes
+      const circGrid = document.getElementById('circularTortesGrid');
+      circGrid.innerHTML = '';
+      circularTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
+            <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+          </div>
+          <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+            <span class="text-xs font-black text-brand-berry font-outfit">${item.price}</span>
+            <div class="flex items-center gap-1">
+              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+            </div>
+          </div>
+        `;
+        circGrid.appendChild(card);
+      });
+
+      // 2. Special Tortes
+      const specGrid = document.getElementById('specialTortesGrid');
+      specGrid.innerHTML = '';
+      specialTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
+            <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+          </div>
+          <div class="pt-2 border-t border-brand-gold/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <span class="text-xs font-black text-brand-berry font-outfit leading-tight">${item.price}</span>
+            <div class="flex items-center gap-1 self-end sm:self-auto">
+              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+            </div>
+          </div>
+        `;
+        specGrid.appendChild(card);
+      });
+
+      // 3. Gateaux
+      const gatGrid = document.getElementById('gateauxGrid');
+      gatGrid.innerHTML = '';
+      gateauxItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+        const card = document.createElement('div');
+        card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+        card.innerHTML = `
+          <div>
+            <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
+            <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+          </div>
+          <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+            <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
+            <div class="flex items-center gap-1">
+              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+            </div>
+          </div>
+        `;
+        gatGrid.appendChild(card);
+      });
+    }
+
+    // ==========================================
+    // TABS & FILTERS HANDLERS
+    // ==========================================
+    function switchMenuTab(tab) {
+      const btnOri = document.getElementById('tabBtnOriental');
+      const btnWes = document.getElementById('tabBtnWestern');
+      const paneOri = document.getElementById('orientalMenuContent');
+      const paneWes = document.getElementById('westernMenuContent');
+
+      if (tab === 'oriental') {
+        btnOri.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
+        btnOri.classList.remove('bg-white', 'text-brand-chocolate');
+        btnWes.classList.remove('active', 'bg-brand-chocolate', 'text-brand-gold');
+        btnWes.classList.add('bg-white', 'text-brand-chocolate');
+        paneOri.classList.remove('hidden');
+        paneWes.classList.add('hidden');
+      } else {
+        btnWes.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
+        btnWes.classList.remove('bg-white', 'text-brand-chocolate');
+        btnOri.classList.remove('active', 'bg-brand-chocolate', 'text-brand-gold');
+        btnOri.classList.add('bg-white', 'text-brand-chocolate');
+        paneWes.classList.remove('hidden');
+        paneOri.classList.add('hidden');
+      }
+    }
+
+    function filterOrientalSubCategory(cat) {
+      currentOrientalFilter = cat;
+      document.querySelectorAll('.oriental-filter-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-chocolate', 'text-brand-gold');
+        btn.classList.add('bg-white', 'text-brand-chocolate');
+      });
+      event.target.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
+      event.target.classList.remove('bg-white', 'text-brand-chocolate');
+      renderOrientalMenu();
+    }
+
+    function filterMenuItems() {
+      const input = document.getElementById('menuSearchInput');
+      searchQuery = input.value.trim();
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (searchQuery) {
+        clearBtn.classList.remove('hidden');
+      } else {
+        clearBtn.classList.add('hidden');
+      }
+      renderOrientalMenu();
+      renderWesternMenu();
+    }
+
+    function clearSearch() {
+      const input = document.getElementById('menuSearchInput');
+      input.value = '';
+      searchQuery = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderOrientalMenu();
+      renderWesternMenu();
+    }
+
+    // ==========================================
+    // INTERACTIVE CART & WHATSAPP GENERATOR
+    // ==========================================
+    let cart = [];
+
+    function addToCart(id, name, priceStr, priceNum) {
+      const existing = cart.find(item => item.id === id);
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({ id, name, priceStr, priceNum, qty: 1 });
+      }
+      updateCartUI();
+      // Visual feedback
+      showToast(`تمت إضافة "${name}" إلى سلة الطلب!`);
+    }
+
+    function updateCartUI() {
+      const badge = document.getElementById('cartCountBadge');
+      const mobileBadge = document.getElementById('mobileCartCountBadge');
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      
+      if (totalCount > 0) {
+        if (badge) {
+          badge.textContent = totalCount;
+          badge.classList.remove('hidden');
+        }
+        if (mobileBadge) {
+          mobileBadge.textContent = totalCount;
+          mobileBadge.classList.remove('hidden');
+        }
+      } else {
+        if (badge) badge.classList.add('hidden');
+        if (mobileBadge) mobileBadge.classList.add('hidden');
+      }
+
+      const list = document.getElementById('cartItemsList');
+      const totalDisplay = document.getElementById('cartTotalPrice');
+
+      if (cart.length === 0) {
+        list.innerHTML = `
+          <div class="text-center py-16 text-gray-400 space-y-3">
+            <i class="fa-solid fa-basket-shopping text-5xl text-gray-300"></i>
+            <p class="font-bold text-gray-500">سلتك فارغة حالياً</p>
+            <p class="text-xs text-gray-400">تصفح المنيو واضغط "أضف للطلب" لاختيار حلوياتك المفضلة</p>
+          </div>
+        `;
+        totalDisplay.textContent = '0 ج.م';
+        return;
+      }
+
+      list.innerHTML = '';
+      let totalSum = 0;
+
+      cart.forEach((item, index) => {
+        const itemTotal = item.priceNum * item.qty;
+        totalSum += itemTotal;
+
+        const row = document.createElement('div');
+        row.className = "flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-200 gap-2";
+        row.innerHTML = `
+          <div class="flex-1">
+            <h5 class="text-xs font-bold text-brand-chocolate">${item.name}</h5>
+            <span class="text-[11px] text-gray-500 font-outfit">${item.priceStr}</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <button onclick="changeQty(${index}, -1)" class="w-6 h-6 rounded-md bg-white border border-gray-300 text-xs font-bold flex items-center justify-center hover:bg-gray-100">-</button>
+            <span class="text-xs font-black text-brand-chocolate w-4 text-center font-outfit">${item.qty}</span>
+            <button onclick="changeQty(${index}, 1)" class="w-6 h-6 rounded-md bg-white border border-gray-300 text-xs font-bold flex items-center justify-center hover:bg-gray-100">+</button>
+            <button onclick="removeItem(${index})" class="text-red-500 hover:text-red-700 text-xs p-1 mr-1" title="حذف"><i class="fa-solid fa-trash-can"></i></button>
+          </div>
+        `;
+        list.appendChild(row);
+      });
+
+      totalDisplay.textContent = `${totalSum} ج.م`;
+    }
+
+    function changeQty(index, delta) {
+      cart[index].qty += delta;
+      if (cart[index].qty <= 0) {
+        cart.splice(index, 1);
+      }
+      updateCartUI();
+    }
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function toggleCartModal(show) {
+      const modal = document.getElementById('cartModal');
+      if (show) {
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function sendCartOrderViaWhatsApp() {
+      if (cart.length === 0) {
+        alert('يرجى إضافة أصناف إلى السلة أولاً!');
+        return;
+      }
+      const branch = document.getElementById('orderBranchSelect').value;
+      const address = document.getElementById('customerAddressInput').value.trim();
+
+      let itemsText = cart.map(i => `• ${i.name} (عدد: ${i.qty}) - السعر: ${i.priceNum * i.qty} ج.م`).join('%0A');
+      let total = cart.reduce((sum, i) => sum + (i.priceNum * i.qty), 0);
+
+      let message = `مرحباً حلواني فيستيفال، أود تقديم طلب جديد:%0A%0A` +
+                    `*تفاصيل الطلب:*%0A${itemsText}%0A%0A` +
+                    `*الإجمالي التقريبي:* ${total} ج.م%0A` +
+                    `*الفرع المفضل:* ${branch}%0A`;
+
+      if (address) {
+        message += `*بيانات العميل / العنوان:* ${address}%0A`;
+      }
+      message += `%0Aيرجى تأكيد الطلب ووقت التوصيل. شكراً لكم!`;
+
+      window.open(`https://wa.me/201093916372?text=${message}`, '_blank');
+    }
+
+    function orderViaWhatsApp(itemName, itemPrice = '') {
+      let text = `مرحباً حلواني فيستيفال، أود الاستفسار والطلب لصنف: *${itemName}*`;
+      if (itemPrice) {
+        text += ` بسعر (${itemPrice})`;
+      }
+      text += `.%0Aيرجى إفادتي بالتوافر وخيارات التوصيل.`;
+      window.open(`https://wa.me/201093916372?text=${encodeURIComponent(text)}`, '_blank');
+    }
+
+    // ==========================================
+    // TOAST NOTIFICATION
+    // ==========================================
+    function showToast(msg) {
+      let toast = document.getElementById('toastNotice');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'toastNotice';
+        toast.className = 'fixed top-24 left-1/2 -translate-x-1/2 z-50 bg-brand-chocolate text-brand-gold border border-brand-gold px-5 py-2.5 rounded-2xl shadow-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all pointer-events-none';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `<i class="fa-solid fa-circle-check text-green-400"></i> <span>${msg}</span>`;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translate(-50%, 0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translate(-50%, -20px)';
+      }, 2400);
+    }
+
+    // ==========================================
+    // MOBILE MENU
+    // ==========================================
+    function toggleMobileMenu() {
+      const menu = document.getElementById('mobileMenu');
+      const icon = document.getElementById('menuIcon');
+      if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.className = 'fa-solid fa-xmark text-xl text-brand-berry';
+      } else {
+        menu.classList.add('hidden');
+        icon.className = 'fa-solid fa-bars text-xl';
+      }
+    }
+
+    // ==========================================
+    // HERO MEDIA CONTROLS
+    // ==========================================
+    function toggleHeroVideoAudio(e) {
+      if (e) e.stopPropagation();
+      const video = document.getElementById('heroPastryVideo');
+      const icon = document.getElementById('audioIcon');
+      if (video.muted) {
+        video.muted = false;
+        icon.className = 'fa-solid fa-volume-high text-sm text-brand-gold';
+      } else {
+        video.muted = true;
+        icon.className = 'fa-solid fa-volume-xmark text-sm';
+      }
+    }
+
+    function toggleHeroVideoPlay(e) {
+      if (e) e.stopPropagation();
+      const video = document.getElementById('heroPastryVideo');
+      const icon = document.getElementById('playIcon');
+      if (video.paused) {
+        video.play();
+        icon.className = 'fa-solid fa-pause text-sm';
+      } else {
+        video.pause();
+        icon.className = 'fa-solid fa-play text-sm text-brand-gold';
+      }
+    }
+
+    function switchHeroMedia(type) {
+      if (type === 'tortes') {
+        openImageModal('./assets/hero-tortes.jpg', 'تشكيلات التورت المتنوعة من حلواني فيستيفال');
+      } else if (type === 'platter') {
+        openImageModal('./assets/oriental-platter.jpg', 'صواني وأطباق شرقية مشكلة ومزينة بشكل حلزوني أنيق');
+      } else if (type === 'box') {
+        openImageModal('./assets/festival-box-ad.jpg', 'تشكيلة فاخرة من أجود الحلويات الشرقية فيستيفال');
+      }
+    }
+
+    // ==========================================
+    // LIGHTBOX MODAL
+    // ==========================================
+    function openImageModal(imgSrc, caption) {
+      const modal = document.getElementById('imageLightboxModal');
+      const img = document.getElementById('lightboxImg');
+      const cap = document.getElementById('lightboxCaption');
+      const btn = document.getElementById('lightboxOrderBtn');
+
+      img.src = imgSrc;
+      cap.textContent = caption;
+      btn.onclick = () => orderViaWhatsApp(caption);
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeImageModal() {
+      document.getElementById('imageLightboxModal').classList.add('hidden');
+    }
+
+    // ==========================================
+    // WELCOME INTRO SPLASH CONTROLLER
+    // ==========================================
+    let splashDismissTimer = null;
+
+    function playWelcomeChime() {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        const now = ctx.currentTime;
+        // Luxury golden chime chord frequencies (C5, E5, G5, C6)
+        const notes = [523.25, 659.25, 783.99, 1046.5];
+        notes.forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + idx * 0.12);
+          gain.gain.setValueAtTime(0.001, now + idx * 0.12);
+          gain.gain.exponentialRampToValueAtTime(0.12, now + idx * 0.12 + 0.04);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.12 + 1.2);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + idx * 0.12);
+          osc.stop(now + idx * 0.12 + 1.3);
+        });
+      } catch (e) {
+        // Audio policy or silent mode fallback
+      }
+    }
+
+    function initWelcomeSplash() {
+      const splash = document.getElementById('welcomeSplash');
+      const bar = document.getElementById('splashProgressBar');
+      const txt = document.getElementById('splashProgressText');
+      if (!splash || !bar) return;
+
+      // Reset state
+      splash.style.display = 'flex';
+      splash.classList.remove('opacity-0', 'pointer-events-none', 'scale-105');
+      bar.style.width = '0%';
+      if (txt) txt.textContent = 'جاري تجهيز أشهى الحلويات والتورت...';
+
+      // Progressive smooth animation
+      setTimeout(() => { if (bar) bar.style.width = '35%'; }, 150);
+      setTimeout(() => { if (bar) bar.style.width = '75%'; }, 800);
+      setTimeout(() => {
+        if (bar) bar.style.width = '100%';
+        if (txt) txt.textContent = 'أهلاً بكم في حلواني فيستيفال ✨';
+        playWelcomeChime();
+      }, 1500);
+
+      // Graceful auto-fadeout
+      if (splashDismissTimer) clearTimeout(splashDismissTimer);
+      splashDismissTimer = setTimeout(() => {
+        dismissWelcomeSplash();
+      }, 2600);
+    }
+
+    function dismissWelcomeSplash() {
+      const splash = document.getElementById('welcomeSplash');
+      if (!splash) return;
+      if (splashDismissTimer) clearTimeout(splashDismissTimer);
+      splash.classList.add('opacity-0', 'pointer-events-none', 'scale-105');
+      setTimeout(() => {
+        splash.style.display = 'none';
+      }, 700);
+    }
+
+    function replayWelcomeSplash() {
+      initWelcomeSplash();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ==========================================
+    // CINEMA VIDEO MODAL CONTROLS
+    // ==========================================
+    function openCinemaVideoModal(e) {
+      if (e) e.stopPropagation();
+      const modal = document.getElementById('cinemaVideoModal');
+      const cinemaPlayer = document.getElementById('cinemaVideoPlayer');
+      const heroVideo = document.getElementById('heroPastryVideo');
+      
+      if (heroVideo && !heroVideo.paused) heroVideo.pause();
+      if (modal) modal.classList.remove('hidden');
+      if (cinemaPlayer) {
+        cinemaPlayer.currentTime = 0;
+        cinemaPlayer.play().catch(() => {});
+      }
+    }
+
+    function closeCinemaVideoModal() {
+      const modal = document.getElementById('cinemaVideoModal');
+      const cinemaPlayer = document.getElementById('cinemaVideoPlayer');
+      const heroVideo = document.getElementById('heroPastryVideo');
+
+      if (cinemaPlayer) cinemaPlayer.pause();
+      if (modal) modal.classList.add('hidden');
+      if (heroVideo) heroVideo.play().catch(() => {});
+    }
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+      renderOrientalMenu();
+      renderWesternMenu();
+      initWelcomeSplash();
+    });
+  </script>
+</body>
+</html>
