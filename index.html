@@ -301,13 +301,13 @@
   <!-- ========================================== -->
   <!-- TOP ANNOUNCEMENT BAR (عروض وتوصيل فوري) -->
   <!-- ========================================== -->
-  <aside aria-label="شريط العروض اليومية" class="bg-gradient-to-r from-brand-chocolate via-brand-brown to-brand-chocolate text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-gold/30 relative z-40">
+  <aside id="topAnnouncementBar" aria-label="شريط العروض اليومية" class="bg-gradient-to-r from-brand-chocolate via-brand-brown to-brand-chocolate text-white text-xs sm:text-sm py-2 px-4 border-b border-brand-gold/30 relative z-40">
     <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2 text-center sm:text-right">
       <div class="flex items-center gap-2 mx-auto sm:mx-0">
-        <span class="inline-flex items-center justify-center bg-brand-berry text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full animate-pulse">
+        <span id="topAnnouncementBadge" class="inline-flex items-center justify-center bg-brand-berry text-white text-[11px] font-bold px-2.5 py-0.5 rounded-full animate-pulse">
           <i class="fa-solid fa-gift ml-1.5 text-[10px]"></i> عرض اليوم
         </span>
-        <span class="text-brand-amber font-semibold">أصل الحلو - كل يوم عرض جديد!</span>
+        <span id="topAnnouncementText" class="text-brand-amber font-semibold">أصل الحلو - كل يوم عرض جديد!</span>
         <span class="hidden md:inline text-white/80">| خصومات خاصة على التورت والدست والتشكيلات الشرقية</span>
         <!-- Replay Intro Splash Button -->
         <button onclick="replayWelcomeSplash()" class="hidden sm:inline-flex items-center gap-1 text-[11px] text-brand-gold hover:text-white mr-2 underline decoration-brand-gold/50" title="إعادة تشغيل شاشة الترحيب">
@@ -316,9 +316,9 @@
         </button>
       </div>
       <div class="flex items-center justify-center gap-4 text-xs font-medium text-white/90 mx-auto sm:mx-0">
-        <a href="tel:01093916372" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+        <a id="topBarPhoneLink" href="tel:01093916372" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
           <i class="fa-solid fa-motorcycle text-brand-gold"></i>
-          <span>توصيل الهرم وفيصل: <strong class="font-bold text-white tracking-wider" dir="ltr">01093916372</strong></span>
+          <span>توصيل الهرم وفيصل: <strong id="topBarPhoneText" class="font-bold text-white tracking-wider" dir="ltr">01093916372</strong></span>
         </a>
         <span class="text-brand-gold/40">|</span>
         <a href="https://www.facebook.com/share/19nLkgnVAB/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors flex items-center gap-1" title="صفحتنا على فيسبوك">
@@ -362,12 +362,12 @@
           </div>
           <div class="flex flex-col">
             <div class="flex items-center gap-1.5">
-              <span class="text-xl sm:text-2xl font-black text-brand-chocolate tracking-tight group-hover:text-brand-gold transition-colors">
+              <span id="navStoreName" class="text-xl sm:text-2xl font-black text-brand-chocolate tracking-tight group-hover:text-brand-gold transition-colors">
                 حلواني فيستيفال
               </span>
               <span class="inline-block w-2 h-2 rounded-full bg-brand-berry animate-pulse"></span>
             </div>
-            <span class="text-[11px] sm:text-xs font-semibold text-brand-gold font-outfit uppercase tracking-widest" dir="ltr">
+            <span id="navStoreTagline" class="text-[11px] sm:text-xs font-semibold text-brand-gold font-outfit uppercase tracking-widest" dir="ltr">
               Festival Pastry • أصل الحلو
             </span>
           </div>
@@ -381,9 +381,13 @@
           <a href="#gallery" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">بعض منتجاتنا</a>
           <a href="#branches" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">فروعنا</a>
           <a href="#contact" class="nav-link px-3.5 py-2 text-sm font-bold text-brand-chocolate hover:text-brand-gold transition-colors rounded-lg hover:bg-brand-amberLight/40">تواصل معنا</a>
+          <a href="./admin.html" class="nav-link px-3 py-2 text-xs font-bold text-brand-brown hover:text-brand-gold bg-brand-gold/10 hover:bg-brand-gold/25 rounded-lg border border-brand-gold/30 transition-all flex items-center gap-1.5" title="لوحة تحكم الإدارة">
+            <i class="fa-solid fa-user-shield text-brand-gold"></i>
+            <span>الإدارة</span>
+          </a>
         </nav>
 
-        <!-- Header Actions: Cart + WhatsApp Direct CTA -->
+        <!-- Header Actions: Cart + Admin + WhatsApp Direct CTA -->
         <div class="flex items-center gap-2 sm:gap-3">
           <!-- Cart Button -->
           <button id="openCartBtn" onclick="toggleCartModal(true)" class="relative p-2.5 rounded-full bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-amberLight hover:text-brand-gold transition-all duration-300 shadow-sm" title="سلة الطلبات">
@@ -391,8 +395,13 @@
             <span id="cartCountBadge" class="absolute -top-1 -right-1 bg-brand-berry text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white hidden">0</span>
           </button>
 
+          <!-- Admin Link Icon Button -->
+          <a href="./admin.html" class="p-2.5 rounded-full bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-all duration-300 shadow-sm hidden sm:flex items-center justify-center" title="لوحة تحكم الإدارة (Admin)">
+            <i class="fa-solid fa-user-shield text-base"></i>
+          </a>
+
           <!-- WhatsApp Click-to-chat Header Button -->
-          <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" 
+          <a id="headerWhatsAppBtn" href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%88%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1" 
              target="_blank" 
              rel="noopener noreferrer"
              class="btn-gold-shimmer text-brand-chocolate font-bold text-xs sm:text-sm px-4 sm:px-5 py-2.5 rounded-full flex items-center gap-2 border border-brand-gold/60 shadow-md hover:shadow-gold-glow transition-all">
@@ -427,8 +436,11 @@
         <a href="#branches" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold border-b border-gray-100">
           <i class="fa-solid fa-location-dot text-brand-gold w-5"></i> فروعنا بالهرم والتوصيل
         </a>
-        <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold">
+        <a href="#contact" onclick="toggleMobileMenu()" class="flex items-center gap-3 py-2 text-brand-chocolate font-bold text-base hover:text-brand-gold border-b border-gray-100">
           <i class="fa-solid fa-phone text-brand-gold w-5"></i> تواصل معنا
+        </a>
+        <a href="./admin.html" class="flex items-center gap-3 py-2 text-brand-gold font-bold text-base hover:text-brand-brown">
+          <i class="fa-solid fa-user-shield text-brand-gold w-5"></i> لوحة تحكم الإدارة (Admin)
         </a>
         <div class="pt-3 flex flex-col gap-2">
           <a href="tel:01093916372" class="w-full text-center bg-brand-chocolate text-white py-2.5 rounded-xl font-bold flex items-center justify-center gap-2">
@@ -1276,14 +1288,15 @@
         <div class="lg:col-span-5 space-y-4 text-center md:text-right">
           <div class="flex items-center justify-center md:justify-start gap-3">
             <div class="w-12 h-12 rounded-full border-2 border-brand-gold bg-brand-cream overflow-hidden flex items-center justify-center p-1">
-              <img src="./assets/festival-logo.jpg" 
+              <img id="footerLogoImg" 
+                   src="./assets/festival-logo.jpg" 
                    onerror="handleImageFallback(this, 'file:///C:/Users/dell/.gemini/antigravity/brain/6d040525-ce79-4c46-b9f7-adc0b348a60f/.user_uploaded/media_1791109995300.jpg', 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=160&auto=format&fit=crop&q=80')" 
                    alt="شعار فيستيفال" 
                    class="w-full h-full object-contain" />
             </div>
             <div>
-              <span class="text-2xl font-black text-white block">حلواني فيستيفال</span>
-              <span class="text-xs text-brand-gold font-outfit uppercase tracking-widest block" dir="ltr">Festival Pastry</span>
+              <span id="footerStoreName" class="text-2xl font-black text-white block">حلواني فيستيفال</span>
+              <span id="footerStoreNameEn" class="text-xs text-brand-gold font-outfit uppercase tracking-widest block" dir="ltr">Festival Pastry</span>
             </div>
           </div>
           <p class="text-sm text-gray-300 leading-relaxed max-w-sm mx-auto md:mx-0">
@@ -1294,10 +1307,10 @@
             <a href="https://www.facebook.com/share/19nLkgnVAB/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-blue-600 text-white flex items-center justify-center transition-all border border-white/20 hover:border-blue-600 shadow-sm" title="صفحة فيسبوك الرسمية">
               <i class="fa-brands fa-facebook-f text-lg"></i>
             </a>
-            <a href="https://wa.me/201093916372" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-green-600 text-white flex items-center justify-center transition-all border border-white/20 hover:border-green-600 shadow-sm" title="واتساب خدمة عملاء فيستيفال">
+            <a id="footerWhatsAppLink" href="https://wa.me/201093916372" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-white/10 hover:bg-green-600 text-white flex items-center justify-center transition-all border border-white/20 hover:border-green-600 shadow-sm" title="واتساب خدمة عملاء فيستيفال">
               <i class="fa-brands fa-whatsapp text-lg"></i>
             </a>
-            <a href="tel:01093916372" class="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-chocolate text-white flex items-center justify-center transition-all border border-white/20 shadow-sm" title="اتصال مباشر">
+            <a id="footerPhoneLink" href="tel:01093916372" class="w-10 h-10 rounded-full bg-white/10 hover:bg-brand-gold hover:text-brand-chocolate text-white flex items-center justify-center transition-all border border-white/20 shadow-sm" title="اتصال مباشر">
               <i class="fa-solid fa-phone text-base"></i>
             </a>
           </div>
@@ -1312,6 +1325,7 @@
             <li><a href="#menu" class="hover:text-brand-gold transition-colors">المنيو وقائمة الأسعار</a></li>
             <li><a href="#gallery" class="hover:text-brand-gold transition-colors">معرض بعض منتجاتنا</a></li>
             <li><a href="#branches" class="hover:text-brand-gold transition-colors">فروع الهرم والتوصيل</a></li>
+            <li><a href="./admin.html" class="text-brand-gold hover:underline transition-colors font-bold flex items-center justify-center md:justify-start gap-1.5"><i class="fa-solid fa-user-shield text-xs"></i><span>لوحة تحكم الإدارة (Admin)</span></a></li>
           </ul>
         </div>
 
@@ -1536,8 +1550,13 @@
   </div>
 
   <!-- ========================================== -->
-  <!-- JAVASCRIPT LOGIC & INTERACTIVITY -->
+  <!-- JAVASCRIPT LOGIC & SUPABASE DATA LAYER -->
   <!-- ========================================== -->
+  <!-- Supabase JS Library & Universal Data Layer -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./supabase-config.js"></script>
+  <script src="./supabase-client.js"></script>
+
   <script>
     // Set dynamic current year in footer
     document.getElementById('currentYear').textContent = new Date().getFullYear();
@@ -1557,11 +1576,11 @@
     }
 
     // ==========================================
-    // MENU DATA MODEL (EXACT SPECIFICATIONS)
+    // MENU DATA MODEL (EXACT SPECIFICATIONS & DYNAMIC SUPABASE SYNC)
     // ==========================================
     
     // 1. الحلويات الشرقية (Oriental Sweets - 23 items with Talabat & high-res images)
-    const orientalItems = [
+    let orientalItems = [
       { id: 'o-1', name: 'مشكل ساده', price: '140 ج.م', numPrice: 140, category: 'مشكل', desc: 'تشكيلة شرقية فاخرة ساده بالسمن البلدي الطبيعي', badge: 'كلاسيك', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857294/bfda4cc4-6315-4223-85d3-f8dcd74e747e.jpg' },
       { id: 'o-2', name: 'مشكل ساده ومكسرات', price: '170 ج.م', numPrice: 170, category: 'مشكل', desc: 'مزيج رائع من القطع السادة مع تشكيلة مكسرات فاخرة', badge: 'الأكثر مبيعاً', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857295/d30f4940-fbd3-4da2-bd66-1d2c2ed8a375.jpg' },
       { id: 'o-3', name: 'مشكل مكسرات', price: '220 ج.م', numPrice: 220, category: 'مشكل', desc: 'أفخر تشكيلة حلويات شرقية محشوة ومغطاة بالمكسرات الفاخرة', badge: 'سوبر مكسرات', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857296/385b94b7-c6bb-4a95-abbf-f6b216c1bfcf.jpg' },
@@ -1589,7 +1608,7 @@
 
     // 2. الحلويات الغربية والتورت والمخبوزات (Western & Cakes & Bakery)
     // A. تورتات دائرية وتورت الأشكال
-    const circularTortes = [
+    let circularTortes = [
       { id: 'tc-1', name: 'تورتة باندة', price: '170 ج.م', numPrice: 170, desc: 'تورتة باندا بشكل كرتوني محبب للأطفال بطعم كريمة وشوكولاتة لذيذة', badge: 'شكل كرتوني', image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=600&auto=format&fit=crop&q=80' },
       { id: 'tc-2', name: 'تورتة مدور مقاس 18', price: '190 ج.م', numPrice: 190, desc: 'مقاس مناسب لـ 4 إلى 6 أفراد بتشكيلة فواكه أو شوكولاتة غنية', image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&auto=format&fit=crop&q=80' },
       { id: 'tc-3', name: 'تورتة مدور مقاس 20', price: '250 ج.م', numPrice: 250, desc: 'مقاس مناسب لـ 6 إلى 8 أفراد نكهات متعددة فواكه ومكسرات', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop&q=80' },
@@ -1605,7 +1624,7 @@
     ];
 
     // B. تورت المناسبات والأحجام الكبيرة
-    const specialTortes = [
+    let specialTortes = [
       { id: 'ts-1', name: 'تورتة مقاس 20×30', price: 'من غير صورة: 450 ج.م / بصورة: 520 ج.م', numPrice: 450, desc: 'تورتة مستطيلة للحفلات، إمكانية إضافة صورة صالحة للأكل بدقة عالية', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065082571860855.jpeg' },
       { id: 'ts-2', name: 'تورتة مقاس 30×30', price: 'من غير صورة: 550 ج.م / بصورة: 620 ج.م', numPrice: 550, desc: 'تورتة مربعة فخمة لأعياد الميلاد والتخرج والتفوق', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065083501371194.jpeg' },
       { id: 'ts-3', name: 'تورتة مقاس 30×40', price: 'من غير صورة: 850 ج.م / بصورة: 920 ج.م', numPrice: 850, desc: 'حجم كبير مخصص للمناسبات والعزائم تكفي حتى 25 فرد', image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&auto=format&fit=crop&q=80' },
@@ -1615,7 +1634,7 @@
     ];
 
     // C. قطع الجاتوه والدست
-    const gateauxItems = [
+    let gateauxItems = [
       { id: 'g-1', name: 'قطعة جاتوه لوكس', price: '17 ج.م', numPrice: 17, desc: 'قطعة جاتوه كلاسيك طازجة شوكولاتة أو فانيليا أو فاكهة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/قطعة_جاتو_لوكس638928529013180264.jpg' },
       { id: 'g-2', name: 'قطعة جاتوه سوبر', price: '25 ج.م', numPrice: 25, desc: 'قطعة جاتوه سوبر فاخرة بطبقات موس غنية وصوصات خاصة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/قطعة_جاتو_سوبر638928528858278801.jpg' },
       { id: 'g-3', name: 'قطعة جاتوه أمواس', price: '30 ج.م', numPrice: 30, desc: 'موس فرنسي ناعم وغني بالشوكولاتة أو الفواكه الفاخرة', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop&q=80' },
@@ -1627,7 +1646,7 @@
     ];
 
     // D. المخبوزات ونواشف العيد والكحك
-    const bakeryItems = [
+    let bakeryItems = [
       { id: 'b-1', name: 'كيلو كحك سادة', price: '230 ج.م', numPrice: 230, desc: 'كحك دايب ومرمل بالسمن البلدي الطبيعي ورائحة الكحك الأصيلة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كعك_سادة638928528989674198.jpg' },
       { id: 'b-2', name: 'كيلو كحك سكر', price: '190 ج.م', numPrice: 190, desc: 'كحك ناعم ومغطى بالسكر البودرة الفاخر بالسمن البلدي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كعك_سادة638928528989674198.jpg' },
       { id: 'b-3', name: 'كيلو بسكوت', price: '190 ج.م', numPrice: 190, desc: 'بسكويت نشادر وماربل مقرمش وهش خفيف للشاي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/بسكويت_سادة638928528760236759.jpg' },
@@ -1637,7 +1656,7 @@
     ];
 
     // 3. المعلبات والحلويات الباردة (Canned & Chilled Sweets - 14 Items)
-    const cannedItems = [
+    let cannedItems = [
       { id: 'c-1', name: 'كب ريد فالفيت', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كب كيك ريد فالفيت فاخر بطبقات الكريمة المخفوقة الغنية', badge: 'كوب بارد', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كب_ريد_فليت638928528827773111.jpg' },
       { id: 'c-2', name: 'كب كنافة مانجا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'طبقات كنافة ذهبية مقرمشة مع قطع مانجو فريش وكريمة', badge: 'الأكثر طلباً', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857316/92ba10f3-5261-4ba3-95a8-657f35e1c550.jpg' },
       { id: 'c-3', name: 'كب كنافة نوتيلا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كنافة مقرمشة مغطاة بشوكولاتة نوتيلا أصلية وبندق', badge: 'عشاق النوتيلا', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/بولة_كنافة_نوتيلا638928528931265705.jpg' },
@@ -1655,11 +1674,33 @@
     ];
 
     // ==========================================
-    // RENDER FUNCTIONS
+    // RENDER FUNCTIONS & AVAILABILITY HELPERS
     // ==========================================
     let currentOrientalFilter = 'all';
     let currentCannedFilter = 'all';
     let searchQuery = '';
+
+    function getProductAvailabilityBadge(item) {
+      if (item.is_available === false) {
+        return `<span class="absolute top-2.5 left-2.5 bg-rose-600/95 text-white text-[10px] font-bold px-2 py-0.5 rounded-full shadow-md z-10"><i class="fa-solid fa-ban ml-1 text-[9px]"></i>غير متوفر</span>`;
+      }
+      return '';
+    }
+
+    function getProductCardActionButtons(item) {
+      if (item.is_available === false) {
+        return `<span class="text-[11px] font-bold text-gray-400 bg-gray-100 px-3 py-1.5 rounded-lg border border-gray-200">غير متوفر حالياً</span>`;
+      }
+      return `
+        <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center text-xs" title="أضف للسلة">
+          <i class="fa-solid fa-plus"></i>
+        </button>
+        <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate hover:bg-brand-brown text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all" title="اطلب عبر واتساب">
+          <i class="fa-brands fa-whatsapp text-green-400"></i>
+          <span>اطلب</span>
+        </button>
+      `;
+    }
 
     function renderOrientalMenu() {
       const grid = document.getElementById('orientalGrid');
@@ -1682,6 +1723,7 @@
       }
 
       filtered.forEach(item => {
+        const isAvail = item.is_available !== false;
         const card = document.createElement('div');
         card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
         card.innerHTML = `
@@ -1691,9 +1733,10 @@
                    loading="lazy" 
                    alt="${item.name}" 
                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80';"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer ${isAvail ? '' : 'opacity-65 grayscale-[25%]'}"
                    onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
               ${item.badge ? `<span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-black px-2.5 py-1 rounded-full shadow-md border border-brand-gold/30">${item.badge}</span>` : ''}
+              ${getProductAvailabilityBadge(item)}
               <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
                 <i class="fa-solid fa-expand text-[10px]"></i>
               </button>
@@ -1706,13 +1749,7 @@
           <div class="p-4 sm:p-5 pt-0 border-t border-gray-100 flex items-center justify-between gap-2 mt-auto">
             <span class="font-black text-brand-berry text-base sm:text-lg font-outfit">${item.price}</span>
             <div class="flex items-center gap-1.5">
-              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center text-xs" title="أضف للسلة">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate hover:bg-brand-brown text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all" title="اطلب عبر واتساب">
-                <i class="fa-brands fa-whatsapp text-green-400"></i>
-                <span>اطلب</span>
-              </button>
+              ${getProductCardActionButtons(item)}
             </div>
           </div>
         `;
@@ -1726,6 +1763,7 @@
       if (circGrid) {
         circGrid.innerHTML = '';
         circularTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const isAvail = item.is_available !== false;
           const card = document.createElement('div');
           card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
@@ -1735,9 +1773,10 @@
                      loading="lazy" 
                      alt="${item.name}" 
                      onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80';"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer ${isAvail ? '' : 'opacity-65 grayscale-[25%]'}"
                      onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
                 ${item.badge ? `<span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-bold px-2.5 py-1 rounded-full shadow border border-brand-gold/30">${item.badge}</span>` : ''}
+                ${getProductAvailabilityBadge(item)}
                 <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
                   <i class="fa-solid fa-expand text-[10px]"></i>
                 </button>
@@ -1750,8 +1789,7 @@
             <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex items-center justify-between gap-2 mt-auto">
               <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
               <div class="flex items-center gap-1.5">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+                ${getProductCardActionButtons(item)}
               </div>
             </div>
           `;
@@ -1764,6 +1802,7 @@
       if (specGrid) {
         specGrid.innerHTML = '';
         specialTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const isAvail = item.is_available !== false;
           const card = document.createElement('div');
           card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
@@ -1773,8 +1812,9 @@
                      loading="lazy" 
                      alt="${item.name}" 
                      onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&auto=format&fit=crop&q=80';"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer ${isAvail ? '' : 'opacity-65 grayscale-[25%]'}"
                      onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+                ${getProductAvailabilityBadge(item)}
                 <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
                   <i class="fa-solid fa-expand text-[10px]"></i>
                 </button>
@@ -1787,8 +1827,7 @@
             <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-auto">
               <span class="text-xs font-black text-brand-berry font-outfit leading-tight">${item.price}</span>
               <div class="flex items-center gap-1.5 self-end sm:self-auto">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+                ${getProductCardActionButtons(item)}
               </div>
             </div>
           `;
@@ -1801,6 +1840,7 @@
       if (gatGrid) {
         gatGrid.innerHTML = '';
         gateauxItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const isAvail = item.is_available !== false;
           const card = document.createElement('div');
           card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
@@ -1810,8 +1850,9 @@
                      loading="lazy" 
                      alt="${item.name}" 
                      onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop&q=80';"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer ${isAvail ? '' : 'opacity-65 grayscale-[25%]'}"
                      onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+                ${getProductAvailabilityBadge(item)}
                 <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
                   <i class="fa-solid fa-expand text-[10px]"></i>
                 </button>
@@ -1824,8 +1865,7 @@
             <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex items-center justify-between gap-2 mt-auto">
               <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
               <div class="flex items-center gap-1.5">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+                ${getProductCardActionButtons(item)}
               </div>
             </div>
           `;
@@ -1838,6 +1878,7 @@
       if (bakGrid) {
         bakGrid.innerHTML = '';
         bakeryItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const isAvail = item.is_available !== false;
           const card = document.createElement('div');
           card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
@@ -1847,9 +1888,10 @@
                      loading="lazy" 
                      alt="${item.name}" 
                      onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80';"
-                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer ${isAvail ? '' : 'opacity-65 grayscale-[25%]'}"
                      onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
                 <span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-bold px-2.5 py-1 rounded-full shadow border border-brand-gold/30">سمن بلدي</span>
+                ${getProductAvailabilityBadge(item)}
                 <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
                   <i class="fa-solid fa-expand text-[10px]"></i>
                 </button>
@@ -1862,8 +1904,7 @@
             <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex items-center justify-between gap-2 mt-auto">
               <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
               <div class="flex items-center gap-1.5">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+                ${getProductCardActionButtons(item)}
               </div>
             </div>
           `;
@@ -1895,6 +1936,7 @@
       }
 
       filtered.forEach(item => {
+        const isAvail = item.is_available !== false;
         const card = document.createElement('div');
         card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
         card.innerHTML = `
@@ -1904,9 +1946,10 @@
                    loading="lazy" 
                    alt="${item.name}" 
                    onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80';"
-                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer ${isAvail ? '' : 'opacity-65 grayscale-[25%]'}"
                    onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
               ${item.badge ? `<span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-black px-2.5 py-1 rounded-full shadow-md border border-brand-gold/30">${item.badge}</span>` : ''}
+              ${getProductAvailabilityBadge(item)}
               <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
                 <i class="fa-solid fa-expand text-[10px]"></i>
               </button>
@@ -1919,13 +1962,7 @@
           <div class="p-4 sm:p-5 pt-0 border-t border-gray-100 flex items-center justify-between gap-2 mt-auto">
             <span class="font-black text-brand-berry text-base sm:text-lg font-outfit">${item.price}</span>
             <div class="flex items-center gap-1.5">
-              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center text-xs" title="أضف للسلة">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate hover:bg-brand-brown text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all" title="اطلب عبر واتساب">
-                <i class="fa-brands fa-whatsapp text-green-400"></i>
-                <span>اطلب</span>
-              </button>
+              ${getProductCardActionButtons(item)}
             </div>
           </div>
         `;
@@ -2354,12 +2391,129 @@
       if (heroVideo) heroVideo.play().catch(() => {});
     }
 
+    // ==========================================
+    // SUPABASE DYNAMIC INTEGRATION & LIVE SYNC
+    // ==========================================
+    function applyStoreSettings(settings) {
+      if (!settings) return;
+      
+      // Update logo
+      if (settings.logo_url) {
+        const navLogo = document.getElementById('navLogoImg');
+        const footerLogo = document.getElementById('footerLogoImg');
+        if (navLogo) navLogo.src = settings.logo_url;
+        if (footerLogo) footerLogo.src = settings.logo_url;
+      }
+
+      // Update store name & tagline
+      if (settings.store_name) {
+        const navStoreName = document.getElementById('navStoreName');
+        const footerStoreName = document.getElementById('footerStoreName');
+        if (navStoreName) navStoreName.textContent = settings.store_name;
+        if (footerStoreName) footerStoreName.textContent = settings.store_name;
+        document.title = `${settings.store_name} | ${settings.slogan || 'أصل الحلو'}`;
+      }
+
+      if (settings.store_name_en) {
+        const navTagline = document.getElementById('navStoreTagline');
+        const footerEn = document.getElementById('footerStoreNameEn');
+        if (navTagline) navTagline.textContent = `${settings.store_name_en} • ${settings.slogan || 'أصل الحلو'}`;
+        if (footerEn) footerEn.textContent = settings.store_name_en;
+      }
+
+      // Update Announcement Bar
+      const annBar = document.getElementById('topAnnouncementBar');
+      const annBadge = document.getElementById('topAnnouncementBadge');
+      const annText = document.getElementById('topAnnouncementText');
+      if (annBar) {
+        if (settings.is_announcement_active === false) {
+          annBar.classList.add('hidden');
+        } else {
+          annBar.classList.remove('hidden');
+          if (annText && settings.announcement_text) annText.textContent = settings.announcement_text;
+          if (annBadge && settings.announcement_badge) annBadge.innerHTML = `<i class="fa-solid fa-gift ml-1.5 text-[10px]"></i> ${settings.announcement_badge}`;
+        }
+      }
+
+      // Update phone & WhatsApp numbers
+      if (settings.phone) {
+        const phoneLink = document.getElementById('topBarPhoneLink');
+        const phoneText = document.getElementById('topBarPhoneText');
+        const footerPhone = document.getElementById('footerPhoneLink');
+        if (phoneLink) phoneLink.href = 'tel:' + settings.phone;
+        if (phoneText) phoneText.textContent = settings.phone;
+        if (footerPhone) footerPhone.href = 'tel:' + settings.phone;
+      }
+
+      if (settings.whatsapp) {
+        const waClean = settings.whatsapp.replace(/[^0-9]/g, '');
+        const headerWa = document.getElementById('headerWhatsAppBtn');
+        const footerWa = document.getElementById('footerWhatsAppLink');
+        const waMsg = encodeURIComponent('مرحباً حلواني فيستيفال، أود الطلب والاستفسار');
+        if (headerWa) headerWa.href = `https://wa.me/${waClean}?text=${waMsg}`;
+        if (footerWa) footerWa.href = `https://wa.me/${waClean}`;
+      }
+    }
+
+    function populateProductsFromDatabase(prods) {
+      if (!Array.isArray(prods) || prods.length === 0) return;
+
+      const formatItem = (p) => ({
+        id: p.id,
+        name: p.name,
+        price: p.price,
+        numPrice: Number(p.num_price) || parseInt(String(p.price).replace(/[^0-9]/g, '')) || 0,
+        category: p.sub_category || '',
+        desc: p.description || '',
+        badge: p.badge || '',
+        image: p.image_url,
+        is_available: p.is_available !== false
+      });
+
+      const o = prods.filter(p => p.main_category === 'oriental').map(formatItem);
+      const ct = prods.filter(p => p.main_category === 'circular_tortes').map(formatItem);
+      const st = prods.filter(p => p.main_category === 'special_tortes').map(formatItem);
+      const g = prods.filter(p => p.main_category === 'gateaux').map(formatItem);
+      const b = prods.filter(p => p.main_category === 'bakery').map(formatItem);
+      const c = prods.filter(p => p.main_category === 'canned').map(formatItem);
+
+      if (o.length > 0) orientalItems = o;
+      if (ct.length > 0) circularTortes = ct;
+      if (st.length > 0) specialTortes = st;
+      if (g.length > 0) gateauxItems = g;
+      if (b.length > 0) bakeryItems = b;
+      if (c.length > 0) cannedItems = c;
+
+      // Re-render all menu categories with fresh Supabase data
+      renderOrientalMenu();
+      renderWesternMenu();
+      renderCannedMenu();
+    }
+
+    async function loadDynamicStoreData() {
+      if (!window.FestivalDB) return;
+      try {
+        // Fetch Settings
+        const settings = await window.FestivalDB.getStoreSettings();
+        if (settings) applyStoreSettings(settings);
+
+        // Fetch Products
+        const prods = await window.FestivalDB.getAllProducts();
+        if (prods && prods.length > 0) {
+          populateProductsFromDatabase(prods);
+        }
+      } catch (err) {
+        console.warn('[FestivalPastry] Dynamic data loading error:', err);
+      }
+    }
+
     // Initialize on load
     document.addEventListener('DOMContentLoaded', () => {
       renderOrientalMenu();
       renderWesternMenu();
       renderCannedMenu();
       initWelcomeSplash();
+      loadDynamicStoreData();
     });
   </script>
 </body>
