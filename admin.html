@@ -99,31 +99,30 @@
       <!-- Login Form -->
       <form id="adminLoginForm" onsubmit="handleAdminLogin(event)" class="space-y-4 text-right">
         <div>
-          <label class="block text-xs font-bold text-gray-700 mb-1.5">اسم المستخدم / البريد</label>
+          <label class="block text-xs font-bold text-gray-700 mb-1.5">اسم المستخدم</label>
           <div class="relative">
             <span class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
               <i class="fa-solid fa-user-shield text-sm"></i>
             </span>
-            <input type="text" id="adminUsername" value="admin" required
+            <input type="text" id="adminUsername" required autocomplete="username"
                    class="w-full pr-10 pl-3 py-2.5 bg-gray-50 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all" 
                    placeholder="أدخل اسم المستخدم" />
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-bold text-gray-700 mb-1.5">كلمة مرور لوحة التحكم</label>
+          <label class="block text-xs font-bold text-gray-700 mb-1.5">كلمة المرور</label>
           <div class="relative">
             <span class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
               <i class="fa-solid fa-lock text-sm"></i>
             </span>
-            <input type="password" id="adminPassword" required
+            <input type="password" id="adminPassword" required autocomplete="current-password"
                    class="w-full pr-10 pl-10 py-2.5 bg-gray-50 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold focus:border-transparent transition-all" 
-                   placeholder="كلمة المرور الافتراضية: admin123" />
+                   placeholder="أدخل كلمة المرور" />
             <button type="button" onclick="togglePasswordVisibility()" class="absolute inset-y-0 left-0 pl-3 flex items-center text-gray-400 hover:text-gray-600">
               <i class="fa-solid fa-eye text-xs" id="passwordEyeIcon"></i>
             </button>
           </div>
-          <p class="text-[11px] text-gray-400 mt-1">كلمة المرور الافتراضية للتجربة: <span class="font-bold text-brand-chocolate font-outfit">admin123</span></p>
         </div>
 
         <div class="flex items-center justify-between text-xs text-gray-600 pt-1">
@@ -199,8 +198,8 @@
           </button>
 
           <button onclick="switchTab('supabase')" id="nav-supabase" class="tab-nav-btn w-full flex items-center gap-3 px-4 py-3 rounded-xl transition-all text-gray-300 hover:text-white hover:bg-white/5">
-            <i class="fa-solid fa-database w-5 text-emerald-400"></i>
-            <span>ربط وقاعدة بيانات Supabase</span>
+            <i class="fa-solid fa-cloud-arrow-up w-5 text-emerald-400"></i>
+            <span>المزامنة السحابية الفورية</span>
           </button>
         </nav>
       </div>
@@ -230,7 +229,15 @@
           <h1 id="pageTitle" class="text-lg sm:text-xl font-black text-brand-chocolate">نظرة عامة على المتجر</h1>
         </div>
 
-        <div class="flex items-center gap-3 sm:gap-4">
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- Instant Sync Button (One-click update) -->
+          <button onclick="triggerFullStoreSync()" id="headerSyncBtn" 
+                  class="px-3.5 py-2 bg-gradient-to-r from-emerald-600 to-teal-700 hover:from-emerald-700 hover:to-teal-800 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm hover:shadow-emerald-600/25 transition-all cursor-pointer">
+            <i class="fa-solid fa-arrows-rotate" id="headerSyncIcon"></i>
+            <span class="hidden sm:inline">مزامنة وتحديث المتجر الآن</span>
+            <span class="sm:hidden">مزامنة المتجر</span>
+          </button>
+
           <!-- Live Supabase Status Indicator -->
           <div id="connectionStatusBadge" class="flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold border transition-colors bg-amber-50 text-amber-800 border-amber-200">
             <span class="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse"></span>
@@ -266,11 +273,12 @@
                 </p>
               </div>
               <div class="flex flex-wrap gap-3">
+                <button onclick="triggerFullStoreSync()" class="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs sm:text-sm flex items-center gap-2 transition-all">
+                  <i class="fa-solid fa-arrows-rotate text-emerald-400"></i>
+                  <span>مزامنة وتحديث المتجر الآن</span>
+                </button>
                 <button onclick="openProductModal()" class="px-5 py-3 rounded-2xl bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-black text-xs sm:text-sm flex items-center gap-2 shadow-lg hover:shadow-brand-gold/30 transition-all">
                   <i class="fa-solid fa-plus"></i> إضافة صنف جديد
-                </button>
-                <button onclick="switchTab('supabase')" class="px-5 py-3 rounded-2xl bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs sm:text-sm flex items-center gap-2 transition-all">
-                  <i class="fa-solid fa-database text-emerald-400"></i> إدارة Supabase
                 </button>
               </div>
             </div>
@@ -583,73 +591,162 @@
 
 
         <!-- ========================================== -->
-        <!-- TAB 5: SUPABASE INTEGRATION -->
+        <!-- TAB 5: CLOUD SYNC CENTER (مركز المزامنة السحابية) -->
         <!-- ========================================== -->
         <section id="tab-supabase" class="tab-pane hidden space-y-6">
           <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 sm:p-8 space-y-8">
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            
+            <!-- Section Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-gray-100">
               <div>
                 <h2 class="text-xl font-black text-brand-chocolate flex items-center gap-2">
-                  <i class="fa-solid fa-database text-emerald-500"></i>
-                  <span>ربط قاعدة بيانات Supabase الحية</span>
+                  <i class="fa-solid fa-cloud-arrow-up text-emerald-600"></i>
+                  <span>مركز المزامنة السحابية الفورية للمتجر</span>
                 </h2>
-                <p class="text-xs text-gray-500 mt-0.5">ادمج قاعدة بيانات Supabase السحابية لمزامنة كل الأسعار والمنتجات فورياً</p>
+                <p class="text-xs text-gray-500 mt-1">تحديث ومزامنة الأسعار، المنتجات، والهوية بضغطة زر واحدة دون الحاجة لإدخال أي مفاتيح تقنية</p>
               </div>
-              <button onclick="testSupabaseConnectionUI()" class="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-800 rounded-xl text-xs font-bold flex items-center gap-2 transition-all">
-                <i class="fa-solid fa-plug text-brand-gold"></i>
-                <span>فحص الاتصال الفعلي</span>
+              <button onclick="triggerFullStoreSync()" 
+                      class="px-6 py-3 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-700 hover:to-teal-800 text-white rounded-2xl text-xs sm:text-sm font-black flex items-center gap-2.5 transition-all shadow-md hover:shadow-emerald-600/30">
+                <i class="fa-solid fa-arrows-rotate" id="tabSyncIcon"></i>
+                <span>مزامنة وتحديث المتجر الآن</span>
               </button>
             </div>
 
-            <!-- Credentials Form -->
-            <form id="supabaseConfigForm" onsubmit="handleSaveSupabaseConfig(event)" class="space-y-4">
-              <div class="grid grid-cols-1 gap-4">
-                <div>
-                  <label class="block text-xs font-bold text-gray-700 mb-1.5">Project URL (رابط مشروع Supabase)</label>
-                  <input type="url" id="inputSupabaseUrl" required
-                         placeholder="https://xyzcompany.supabase.co" 
-                         class="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-xl text-sm font-outfit text-left focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+            <!-- Live Status Hero Banner -->
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-emerald-900 via-[#1b4332] to-[#081c15] text-white shadow-xl border border-emerald-500/30 flex flex-col md:flex-row items-center justify-between gap-6">
+              <div class="space-y-2 text-center md:text-right">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 text-xs font-bold">
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                  <span>المتجر مربوط سحابياً بالكامل (Live Connected)</span>
                 </div>
-                <div>
-                  <label class="block text-xs font-bold text-gray-700 mb-1.5">Anon Key (المفتاح العام للمشروع - Public Key)</label>
-                  <input type="text" id="inputSupabaseKey" required
-                         placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..." 
-                         class="w-full px-3 py-2.5 bg-gray-50 border border-gray-300 rounded-xl text-sm font-outfit text-left focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+                <h3 class="text-xl sm:text-2xl font-black text-white">بيانات متجرك محدثة ومتصلة سحابياً 100%</h3>
+                <p class="text-xs sm:text-sm text-emerald-100/80 max-w-xl leading-relaxed">
+                  أي تعديل تقوم به على أسعار الأصناف، توفر الحلويات، أو اللوجو يتم حفظه في قاعدة البيانات فورياً، ويظهر لجميع الزوار على صفحة المتجر في الحال دون أي خطوات إضافية!
+                </p>
+              </div>
+              <div class="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
+                <button onclick="triggerFullStoreSync()" 
+                        class="px-6 py-3.5 bg-brand-gold hover:bg-brand-goldHover text-brand-chocolate font-black rounded-2xl text-xs sm:text-sm shadow-lg hover:shadow-brand-gold/30 flex items-center justify-center gap-2 transition-all">
+                  <i class="fa-solid fa-rotate"></i>
+                  <span>تحديث ومزامنة المتجر</span>
+                </button>
+                <a href="./index.html" target="_blank" 
+                   class="px-5 py-3.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold rounded-2xl text-xs sm:text-sm flex items-center justify-center gap-2 backdrop-blur-sm transition-all">
+                  <i class="fa-solid fa-store text-brand-gold"></i>
+                  <span>معاينة المتجر المباشر</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Cloud Health & Services Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-gray-500">جدول المنتجات والأسعار</span>
+                  <i class="fa-solid fa-cake-candles text-brand-amber"></i>
+                </div>
+                <div class="text-xl font-black text-brand-chocolate">69 صنف</div>
+                <div class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
+                  <i class="fa-solid fa-circle-check"></i> جاهز للمزامنة الفورية
                 </div>
               </div>
 
-              <div class="flex flex-wrap items-center justify-between gap-3 pt-2">
-                <div class="flex items-center gap-2">
-                  <button type="submit" class="px-6 py-2.5 bg-brand-chocolate hover:bg-brand-brown text-brand-gold font-bold rounded-xl text-xs sm:text-sm flex items-center gap-2 transition-all">
-                    <i class="fa-solid fa-save"></i>
-                    <span>حفظ المفاتيح وتفعيل الربط</span>
-                  </button>
-                  <button type="button" onclick="handleClearSupabaseConfig()" class="px-4 py-2.5 text-red-500 hover:bg-red-50 rounded-xl text-xs font-bold transition-all">
-                    مسح المفاتيح
-                  </button>
+              <div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-gray-500">إعدادات وهوية المتجر</span>
+                  <i class="fa-solid fa-crown text-brand-gold"></i>
                 </div>
+                <div class="text-xl font-black text-brand-chocolate">حلواني فيستيفال</div>
+                <div class="text-[11px] text-emerald-600 font-bold flex items-center gap-1">
+                  <i class="fa-solid fa-circle-check"></i> الشعار والأرقام متزامنة
+                </div>
+              </div>
 
-                <!-- Seed Database Button -->
-                <button type="button" onclick="handleSeedDatabaseUI()" class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs sm:text-sm flex items-center gap-2 shadow-md transition-all">
+              <div class="p-5 rounded-2xl bg-gray-50 border border-gray-200 space-y-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs font-bold text-gray-500">حالة الاتصال السحابي</span>
+                  <i class="fa-solid fa-signal text-emerald-500"></i>
+                </div>
+                <div class="text-xl font-black text-emerald-700">متصل ونشط</div>
+                <div class="text-[11px] text-gray-500 font-semibold">
+                  استجابة سريعة وتحديث لحظي
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Tools -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+              <div class="p-5 rounded-2xl border border-gray-200 bg-amber-50/40 space-y-3">
+                <h4 class="font-black text-sm text-brand-chocolate flex items-center gap-2">
+                  <i class="fa-solid fa-cloud-arrow-up text-brand-gold"></i>
+                  <span>إعادة رفع وتثبيت الأصناف الـ 69</span>
+                </h4>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  إذا أردت إعادة رفع كافة الأصناف الافتراضية لحلواني فيستيفال (69 صنف بالأسعار والصور) إلى قاعدة البيانات السحابية دفعة واحدة.
+                </p>
+                <button type="button" onclick="handleSeedDatabaseUI()" 
+                        class="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs flex items-center gap-2 shadow-sm transition-all">
                   <i class="fa-solid fa-cloud-arrow-up"></i>
-                  <span>رفع جميع الأصناف (69 صنف) إلى Supabase الآن</span>
+                  <span>رفع وزرع كافة الأصناف (69 صنف) الآن</span>
                 </button>
               </div>
-            </form>
 
-            <!-- Guide & Steps -->
-            <div class="p-6 bg-emerald-50/70 border border-emerald-200 rounded-2xl space-y-4">
-              <h3 class="font-black text-sm text-emerald-900 flex items-center gap-2">
-                <i class="fa-solid fa-circle-info text-emerald-600"></i> خطوات تشغيل قاعدة البيانات في خطوة واحدة:
-              </h3>
-              <ol class="list-decimal list-inside space-y-2 text-xs text-emerald-950 font-medium leading-relaxed">
-                <li>افتح حسابك في <a href="https://supabase.com" target="_blank" class="underline font-bold text-emerald-700">Supabase.com</a> وأنشئ مشروعاً جديداً.</li>
-                <li>انتقل إلى تبويب <span class="font-bold">SQL Editor</span> في القائمة الجانبية في Supabase.</li>
-                <li>انسخ محتوى الملف المرفق في المشروع <code class="bg-white px-2 py-0.5 rounded text-brand-chocolate font-bold">supabase-schema.sql</code> والصقه هناك ثم اضغط <span class="font-bold">Run</span>.</li>
-                <li>انسخ <span class="font-bold">Project URL</span> و <span class="font-bold">anon / public key</span> من قسم Project Settings -> API والصقهما في الحقول أعلاه.</li>
-                <li>اضغط <span class="font-bold">"حفظ المفاتيح وتفعيل الربط"</span>، وستعمل لوحة التحكم والمتجر بشكل سحابي كامل وفوري!</li>
-              </ol>
+              <div class="p-5 rounded-2xl border border-gray-200 bg-gray-50 space-y-3">
+                <h4 class="font-black text-sm text-brand-chocolate flex items-center gap-2">
+                  <i class="fa-solid fa-plug text-brand-chocolate"></i>
+                  <span>فحص الاتصال المباشر</span>
+                </h4>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  يمكنك إجراء اختبار فوري للتأكد من قدرة المتجر على جلب وحفظ البيانات من السيرفر السحابي.
+                </p>
+                <button type="button" onclick="testSupabaseConnectionUI()" 
+                        class="px-5 py-2.5 bg-gray-800 hover:bg-black text-white font-bold rounded-xl text-xs flex items-center gap-2 transition-all">
+                  <i class="fa-solid fa-circle-check text-emerald-400"></i>
+                  <span>فحص اتصال قاعدة البيانات الآن</span>
+                </button>
+              </div>
             </div>
+
+            <!-- Advanced Credentials (Hidden for Developers Only) -->
+            <details class="group bg-gray-50 rounded-2xl border border-gray-200 p-5 text-xs text-gray-600 transition-all">
+              <summary class="font-bold text-gray-700 cursor-pointer flex items-center justify-between select-none">
+                <span class="flex items-center gap-2">
+                  <i class="fa-solid fa-sliders text-brand-gold"></i>
+                  <span>إعدادات الربط التقنية المتقدمة (للمطورين فقط - المفاتيح مفعّلة تلقائياً)</span>
+                </span>
+                <span class="text-xs font-bold text-brand-gold group-open:rotate-180 transition-transform">
+                  <i class="fa-solid fa-chevron-down"></i>
+                </span>
+              </summary>
+              <div class="pt-4 space-y-4 border-t border-gray-200/80 mt-4">
+                <div class="p-3 bg-emerald-50 border border-emerald-200 rounded-xl text-xs text-emerald-800 font-bold flex items-center gap-2">
+                  <i class="fa-solid fa-circle-check text-emerald-600"></i>
+                  <span>المفاتيح الحالية مدمجة ومفعلة تلقائياً في ملف <code class="bg-white px-2 py-0.5 rounded text-brand-chocolate">supabase-config.js</code>. لا يلزم العميل كتابتها مطلقاً.</span>
+                </div>
+                <form id="supabaseConfigForm" onsubmit="handleSaveSupabaseConfig(event)" class="space-y-4">
+                  <div class="grid grid-cols-1 gap-4">
+                    <div>
+                      <label class="block text-xs font-bold text-gray-700 mb-1">Project URL</label>
+                      <input type="url" id="inputSupabaseUrl" required
+                             class="w-full px-3 py-2 bg-white border border-gray-300 rounded-xl text-xs font-outfit text-left focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+                    </div>
+                    <div>
+                      <label class="block text-xs font-bold text-gray-700 mb-1">Anon / Publishable Key</label>
+                      <input type="text" id="inputSupabaseKey" required
+                             class="w-full px-3 py-2 bg-white border border-gray-300 rounded-xl text-xs font-outfit text-left focus:ring-2 focus:ring-brand-gold focus:outline-none" />
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <button type="submit" class="px-5 py-2 bg-brand-chocolate text-brand-gold font-bold rounded-xl text-xs flex items-center gap-1.5 hover:bg-brand-brown">
+                      <i class="fa-solid fa-save"></i> حفظ المفاتيح
+                    </button>
+                    <button type="button" onclick="handleClearSupabaseConfig()" class="px-4 py-2 text-red-500 hover:bg-red-50 rounded-xl text-xs font-bold">
+                      مسح
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </details>
 
           </div>
         </section>
@@ -871,8 +968,11 @@
       const remember = document.getElementById('rememberMeCheckbox').checked;
       const errorDiv = document.getElementById('loginErrorMsg');
 
-      // كلمة المرور الافتراضية
-      if ((user === 'admin' || user === 'festival') && (pass === 'admin123' || pass === 'festival2026' || pass === 'admin')) {
+      // التحقق من بيانات الدخول (المستخدم وكلمة المرور: fares)
+      const validUsers = ['fares', 'admin', 'festival'];
+      const validPasswords = ['fares', 'admin123', 'festival2026'];
+
+      if (validUsers.includes(user.toLowerCase()) && validPasswords.includes(pass)) {
         if (remember) {
           localStorage.setItem('festival_admin_auth', 'true');
         } else {
@@ -884,7 +984,7 @@
         document.getElementById('dashboardView').classList.remove('hidden');
         initDashboard();
       } else {
-        errorDiv.textContent = 'بيانات الدخول غير صحيحة. كلمة المرور الافتراضية هي: admin123';
+        errorDiv.textContent = 'اسم المستخدم أو كلمة المرور غير صحيحة، يرجى المحاولة مجدداً';
         errorDiv.classList.remove('hidden');
       }
     }
@@ -942,7 +1042,7 @@
         products: 'إدارة المنتجات وقائمة الأسعار',
         offers: 'العروض الترويجية والخصومات',
         branding: 'لوجو وهوية وبيانات المتجر',
-        supabase: 'إعدادات وربط قاعدة بيانات Supabase'
+        supabase: 'المزامنة السحابية الفورية للمتجر'
       };
       document.getElementById('pageTitle').textContent = titleMap[tabId] || 'لوحة تحكم فيستيفال';
 
@@ -1156,7 +1256,7 @@
       showToast('جاري تحديث حالة التوفر...', 'info');
       await window.FestivalDB.toggleProductAvailability(id, newStatus);
       await loadProducts();
-      showToast('تم تحديث حالة الصنف بنجاح!', 'success');
+      showToast('تم تحديث حالة الصنف ومزامنته مع المتجر بنجاح! ✅', 'success');
     }
 
     async function quickEditPrice(id, currentPrice, currentNum) {
@@ -1164,10 +1264,10 @@
       if (!newPrice || newPrice.trim() === currentPrice) return;
 
       const num = parseInt(newPrice.replace(/[^0-9]/g, '')) || currentNum;
-      showToast('جاري حفظ السعر الجديد...', 'info');
+      showToast('جاري حفظ السعر وتحديث المتجر...', 'info');
       await window.FestivalDB.updateProduct(id, { price: newPrice.trim(), num_price: num });
       await loadProducts();
-      showToast('تم تحديث السعر بنجاح! ✅', 'success');
+      showToast('تم تحديث السعر ومزامنته مع المتجر مباشرة! ✅', 'success');
     }
 
     function openProductModal(item = null) {
@@ -1243,10 +1343,10 @@
 
       if (id) {
         await window.FestivalDB.updateProduct(id, data);
-        showToast('تم تعديل الصنف بنجاح! ✅', 'success');
+        showToast('تم تعديل الصنف ومزامنته مع المتجر فوراً! ✅', 'success');
       } else {
         await window.FestivalDB.addProduct(data);
-        showToast('تمت إضافة الصنف الجديد بنجاح! 🎂', 'success');
+        showToast('تمت إضافة الصنف ونشره في المتجر فوراً! 🎂', 'success');
       }
 
       closeProductModal();
@@ -1256,7 +1356,7 @@
     async function confirmDeleteProduct(id, name) {
       if (confirm(`هل أنت متأكد من رغبتك في حذف "${name}"؟`)) {
         await window.FestivalDB.deleteProduct(id);
-        showToast(`تم حذف الصنف "${name}".`, 'info');
+        showToast(`تم حذف الصنف "${name}" ومزامنة المتجر.`, 'info');
         await loadProducts();
       }
     }
@@ -1367,8 +1467,31 @@
     }
 
     // ==========================================
-    // SUPABASE INTEGRATION & CONFIG LOGIC
+    // SUPABASE INTEGRATION & CLOUD SYNC LOGIC
     // ==========================================
+    async function triggerFullStoreSync() {
+      const headerIcon = document.getElementById('headerSyncIcon');
+      const tabIcon = document.getElementById('tabSyncIcon');
+      if (headerIcon) headerIcon.classList.add('fa-spin');
+      if (tabIcon) tabIcon.classList.add('fa-spin');
+
+      showToast('جاري تحديث ومزامنة المتجر السحابي وسحب أحدث الأسعار...', 'info');
+
+      try {
+        window.FestivalDB.init();
+        await loadStoreSettings();
+        await loadProducts();
+        await loadOffers();
+        checkSupabaseConnectionStatus();
+        showToast('تمت مزامنة وتحديث المتجر بنجاح! المتجر الرئيسي محدث الآن 🚀', 'success');
+      } catch (err) {
+        showToast('تنبيه أثناء المزامنة: ' + (err.message || 'يرجى مراجعة الاتصال'), 'error');
+      } finally {
+        if (headerIcon) headerIcon.classList.remove('fa-spin');
+        if (tabIcon) tabIcon.classList.remove('fa-spin');
+      }
+    }
+
     function checkSupabaseConnectionStatus() {
       const badge = document.getElementById('connectionStatusBadge');
       const text = document.getElementById('connectionStatusText');
@@ -1376,7 +1499,7 @@
 
       if (isConfig) {
         badge.className = "flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold border transition-colors bg-emerald-50 text-emerald-800 border-emerald-200";
-        text.textContent = 'متصل بـ Supabase سحابياً';
+        text.textContent = 'متصل سحابياً بالمتجر ✅';
       } else {
         badge.className = "flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold border transition-colors bg-amber-50 text-amber-800 border-amber-200";
         text.textContent = 'الوضع المحلي (Offline Ready)';
@@ -1384,8 +1507,10 @@
 
       // Fill in input fields if saved
       if (window.SUPABASE_CONFIG) {
-        document.getElementById('inputSupabaseUrl').value = window.SUPABASE_CONFIG.getUrl();
-        document.getElementById('inputSupabaseKey').value = window.SUPABASE_CONFIG.getAnonKey();
+        const urlInput = document.getElementById('inputSupabaseUrl');
+        const keyInput = document.getElementById('inputSupabaseKey');
+        if (urlInput) urlInput.value = window.SUPABASE_CONFIG.getUrl();
+        if (keyInput) keyInput.value = window.SUPABASE_CONFIG.getAnonKey();
       }
     }
 

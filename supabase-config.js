@@ -1,22 +1,20 @@
 /**
  * Supabase Configuration for Festival Pastry (حلواني فيستيفال)
- * 
- * يمكنك ضبط مفاتيح Supabase هنا مباشرة، أو إدخالها من واجهة لوحة التحكم (admin.html)
- * وسيتم حفظها تلقائياً واستخدامها في الموقع والمتجر.
+ * يتم الربط والمزامنة السحابية تلقائياً دون حاجة لإدخال أي مفاتيح من المستخدم.
  */
 
-const DEFAULT_SUPABASE_URL = '';
-const DEFAULT_SUPABASE_ANON_KEY = '';
+const DEFAULT_SUPABASE_URL = 'https://dcgwvgliyeogepcqcoqf.supabase.co';
+const DEFAULT_SUPABASE_ANON_KEY = 'sb_publishable_bhyEopLcAmAxa1FvI2ZYSw_nAJhwrD0';
 
 const SUPABASE_CONFIG = {
-  // استرجاع الرابط من التخزين المحلي أو القيمة الافتراضية
+  // استرجاع الرابط المعتمد للمشروع
   getUrl: function() {
-    return localStorage.getItem('festival_supabase_url') || DEFAULT_SUPABASE_URL || '';
+    return DEFAULT_SUPABASE_URL || localStorage.getItem('festival_supabase_url') || '';
   },
 
-  // استرجاع المفتاح العام من التخزين المحلي أو القيمة الافتراضية
+  // استرجاع المفتاح المعتمد للمشروع
   getAnonKey: function() {
-    return localStorage.getItem('festival_supabase_anon_key') || DEFAULT_SUPABASE_ANON_KEY || '';
+    return DEFAULT_SUPABASE_ANON_KEY || localStorage.getItem('festival_supabase_anon_key') || '';
   },
 
   // فحص ما إذا كان الربط مهيئاً
@@ -26,7 +24,7 @@ const SUPABASE_CONFIG = {
     return Boolean(url && key && url.startsWith('http') && key.length > 20);
   },
 
-  // حفظ الإعدادات
+  // حفظ الإعدادات يدوياً إذا لزم مستقبلاً
   saveCredentials: function(url, anonKey) {
     if (url) localStorage.setItem('festival_supabase_url', url.trim());
     if (anonKey) localStorage.setItem('festival_supabase_anon_key', anonKey.trim());
