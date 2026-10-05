@@ -1560,98 +1560,98 @@
     // MENU DATA MODEL (EXACT SPECIFICATIONS)
     // ==========================================
     
-    // 1. الحلويات الشرقية (Oriental Sweets - 23 items exactly as requested)
+    // 1. الحلويات الشرقية (Oriental Sweets - 23 items with Talabat & high-res images)
     const orientalItems = [
-      { id: 'o-1', name: 'مشكل ساده', price: '140 ج.م', numPrice: 140, category: 'مشكل', desc: 'تشكيلة شرقية فاخرة ساده بالسمن البلدي الطبيعي', badge: 'كلاسيك' },
-      { id: 'o-2', name: 'مشكل ساده ومكسرات', price: '170 ج.م', numPrice: 170, category: 'مشكل', desc: 'مزيج رائع من القطع السادة مع تشكيلة مكسرات فاخرة', badge: 'الأكثر مبيعاً' },
-      { id: 'o-3', name: 'مشكل مكسرات', price: '220 ج.م', numPrice: 220, category: 'مشكل', desc: 'أفخر تشكيلة حلويات شرقية محشوة ومغطاة بالمكسرات الفاخرة', badge: 'سوبر مكسرات' },
-      { id: 'o-4', name: 'بسبوسه سادة', price: '140 ج.م', numPrice: 140, category: 'بسبوسة', desc: 'بسبوسة دايبة ومرملة بالسمن البلدي والشربات المظبوط', badge: 'طازج' },
-      { id: 'o-5', name: 'بسبوسة بندق', price: '200 ج.م', numPrice: 200, category: 'بسبوسة', desc: 'بسبوسة مرملة غنية بحبات البندق المحمص الفاخر', badge: 'مميز' },
-      { id: 'o-6', name: 'بسبوسة نوتيلا', price: '180 ج.م', numPrice: 180, category: 'بسبوسة', desc: 'بسبوسة فيستيفال مع شلال نوتيلا أصلي غني', badge: 'عشاق الشوكولاتة' },
-      { id: 'o-7', name: 'كنافة سادة', price: '150 ج.م', numPrice: 150, category: 'كنافة', desc: 'كنافة ذهبية مقرمشة بالسمن البلدي الفاخر', badge: '' },
-      { id: 'o-8', name: 'كنافة كريمة', price: '130 ج.م', numPrice: 130, category: 'كنافة', desc: 'كنافة طرية بحشوة القشطة والكريمة الغنية', badge: 'خفيفة ولذيذة' },
-      { id: 'o-9', name: 'كنافة مكسرات', price: '220 ج.م', numPrice: 220, category: 'كنافة', desc: 'كنافة مقرمشة محشوة بأجود أنواع المكسرات المحمصة', badge: 'ملكي' },
-      { id: 'o-10', name: 'كنافة مانجا', price: '180 ج.م', numPrice: 180, category: 'كنافة', desc: 'كنافة مع طبقات الكريمة وقطع المانجو الطبيعية المنعشة', badge: 'منعش' },
-      { id: 'o-11', name: 'كيلو رواني', price: '140 ج.م', numPrice: 140, category: 'أصناف شرقية', desc: 'كيكة الرواني الذهبية الهشة المسقية بالشربات الخفيف', badge: '' },
-      { id: 'o-12', name: 'رموش الست', price: '170 ج.م', numPrice: 170, category: 'أصناف شرقية', desc: 'رموش الست الدايبة دوبان بالسمن البلدي المحمص', badge: 'دايبة' },
-      { id: 'o-13', name: 'شكلمة', price: '240 ج.م', numPrice: 240, category: 'أصناف شرقية', desc: 'شكلمة جوز هند طرية وذهبية بأعلى نسبة جوز هند', badge: 'طعم أصيل' },
-      { id: 'o-14', name: 'مدلعـة', price: '160 ج.م', numPrice: 160, category: 'أصناف شرقية', desc: 'طبقات بسبوسة وكنافة وقشطة وكراميل وشوكولاتة', badge: 'اختراع فيستيفال' },
-      { id: 'o-15', name: 'زنود سادة', price: '170 ج.م', numPrice: 170, category: 'أصناف شرقية', desc: 'أصابع زنود مقرمشة وخفيفة', badge: '' },
-      { id: 'o-16', name: 'جلاش مكسرات', price: '240 ج.م', numPrice: 240, category: 'بقلاوة', desc: 'رقائق جلاش مورقة مقرمشة بالسمن والمكسرات', badge: 'مورق' },
-      { id: 'o-17', name: 'بقلاوة بأنواعها', price: '290 ج.م', numPrice: 290, category: 'بقلاوة', desc: 'تشكيلة بقلاوة تركي ومصري بأنواعها وحشواتها الفاخرة', badge: 'ملوكي' },
-      { id: 'o-18', name: 'بلح الشام وصوابع زينب', price: '140 ج.م', numPrice: 140, category: 'أصناف شرقية', desc: 'بلح الشام المقرمش الذهبي وصوابع زينب اللذيذة', badge: 'مقرمش' },
-      { id: 'o-19', name: 'نابلسية بالجبنة', price: '220 ج.م', numPrice: 220, category: 'كنافة', desc: 'كنافة نابلسية بالجبنة العكاوي السايحة والمطاطية', badge: 'ساخنة' },
-      { id: 'o-20', name: 'هريسة محشية', price: '190 ج.م', numPrice: 190, category: 'بسبوسة', desc: 'هريسة إسكندراني محشية مكسرات بالسمن البلدي', badge: '' },
-      { id: 'o-21', name: 'كيلو كريمات', price: '120 ج.م', numPrice: 120, category: 'أصناف شرقية', desc: 'حلويات الكريمة الطازجة والغنية بالحليب', badge: 'اقتصادي' },
-      { id: 'o-22', name: 'لينزا', price: '150 ج.م', numPrice: 150, category: 'أصناف شرقية', desc: 'لينزا فاخرة بجوز الهند وحشوة القشطة والمربى', badge: '' },
-      { id: 'o-23', name: 'عزيزية', price: '120 ج.م', numPrice: 120, category: 'أصناف شرقية', desc: 'عزيزية مكرونة بالحليب والقشطة محمرة في الفرن', badge: '' },
+      { id: 'o-1', name: 'مشكل ساده', price: '140 ج.م', numPrice: 140, category: 'مشكل', desc: 'تشكيلة شرقية فاخرة ساده بالسمن البلدي الطبيعي', badge: 'كلاسيك', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857294/bfda4cc4-6315-4223-85d3-f8dcd74e747e.jpg' },
+      { id: 'o-2', name: 'مشكل ساده ومكسرات', price: '170 ج.م', numPrice: 170, category: 'مشكل', desc: 'مزيج رائع من القطع السادة مع تشكيلة مكسرات فاخرة', badge: 'الأكثر مبيعاً', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857295/d30f4940-fbd3-4da2-bd66-1d2c2ed8a375.jpg' },
+      { id: 'o-3', name: 'مشكل مكسرات', price: '220 ج.م', numPrice: 220, category: 'مشكل', desc: 'أفخر تشكيلة حلويات شرقية محشوة ومغطاة بالمكسرات الفاخرة', badge: 'سوبر مكسرات', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857296/385b94b7-c6bb-4a95-abbf-f6b216c1bfcf.jpg' },
+      { id: 'o-4', name: 'بسبوسه سادة', price: '140 ج.م', numPrice: 140, category: 'بسبوسة', desc: 'بسبوسة دايبة ومرملة بالسمن البلدي والشربات المظبوط', badge: 'طازج', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857297/6fa19756-3ca2-4c8f-94f4-ecb68d1e9657.jpg' },
+      { id: 'o-5', name: 'بسبوسة بندق', price: '200 ج.م', numPrice: 200, category: 'بسبوسة', desc: 'بسبوسة مرملة غنية بحبات البندق المحمص الفاخر', badge: 'مميز', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857299/abcdf322-1073-4fa6-95d2-6993d9681bda.jpg' },
+      { id: 'o-6', name: 'بسبوسة نوتيلا', price: '180 ج.م', numPrice: 180, category: 'بسبوسة', desc: 'بسبوسة فيستيفال مع شلال نوتيلا أصلي غني', badge: 'عشاق الشوكولاتة', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857301/4cf881b6-c40a-4f50-be19-d3ffadec4d91.jpg' },
+      { id: 'o-7', name: 'كنافة سادة', price: '150 ج.م', numPrice: 150, category: 'كنافة', desc: 'كنافة ذهبية مقرمشة بالسمن البلدي الفاخر', badge: '', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كنافة_سادة638928528828605796.jpg' },
+      { id: 'o-8', name: 'كنافة كريمة', price: '130 ج.م', numPrice: 130, category: 'كنافة', desc: 'كنافة طرية بحشوة القشطة والكريمة الغنية', badge: 'خفيفة ولذيذة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كنافة_كريمة638928529001364276.jpg' },
+      { id: 'o-9', name: 'كنافة مكسرات', price: '220 ج.م', numPrice: 220, category: 'كنافة', desc: 'كنافة مقرمشة محشوة بأجود أنواع المكسرات المحمصة', badge: 'ملكي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كنافة_مكسرات638928528914453218.jpg' },
+      { id: 'o-10', name: 'كنافة مانجا', price: '180 ج.م', numPrice: 180, category: 'كنافة', desc: 'كنافة مع طبقات الكريمة وقطع المانجو الطبيعية المنعشة', badge: 'منعش', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857316/92ba10f3-5261-4ba3-95a8-657f35e1c550.jpg' },
+      { id: 'o-11', name: 'كيلو رواني', price: '140 ج.م', numPrice: 140, category: 'أصناف شرقية', desc: 'كيكة الرواني الذهبية الهشة المسقية بالشربات الخفيف', badge: '', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/رواني638928528922964267.jpg' },
+      { id: 'o-12', name: 'رموش الست', price: '170 ج.م', numPrice: 170, category: 'أصناف شرقية', desc: 'رموش الست الدايبة دوبان بالسمن البلدي المحمص', badge: 'دايبة', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857328/61a80958-9dbd-4b63-87b3-cb230dc31762.jpg' },
+      { id: 'o-13', name: 'شكلمة', price: '240 ج.م', numPrice: 240, category: 'أصناف شرقية', desc: 'شكلمة جوز هند طرية وذهبية بأعلى نسبة جوز هند', badge: 'طعم أصيل', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/شكلمة638928528999326733.jpg' },
+      { id: 'o-14', name: 'مدلعـة', price: '160 ج.م', numPrice: 160, category: 'أصناف شرقية', desc: 'طبقات بسبوسة وكنافة وقشطة وكراميل وشوكولاتة', badge: 'اختراع فيستيفال', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/مدلعة638928528936986711.jpg' },
+      { id: 'o-15', name: 'زنود سادة', price: '170 ج.م', numPrice: 170, category: 'أصناف شرقية', desc: 'أصابع زنود مقرمشة وخفيفة', badge: '', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/زنود_سادة638928528973013684.jpg' },
+      { id: 'o-16', name: 'جلاش مكسرات', price: '240 ج.م', numPrice: 240, category: 'بقلاوة', desc: 'رقائق جلاش مورقة مقرمشة بالسمن والمكسرات', badge: 'مورق', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857334/3cb7af44-3910-4c3b-adac-e289808aca01.jpg' },
+      { id: 'o-17', name: 'بقلاوة بأنواعها', price: '290 ج.م', numPrice: 290, category: 'بقلاوة', desc: 'تشكيلة بقلاوة تركي ومصري بأنواعها وحشواتها الفاخرة', badge: 'ملوكي', image: 'https://images.unsplash.com/photo-1519869325930-281384150729?w=600&auto=format&fit=crop&q=80' },
+      { id: 'o-18', name: 'بلح الشام وصوابع زينب', price: '140 ج.م', numPrice: 140, category: 'أصناف شرقية', desc: 'بلح الشام المقرمش الذهبي وصوابع زينب اللذيذة', badge: 'مقرمش', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857337/ae0e056f-f33c-455d-bcc9-9882ba3cf068.jpg' },
+      { id: 'o-19', name: 'نابلسية بالجبنة', price: '220 ج.م', numPrice: 220, category: 'كنافة', desc: 'كنافة نابلسية بالجبنة العكاوي السايحة والمطاطية', badge: 'ساخنة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/نابلسية_بالجبنة638928528960660984.jpg' },
+      { id: 'o-20', name: 'هريسة محشية', price: '190 ج.م', numPrice: 190, category: 'بسبوسة', desc: 'هريسة إسكندراني محشية مكسرات بالسمن البلدي', badge: '', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857299/abcdf322-1073-4fa6-95d2-6993d9681bda.jpg' },
+      { id: 'o-21', name: 'كيلو كريمات', price: '120 ج.م', numPrice: 120, category: 'أصناف شرقية', desc: 'حلويات الكريمة الطازجة والغنية بالحليب', badge: 'اقتصادي', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857341/0af6c3c0-621d-436c-9833-9012c3b913c2.jpg' },
+      { id: 'o-22', name: 'لينزا', price: '150 ج.م', numPrice: 150, category: 'أصناف شرقية', desc: 'لينزا فاخرة بجوز الهند وحشوة القشطة والمربى', badge: '', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80' },
+      { id: 'o-23', name: 'عزيزية', price: '120 ج.م', numPrice: 120, category: 'أصناف شرقية', desc: 'عزيزية مكرونة بالحليب والقشطة محمرة في الفرن', badge: '', image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=600&auto=format&fit=crop&q=80' },
     ];
 
     // 2. الحلويات الغربية والتورت والمخبوزات (Western & Cakes & Bakery)
     // A. تورتات دائرية وتورت الأشكال
     const circularTortes = [
-      { id: 'tc-1', name: 'تورتة باندة', price: '170 ج.م', numPrice: 170, desc: 'تورتة باندا بشكل كرتوني محبب للأطفال بطعم كريمة وشوكولاتة لذيذة', badge: 'شكل كرتوني' },
-      { id: 'tc-2', name: 'تورتة مدور مقاس 18', price: '190 ج.م', numPrice: 190, desc: 'مقاس مناسب لـ 4 إلى 6 أفراد بتشكيلة فواكه أو شوكولاتة غنية' },
-      { id: 'tc-3', name: 'تورتة مدور مقاس 20', price: '250 ج.م', numPrice: 250, desc: 'مقاس مناسب لـ 6 إلى 8 أفراد نكهات متعددة فواكه ومكسرات' },
-      { id: 'tc-4', name: 'تورتة مدور مقاس 22', price: '290 ج.م', numPrice: 290, desc: 'مقاس عائلي لـ 8 إلى 10 أفراد تشكيلات ميكس شوكولاتة وكريمة' },
-      { id: 'tc-5', name: 'تورتة مدور مقاس 24', price: '370 ج.م', numPrice: 370, desc: 'مقاس كبير لـ 10 إلى 12 فرد فواكه وشوكولاتة ولوتس' },
-      { id: 'tc-6', name: 'تورتة مدور مقاس 26', price: '420 ج.م', numPrice: 420, desc: 'مقاس حفلات لـ 12 إلى 15 فرد تزيين ملكي مميز' },
-      { id: 'tc-7', name: 'تورتة مدور مقاس 28', price: '450 ج.م', numPrice: 450, desc: 'المقاس الدائري الأكبر لـ 15 إلى 18 فرد لمناسباتكم السعيدة' },
-      { id: 'tc-8', name: 'تورتة قلب كبير', price: '450 ج.م', numPrice: 450, desc: 'تورتة مجسمة على شكل قلب أحمر أو شوكولاتة حجم كبير', badge: 'رومانسي' },
-      { id: 'tc-9', name: 'تورتة قلب وسط', price: '390 ج.م', numPrice: 390, desc: 'تورتة قلب مقاس وسط للمناسبات الخاصة والاحتفالات', badge: 'رومانسي' },
-      { id: 'tc-10', name: 'تورتة قلب صغير', price: '270 ج.م', numPrice: 270, desc: 'تورتة قلب مقاس صغير هدية رقيقة ومميزة لشخصين', badge: 'رومانسي' },
-      { id: 'tc-11', name: 'تورتة تفاحة كبير', price: '450 ج.م', numPrice: 450, desc: 'تصميم ثلاثي الأبعاد مجسم ومبهج على شكل تفاحة مقاس كبير', badge: '3D كيك' },
-      { id: 'tc-12', name: 'تورتة تفاحة وسط', price: '350 ج.م', numPrice: 350, desc: 'تصميم مجسم على شكل تفاحة مقاس وسط للأعياد والمفاجآت', badge: '3D كيك' },
+      { id: 'tc-1', name: 'تورتة باندة', price: '170 ج.م', numPrice: 170, desc: 'تورتة باندا بشكل كرتوني محبب للأطفال بطعم كريمة وشوكولاتة لذيذة', badge: 'شكل كرتوني', image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=600&auto=format&fit=crop&q=80' },
+      { id: 'tc-2', name: 'تورتة مدور مقاس 18', price: '190 ج.م', numPrice: 190, desc: 'مقاس مناسب لـ 4 إلى 6 أفراد بتشكيلة فواكه أو شوكولاتة غنية', image: 'https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&auto=format&fit=crop&q=80' },
+      { id: 'tc-3', name: 'تورتة مدور مقاس 20', price: '250 ج.م', numPrice: 250, desc: 'مقاس مناسب لـ 6 إلى 8 أفراد نكهات متعددة فواكه ومكسرات', image: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&auto=format&fit=crop&q=80' },
+      { id: 'tc-4', name: 'تورتة مدور مقاس 22', price: '290 ج.م', numPrice: 290, desc: 'مقاس عائلي لـ 8 إلى 10 أفراد تشكيلات ميكس شوكولاتة وكريمة', image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80' },
+      { id: 'tc-5', name: 'تورتة مدور مقاس 24', price: '370 ج.م', numPrice: 370, desc: 'مقاس كبير لـ 10 إلى 12 فرد فواكه وشوكولاتة ولوتس', image: 'https://images.unsplash.com/photo-1535254973040-607b474cb50d?w=600&auto=format&fit=crop&q=80' },
+      { id: 'tc-6', name: 'تورتة مدور مقاس 26', price: '420 ج.م', numPrice: 420, desc: 'مقاس حفلات لـ 12 إلى 15 فرد تزيين ملكي مميز', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065082827661466.jpeg' },
+      { id: 'tc-7', name: 'تورتة مدور مقاس 28', price: '450 ج.م', numPrice: 450, desc: 'المقاس الدائري الأكبر لـ 15 إلى 18 فرد لمناسباتكم السعيدة', image: 'https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&auto=format&fit=crop&q=80' },
+      { id: 'tc-8', name: 'تورتة قلب كبير', price: '450 ج.م', numPrice: 450, desc: 'تورتة مجسمة على شكل قلب أحمر أو شوكولاتة حجم كبير', badge: 'رومانسي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065083191245940.jpeg' },
+      { id: 'tc-9', name: 'تورتة قلب وسط', price: '390 ج.م', numPrice: 390, desc: 'تورتة قلب مقاس وسط للمناسبات الخاصة والاحتفالات', badge: 'رومانسي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065083415752122.jpeg' },
+      { id: 'tc-10', name: 'تورتة قلب صغير', price: '270 ج.م', numPrice: 270, desc: 'تورتة قلب مقاس صغير هدية رقيقة ومميزة لشخصين', badge: 'رومانسي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065083291888173.jpeg' },
+      { id: 'tc-11', name: 'تورتة تفاحة كبير', price: '450 ج.م', numPrice: 450, desc: 'تصميم ثلاثي الأبعاد مجسم ومبهج على شكل تفاحة مقاس كبير', badge: '3D كيك', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065083943874253.jpeg' },
+      { id: 'tc-12', name: 'تورتة تفاحة وسط', price: '350 ج.م', numPrice: 350, desc: 'تصميم مجسم على شكل تفاحة مقاس وسط للأعياد والمفاجآت', badge: '3D كيك', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065083924673171.jpeg' },
     ];
 
     // B. تورت المناسبات والأحجام الكبيرة
     const specialTortes = [
-      { id: 'ts-1', name: 'تورتة مقاس 20×30', price: 'من غير صورة: 450 ج.م / بصورة: 520 ج.م', numPrice: 450, desc: 'تورتة مستطيلة للحفلات، إمكانية إضافة صورة صالحة للأكل بدقة عالية' },
-      { id: 'ts-2', name: 'تورتة مقاس 30×30', price: 'من غير صورة: 550 ج.م / بصورة: 620 ج.م', numPrice: 550, desc: 'تورتة مربعة فخمة لأعياد الميلاد والتخرج والتفوق' },
-      { id: 'ts-3', name: 'تورتة مقاس 30×40', price: 'من غير صورة: 850 ج.م / بصورة: 920 ج.م', numPrice: 850, desc: 'حجم كبير مخصص للمناسبات والعزائم تكفي حتى 25 فرد' },
-      { id: 'ts-4', name: 'تورتة مقاس 40×40', price: 'من غير صورة: 950 ج.م / بصورة: 1050 ج.م', numPrice: 950, desc: 'تورتة مربعة ضخمة تكفي حتى 35 فرد بتزيين خاص' },
-      { id: 'ts-5', name: 'تورتة مقاس 40×60', price: 'من غير صورة: 1300 ج.م / بصورة: 1400 ج.م', numPrice: 1300, desc: 'مقاس أفراح واحتفالات كبرى تكفي أكثر من 50 فرد' },
-      { id: 'ts-6', name: 'تورتة مقاس 60×60', price: 'من غير صورة: 2200 ج.م / بصورة: 2300 ج.م', numPrice: 2200, desc: 'أضخم تورتة مناسبات بالهرم تكفي حتى 80 فرد' },
+      { id: 'ts-1', name: 'تورتة مقاس 20×30', price: 'من غير صورة: 450 ج.م / بصورة: 520 ج.م', numPrice: 450, desc: 'تورتة مستطيلة للحفلات، إمكانية إضافة صورة صالحة للأكل بدقة عالية', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065082571860855.jpeg' },
+      { id: 'ts-2', name: 'تورتة مقاس 30×30', price: 'من غير صورة: 550 ج.م / بصورة: 620 ج.م', numPrice: 550, desc: 'تورتة مربعة فخمة لأعياد الميلاد والتخرج والتفوق', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/WhatsApp_Image_20260210_a639065083501371194.jpeg' },
+      { id: 'ts-3', name: 'تورتة مقاس 30×40', price: 'من غير صورة: 850 ج.م / بصورة: 920 ج.م', numPrice: 850, desc: 'حجم كبير مخصص للمناسبات والعزائم تكفي حتى 25 فرد', image: 'https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&auto=format&fit=crop&q=80' },
+      { id: 'ts-4', name: 'تورتة مقاس 40×40', price: 'من غير صورة: 950 ج.م / بصورة: 1050 ج.م', numPrice: 950, desc: 'تورتة مربعة ضخمة تكفي حتى 35 فرد بتزيين خاص', image: 'https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&auto=format&fit=crop&q=80' },
+      { id: 'ts-5', name: 'تورتة مقاس 40×60', price: 'من غير صورة: 1300 ج.م / بصورة: 1400 ج.م', numPrice: 1300, desc: 'مقاس أفراح واحتفالات كبرى تكفي أكثر من 50 فرد', image: 'https://images.unsplash.com/photo-1542826438-bd32f43d626f?w=600&auto=format&fit=crop&q=80' },
+      { id: 'ts-6', name: 'تورتة مقاس 60×60', price: 'من غير صورة: 2200 ج.م / بصورة: 2300 ج.م', numPrice: 2200, desc: 'أضخم تورتة مناسبات بالهرم تكفي حتى 80 فرد', image: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?w=600&auto=format&fit=crop&q=80' },
     ];
 
     // C. قطع الجاتوه والدست
     const gateauxItems = [
-      { id: 'g-1', name: 'قطعة جاتوه لوكس', price: '17 ج.م', numPrice: 17, desc: 'قطعة جاتوه كلاسيك طازجة شوكولاتة أو فانيليا أو فاكهة' },
-      { id: 'g-2', name: 'قطعة جاتوه سوبر', price: '25 ج.م', numPrice: 25, desc: 'قطعة جاتوه سوبر فاخرة بطبقات موس غنية وصوصات خاصة' },
-      { id: 'g-3', name: 'قطعة جاتوه أمواس', price: '30 ج.م', numPrice: 30, desc: 'موس فرنسي ناعم وغني بالشوكولاتة أو الفواكه الفاخرة' },
-      { id: 'g-4', name: 'قطعة جاتوه إكلير', price: '30 ج.م', numPrice: 30, desc: 'إكلير فرنسي طازج محشو كريمة غنية ومغطى بجناش شوكولاتة' },
-      { id: 'g-5', name: 'قطعة جاتوه ملفيه', price: '30 ج.م', numPrice: 30, desc: 'رقائق ملفيه فرنسي مقرمش بحشوة الباستري كريم والسكر البودرة' },
-      { id: 'g-6', name: 'دستة جاتوه لوكس (12 قطعة)', price: '190 ج.م', numPrice: 190, desc: 'علبة دستة (12 قطعة) منوعة من تشكيلات الجاتوه اللوكس الطازج' },
-      { id: 'g-7', name: 'دستة جاتوه سوبر لوكس (12 قطعة)', price: '280 ج.م', numPrice: 280, desc: 'دستة سوبر فاخرة (12 قطعة) تشمل قطع السوبر والإكلير والملفيه' },
-      { id: 'g-8', name: 'دستة جاتوه اسبيشيال (12 قطعة)', price: '350 ج.م', numPrice: 350, desc: 'أرقى وأفخم دستة جاتوه فيستيفال مع تشكيلات أمواس وإكلير وسوبر منتقاة' },
+      { id: 'g-1', name: 'قطعة جاتوه لوكس', price: '17 ج.م', numPrice: 17, desc: 'قطعة جاتوه كلاسيك طازجة شوكولاتة أو فانيليا أو فاكهة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/قطعة_جاتو_لوكس638928529013180264.jpg' },
+      { id: 'g-2', name: 'قطعة جاتوه سوبر', price: '25 ج.م', numPrice: 25, desc: 'قطعة جاتوه سوبر فاخرة بطبقات موس غنية وصوصات خاصة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/قطعة_جاتو_سوبر638928528858278801.jpg' },
+      { id: 'g-3', name: 'قطعة جاتوه أمواس', price: '30 ج.م', numPrice: 30, desc: 'موس فرنسي ناعم وغني بالشوكولاتة أو الفواكه الفاخرة', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop&q=80' },
+      { id: 'g-4', name: 'قطعة جاتوه إكلير', price: '30 ج.م', numPrice: 30, desc: 'إكلير فرنسي طازج محشو كريمة غنية ومغطى بجناش شوكولاتة', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857346/b18b9708-b9cb-4576-86df-4bca6b06c4d4.jpg' },
+      { id: 'g-5', name: 'قطعة جاتوه ملفيه', price: '30 ج.م', numPrice: 30, desc: 'رقائق ملفيه فرنسي مقرمش بحشوة الباستري كريم والسكر البودرة', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857345/e413e54f-1c90-46ff-a553-0d24544cb405.jpg' },
+      { id: 'g-6', name: 'دستة جاتوه لوكس (12 قطعة)', price: '190 ج.م', numPrice: 190, desc: 'علبة دستة (12 قطعة) منوعة من تشكيلات الجاتوه اللوكس الطازج', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/دستة_جاتو_لوكس638928529025277274.jpg' },
+      { id: 'g-7', name: 'دستة جاتوه سوبر لوكس (12 قطعة)', price: '280 ج.م', numPrice: 280, desc: 'دستة سوبر فاخرة (12 قطعة) تشمل قطع السوبر والإكلير والملفيه', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/دستة_جاتو_سوبر_لوكس638928529027607685.jpg' },
+      { id: 'g-8', name: 'دستة جاتوه اسبيشيال (12 قطعة)', price: '350 ج.م', numPrice: 350, desc: 'أرقى وأفخم دستة جاتوه فيستيفال مع تشكيلات أمواس وإكلير وسوبر منتقاة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/دستة_إسبيشيال638928529028112620.jpg' },
     ];
 
     // D. المخبوزات ونواشف العيد والكحك
     const bakeryItems = [
-      { id: 'b-1', name: 'كيلو كحك سادة', price: '230 ج.م', numPrice: 230, desc: 'كحك دايب ومرمل بالسمن البلدي الطبيعي ورائحة الكحك الأصيلة' },
-      { id: 'b-2', name: 'كيلو كحك سكر', price: '190 ج.م', numPrice: 190, desc: 'كحك ناعم ومغطى بالسكر البودرة الفاخر بالسمن البلدي' },
-      { id: 'b-3', name: 'كيلو بسكوت', price: '190 ج.م', numPrice: 190, desc: 'بسكويت نشادر وماربل مقرمش وهش خفيف للشاي' },
-      { id: 'b-4', name: 'كيلو سابليه', price: '320 ج.م', numPrice: 320, desc: 'سابليه فرنسي فاخر محشو مربى وجناش شوكولاتة ومكسرات' },
-      { id: 'b-5', name: 'كيلو بتي فور', price: '250 ج.م', numPrice: 250, desc: 'بيتي فور مشكل فاخر بالشوكولاتة والمكسرات والفارماسيل' },
-      { id: 'b-6', name: 'كيلو غريبة', price: '270 ج.م', numPrice: 270, desc: 'غريبة بيضاء ناعمة دايبة دوبان بالسمن البلدي ومزينة بالفستق' },
+      { id: 'b-1', name: 'كيلو كحك سادة', price: '230 ج.م', numPrice: 230, desc: 'كحك دايب ومرمل بالسمن البلدي الطبيعي ورائحة الكحك الأصيلة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كعك_سادة638928528989674198.jpg' },
+      { id: 'b-2', name: 'كيلو كحك سكر', price: '190 ج.م', numPrice: 190, desc: 'كحك ناعم ومغطى بالسكر البودرة الفاخر بالسمن البلدي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كعك_سادة638928528989674198.jpg' },
+      { id: 'b-3', name: 'كيلو بسكوت', price: '190 ج.م', numPrice: 190, desc: 'بسكويت نشادر وماربل مقرمش وهش خفيف للشاي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/بسكويت_سادة638928528760236759.jpg' },
+      { id: 'b-4', name: 'كيلو سابليه', price: '320 ج.م', numPrice: 320, desc: 'سابليه فرنسي فاخر محشو مربى وجناش شوكولاتة ومكسرات', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/بيتي_فور_سابلية638928528865765569.jpg' },
+      { id: 'b-5', name: 'كيلو بتي فور', price: '250 ج.م', numPrice: 250, desc: 'بيتي فور مشكل فاخر بالشوكولاتة والمكسرات والفارماسيل', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280928999/ee1c7589-c291-41a9-8501-62aaee3bff54.jpg' },
+      { id: 'b-6', name: 'كيلو غريبة', price: '270 ج.م', numPrice: 270, desc: 'غريبة بيضاء ناعمة دايبة دوبان بالسمن البلدي ومزينة بالفستق', image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80' },
     ];
 
     // 3. المعلبات والحلويات الباردة (Canned & Chilled Sweets - 14 Items)
     const cannedItems = [
-      { id: 'c-1', name: 'كب ريد فالفيت', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كب كيك ريد فالفيت فاخر بطبقات الكريمة المخفوقة الغنية', badge: 'كوب بارد' },
-      { id: 'c-2', name: 'كب كنافة مانجا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'طبقات كنافة ذهبية مقرمشة مع قطع مانجو فريش وكريمة', badge: 'الأكثر طلباً' },
-      { id: 'c-3', name: 'كب كنافة نوتيلا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كنافة مقرمشة مغطاة بشوكولاتة نوتيلا أصلية وبندق', badge: 'عشاق النوتيلا' },
-      { id: 'c-4', name: 'علبة مدلعة كبيرة', price: '60 ج.م', numPrice: 60, category: 'علب', desc: 'علبة حجم عائلي من المدلعة الشهيرة؛ بسبوسة وكنافة وقشطة وكراميل', badge: 'حجم كبير' },
-      { id: 'c-5', name: 'علبة كنافة مانجا كبيرة', price: '70 ج.م', numPrice: 70, category: 'علب', desc: 'علبة كبيرة تكفي العائلة من كنافة المانجو الطازجة بالكريمة الغنية', badge: 'حجم عائلي' },
-      { id: 'c-6', name: 'ديسباسيتو كبير', price: '70 ج.م', numPrice: 70, category: 'كيك', desc: 'كيكة الديسباسيتو البرازيلية الغارقة في صوص الشوكولاتة الغني حجم كبير', badge: 'شوكولاتة مكثفة' },
-      { id: 'c-7', name: 'ديسباسيتو صغير', price: '35 ج.م', numPrice: 35, category: 'كيك', desc: 'كيكة ديسباسيتو فردية غارقة في جناش الشوكولاتة اللذيذ', badge: 'فردي' },
-      { id: 'c-8', name: 'مولتن كيك كبير', price: '70 ج.م', numPrice: 70, category: 'كيك', desc: 'مولتن كيك دافئ غني ببركان الشوكولاتة البلجيكية السائلة حجم كبير', badge: 'بركان شوكولاتة' },
-      { id: 'c-9', name: 'قشطوطة كبيرة', price: '70 ج.م', numPrice: 70, category: 'أم علي', desc: 'قشطوطة الحليب والقشطة الغنية بصوصات الكراميل والمكسرات حجم كبير', badge: 'مميز فيستيفال' },
-      { id: 'c-10', name: 'تشيز كيك', price: '45 ج.م', numPrice: 45, category: 'أكواب', desc: 'تشيز كيك بارد كريمي مع صوص البلوبيري أو الفراولة اللذيذ', badge: 'بارد ولذيذ' },
-      { id: 'c-11', name: 'فادج كيك', price: '35 ج.م', numPrice: 35, category: 'كيك', desc: 'قطعة فادج شوكولاتة كثيفة وغنية لعشاق الشوكولاتة الداكنة', badge: '' },
-      { id: 'c-12', name: 'فانوس رمضان', price: '40 ج.م', numPrice: 40, category: 'أكواب', desc: 'تصميم فانوس مبهج محشو بطبقات الحلوى والكريمة الشهية', badge: 'مبهج' },
-      { id: 'c-13', name: 'ام علي مكسرات', price: '45 ج.م', numPrice: 45, category: 'أم علي', desc: 'طاجن أم علي بالحليب الساخن والقشطة البلدية وتشكيلة مكسرات محمصة', badge: 'طاجن ساخن' },
-      { id: 'c-14', name: 'ام علي سادة', price: '35 ج.م', numPrice: 35, category: 'أم علي', desc: 'طاجن أم علي كلاسيك بالحليب المغلي ورقائق الملفيه والقشطة', badge: 'كلاسيك' },
+      { id: 'c-1', name: 'كب ريد فالفيت', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كب كيك ريد فالفيت فاخر بطبقات الكريمة المخفوقة الغنية', badge: 'كوب بارد', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/كب_ريد_فليت638928528827773111.jpg' },
+      { id: 'c-2', name: 'كب كنافة مانجا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'طبقات كنافة ذهبية مقرمشة مع قطع مانجو فريش وكريمة', badge: 'الأكثر طلباً', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857316/92ba10f3-5261-4ba3-95a8-657f35e1c550.jpg' },
+      { id: 'c-3', name: 'كب كنافة نوتيلا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كنافة مقرمشة مغطاة بشوكولاتة نوتيلا أصلية وبندق', badge: 'عشاق النوتيلا', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/بولة_كنافة_نوتيلا638928528931265705.jpg' },
+      { id: 'c-4', name: 'علبة مدلعة كبيرة', price: '60 ج.م', numPrice: 60, category: 'علب', desc: 'علبة حجم عائلي من المدلعة الشهيرة؛ بسبوسة وكنافة وقشطة وكراميل', badge: 'حجم كبير', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857308/0a7e6355-2b49-4737-95f5-4c78b7b7ea01.jpg' },
+      { id: 'c-5', name: 'علبة كنافة مانجا كبيرة', price: '70 ج.م', numPrice: 70, category: 'علب', desc: 'علبة كبيرة تكفي العائلة من كنافة المانجو الطازجة بالكريمة الغنية', badge: 'حجم عائلي', image: 'https://talabat.dhmedia.io/image/global-menu-service/HF_EG/vendor/776568/product/2280857316/92ba10f3-5261-4ba3-95a8-657f35e1c550.jpg' },
+      { id: 'c-6', name: 'ديسباسيتو كبير', price: '70 ج.م', numPrice: 70, category: 'كيك', desc: 'كيكة الديسباسيتو البرازيلية الغارقة في صوص الشوكولاتة الغني حجم كبير', badge: 'شوكولاتة مكثفة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/دا_سبسيتو_كبير638928528845059602.jpg' },
+      { id: 'c-7', name: 'ديسباسيتو صغير', price: '35 ج.م', numPrice: 35, category: 'كيك', desc: 'كيكة ديسباسيتو فردية غارقة في جناش الشوكولاتة اللذيذ', badge: 'فردي', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/دا_سبسيتو_كبير638928528845059602.jpg' },
+      { id: 'c-8', name: 'مولتن كيك كبير', price: '70 ج.م', numPrice: 70, category: 'كيك', desc: 'مولتن كيك دافئ غني ببركان الشوكولاتة البلجيكية السائلة حجم كبير', badge: 'بركان شوكولاتة', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/مولتو_كيك638928528836258356.jpg' },
+      { id: 'c-9', name: 'قشطوطة كبيرة', price: '70 ج.م', numPrice: 70, category: 'أم علي', desc: 'قشطوطة الحليب والقشطة الغنية بصوصات الكراميل والمكسرات حجم كبير', badge: 'مميز فيستيفال', image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80' },
+      { id: 'c-10', name: 'تشيز كيك', price: '45 ج.م', numPrice: 45, category: 'أكواب', desc: 'تشيز كيك بارد كريمي مع صوص البلوبيري أو الفراولة اللذيذ', badge: 'بارد ولذيذ', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/تشيز_كيك638928528799529637.jpg' },
+      { id: 'c-11', name: 'فادج كيك', price: '35 ج.م', numPrice: 35, category: 'كيك', desc: 'قطعة فادج شوكولاتة كثيفة وغنية لعشاق الشوكولاتة الداكنة', badge: '', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/فادج638928528886188539.jpg' },
+      { id: 'c-12', name: 'فانوس رمضان', price: '40 ج.م', numPrice: 40, category: 'أكواب', desc: 'تصميم فانوس مبهج محشو بطبقات الحلوى والكريمة الشهية', badge: 'مبهج', image: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=600&auto=format&fit=crop&q=80' },
+      { id: 'c-13', name: 'ام علي مكسرات', price: '45 ج.م', numPrice: 45, category: 'أم علي', desc: 'طاجن أم علي بالحليب الساخن والقشطة البلدية وتشكيلة مكسرات محمصة', badge: 'طاجن ساخن', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/ام_على_مكسرات638928528841886244.jpg' },
+      { id: 'c-14', name: 'ام علي سادة', price: '35 ج.م', numPrice: 35, category: 'أم علي', desc: 'طاجن أم علي كلاسيك بالحليب المغلي ورقائق الملفيه والقشطة', badge: 'كلاسيك', image: 'https://talabat.dhmedia.io/image/talabat/MenuItems/ام_على_مكسرات638928528841886244.jpg' },
     ];
 
     // ==========================================
@@ -1683,17 +1683,28 @@
 
       filtered.forEach(item => {
         const card = document.createElement('div');
-        card.className = "bg-white rounded-2xl p-5 border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
+        card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
         card.innerHTML = `
           <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <h4 class="font-bold text-base sm:text-lg text-brand-chocolate group-hover:text-brand-gold transition-colors">${item.name}</h4>
-              ${item.badge ? `<span class="bg-brand-amberLight text-brand-amber text-[10px] font-black px-2 py-0.5 rounded-full whitespace-nowrap">${item.badge}</span>` : ''}
+            <div class="relative overflow-hidden aspect-[4/3] bg-brand-creamSoft">
+              <img src="${item.image}" 
+                   loading="lazy" 
+                   alt="${item.name}" 
+                   onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80';"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                   onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+              ${item.badge ? `<span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-black px-2.5 py-1 rounded-full shadow-md border border-brand-gold/30">${item.badge}</span>` : ''}
+              <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+                <i class="fa-solid fa-expand text-[10px]"></i>
+              </button>
             </div>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">${item.desc}</p>
+            <div class="p-4 sm:p-5">
+              <h4 class="font-bold text-base sm:text-lg text-brand-chocolate group-hover:text-brand-gold transition-colors mb-1.5">${item.name}</h4>
+              <p class="text-xs text-gray-500 leading-relaxed">${item.desc}</p>
+            </div>
           </div>
-          <div class="pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
-            <span class="font-black text-brand-berry text-base font-outfit">${item.price}</span>
+          <div class="p-4 sm:p-5 pt-0 border-t border-gray-100 flex items-center justify-between gap-2 mt-auto">
+            <span class="font-black text-brand-berry text-base sm:text-lg font-outfit">${item.price}</span>
             <div class="flex items-center gap-1.5">
               <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center text-xs" title="أضف للسلة">
                 <i class="fa-solid fa-plus"></i>
@@ -1716,20 +1727,31 @@
         circGrid.innerHTML = '';
         circularTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
           const card = document.createElement('div');
-          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
             <div>
-              <div class="flex items-start justify-between gap-2 mb-1">
-                <h4 class="font-bold text-base text-brand-chocolate">${item.name}</h4>
-                ${item.badge ? `<span class="bg-brand-gold/20 text-brand-brown text-[10px] font-bold px-2 py-0.5 rounded-full">${item.badge}</span>` : ''}
+              <div class="relative overflow-hidden aspect-[4/3] bg-brand-creamSoft">
+                <img src="${item.image}" 
+                     loading="lazy" 
+                     alt="${item.name}" 
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&auto=format&fit=crop&q=80';"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+                ${item.badge ? `<span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-bold px-2.5 py-1 rounded-full shadow border border-brand-gold/30">${item.badge}</span>` : ''}
+                <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+                  <i class="fa-solid fa-expand text-[10px]"></i>
+                </button>
               </div>
-              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+              <div class="p-4 sm:p-5">
+                <h4 class="font-bold text-base text-brand-chocolate group-hover:text-brand-gold transition-colors mb-1.5">${item.name}</h4>
+                <p class="text-xs text-gray-600 mb-2 leading-relaxed">${item.desc}</p>
+              </div>
             </div>
-            <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
-              <span class="text-xs font-black text-brand-berry font-outfit">${item.price}</span>
-              <div class="flex items-center gap-1">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+            <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex items-center justify-between gap-2 mt-auto">
+              <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
+              <div class="flex items-center gap-1.5">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
               </div>
             </div>
           `;
@@ -1743,17 +1765,30 @@
         specGrid.innerHTML = '';
         specialTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
           const card = document.createElement('div');
-          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
             <div>
-              <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
-              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+              <div class="relative overflow-hidden aspect-[4/3] bg-brand-creamSoft">
+                <img src="${item.image}" 
+                     loading="lazy" 
+                     alt="${item.name}" 
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&auto=format&fit=crop&q=80';"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+                <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+                  <i class="fa-solid fa-expand text-[10px]"></i>
+                </button>
+              </div>
+              <div class="p-4 sm:p-5">
+                <h4 class="font-bold text-base text-brand-chocolate group-hover:text-brand-gold transition-colors mb-1.5">${item.name}</h4>
+                <p class="text-xs text-gray-600 mb-2 leading-relaxed">${item.desc}</p>
+              </div>
             </div>
-            <div class="pt-2 border-t border-brand-gold/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-auto">
               <span class="text-xs font-black text-brand-berry font-outfit leading-tight">${item.price}</span>
-              <div class="flex items-center gap-1 self-end sm:self-auto">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+              <div class="flex items-center gap-1.5 self-end sm:self-auto">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
               </div>
             </div>
           `;
@@ -1767,17 +1802,30 @@
         gatGrid.innerHTML = '';
         gateauxItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
           const card = document.createElement('div');
-          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
             <div>
-              <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
-              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+              <div class="relative overflow-hidden aspect-[4/3] bg-brand-creamSoft">
+                <img src="${item.image}" 
+                     loading="lazy" 
+                     alt="${item.name}" 
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=600&auto=format&fit=crop&q=80';"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+                <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+                  <i class="fa-solid fa-expand text-[10px]"></i>
+                </button>
+              </div>
+              <div class="p-4 sm:p-5">
+                <h4 class="font-bold text-base text-brand-chocolate group-hover:text-brand-gold transition-colors mb-1.5">${item.name}</h4>
+                <p class="text-xs text-gray-600 mb-2 leading-relaxed">${item.desc}</p>
+              </div>
             </div>
-            <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+            <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex items-center justify-between gap-2 mt-auto">
               <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
-              <div class="flex items-center gap-1">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+              <div class="flex items-center gap-1.5">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
               </div>
             </div>
           `;
@@ -1791,20 +1839,31 @@
         bakGrid.innerHTML = '';
         bakeryItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
           const card = document.createElement('div');
-          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/30 shadow-sm hover:shadow-card-hover transition-all flex flex-col justify-between group";
           card.innerHTML = `
             <div>
-              <div class="flex items-start justify-between gap-2 mb-1">
-                <h4 class="font-bold text-base text-brand-chocolate">${item.name}</h4>
-                <span class="bg-brand-amberLight text-brand-brown text-[10px] font-bold px-2 py-0.5 rounded-full">سمن بلدي</span>
+              <div class="relative overflow-hidden aspect-[4/3] bg-brand-creamSoft">
+                <img src="${item.image}" 
+                     loading="lazy" 
+                     alt="${item.name}" 
+                     onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509440159596-0249088772ff?w=600&auto=format&fit=crop&q=80';"
+                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                     onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+                <span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-bold px-2.5 py-1 rounded-full shadow border border-brand-gold/30">سمن بلدي</span>
+                <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+                  <i class="fa-solid fa-expand text-[10px]"></i>
+                </button>
               </div>
-              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+              <div class="p-4 sm:p-5">
+                <h4 class="font-bold text-base text-brand-chocolate group-hover:text-brand-gold transition-colors mb-1.5">${item.name}</h4>
+                <p class="text-xs text-gray-600 mb-2 leading-relaxed">${item.desc}</p>
+              </div>
             </div>
-            <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+            <div class="p-4 sm:p-5 pt-0 border-t border-brand-gold/20 flex items-center justify-between gap-2 mt-auto">
               <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
-              <div class="flex items-center gap-1">
-                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+              <div class="flex items-center gap-1.5">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 hover:bg-brand-brown transition-all"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
               </div>
             </div>
           `;
@@ -1837,17 +1896,28 @@
 
       filtered.forEach(item => {
         const card = document.createElement('div');
-        card.className = "bg-white rounded-2xl p-5 border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
+        card.className = "bg-white rounded-2xl overflow-hidden border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
         card.innerHTML = `
           <div>
-            <div class="flex items-start justify-between gap-2 mb-2">
-              <h4 class="font-bold text-base sm:text-lg text-brand-chocolate group-hover:text-brand-gold transition-colors">${item.name}</h4>
-              ${item.badge ? `<span class="bg-brand-amberLight text-brand-amber text-[10px] font-black px-2 py-0.5 rounded-full whitespace-nowrap">${item.badge}</span>` : ''}
+            <div class="relative overflow-hidden aspect-[4/3] bg-brand-creamSoft">
+              <img src="${item.image}" 
+                   loading="lazy" 
+                   alt="${item.name}" 
+                   onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80';"
+                   class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 cursor-pointer"
+                   onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" />
+              ${item.badge ? `<span class="absolute top-2.5 right-2.5 bg-brand-chocolate/90 backdrop-blur-sm text-brand-gold text-[10px] font-black px-2.5 py-1 rounded-full shadow-md border border-brand-gold/30">${item.badge}</span>` : ''}
+              <button onclick="openImageModal('${item.image}', '${item.name} - ${item.price}')" class="absolute bottom-2.5 left-2.5 w-7 h-7 rounded-full bg-black/60 text-white flex items-center justify-center hover:bg-brand-gold hover:text-black transition-colors" title="تكبير الصورة">
+                <i class="fa-solid fa-expand text-[10px]"></i>
+              </button>
             </div>
-            <p class="text-xs text-gray-500 leading-relaxed mb-4">${item.desc}</p>
+            <div class="p-4 sm:p-5">
+              <h4 class="font-bold text-base sm:text-lg text-brand-chocolate group-hover:text-brand-gold transition-colors mb-1.5">${item.name}</h4>
+              <p class="text-xs text-gray-500 leading-relaxed">${item.desc}</p>
+            </div>
           </div>
-          <div class="pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
-            <span class="font-black text-brand-berry text-base font-outfit">${item.price}</span>
+          <div class="p-4 sm:p-5 pt-0 border-t border-gray-100 flex items-center justify-between gap-2 mt-auto">
+            <span class="font-black text-brand-berry text-base sm:text-lg font-outfit">${item.price}</span>
             <div class="flex items-center gap-1.5">
               <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center text-xs" title="أضف للسلة">
                 <i class="fa-solid fa-plus"></i>
