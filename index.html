@@ -778,17 +778,25 @@
         <!-- Tab 1: Oriental -->
         <button id="tabBtnOriental" 
                 onclick="switchMenuTab('oriental')" 
-                class="tab-btn active px-6 py-3 rounded-2xl font-black text-sm sm:text-base border-2 border-brand-gold/40 bg-brand-chocolate text-brand-gold transition-all duration-300 flex items-center gap-2.5 shadow-md">
+                class="tab-btn active px-5 sm:px-6 py-3 rounded-2xl font-black text-xs sm:text-base border-2 border-brand-gold/40 bg-brand-chocolate text-brand-gold transition-all duration-300 flex items-center gap-2 shadow-md">
           <i class="fa-solid fa-plate-wheat"></i>
           <span>الحلويات الشرقية (23 صنف)</span>
         </button>
 
-        <!-- Tab 2: Western & Tortes -->
+        <!-- Tab 2: Western & Tortes & Bakery -->
         <button id="tabBtnWestern" 
                 onclick="switchMenuTab('western')" 
-                class="tab-btn px-6 py-3 rounded-2xl font-black text-sm sm:text-base border-2 border-brand-gold/40 bg-white text-brand-chocolate hover:bg-brand-amberLight/40 transition-all duration-300 flex items-center gap-2.5 shadow-sm">
+                class="tab-btn px-5 sm:px-6 py-3 rounded-2xl font-black text-xs sm:text-base border-2 border-brand-gold/40 bg-white text-brand-chocolate hover:bg-brand-amberLight/40 transition-all duration-300 flex items-center gap-2 shadow-sm">
           <i class="fa-solid fa-cake-candles text-brand-gold"></i>
-          <span>الحلويات الغربية والتورت</span>
+          <span>الحلويات الغربية والتورت والمخبوزات</span>
+        </button>
+
+        <!-- Tab 3: Canned Sweets (المعلبات والحلويات الباردة) -->
+        <button id="tabBtnCanned" 
+                onclick="switchMenuTab('canned')" 
+                class="tab-btn px-5 sm:px-6 py-3 rounded-2xl font-black text-xs sm:text-base border-2 border-brand-gold/40 bg-white text-brand-chocolate hover:bg-brand-amberLight/40 transition-all duration-300 flex items-center gap-2 shadow-sm">
+          <i class="fa-solid fa-box-open text-brand-amber"></i>
+          <span>المعلبات والحلويات الباردة (14 صنف)</span>
         </button>
       </div>
 
@@ -812,18 +820,23 @@
 
       </div>
 
-      <!-- TAB 2 CONTENT: الحلويات الغربية والتورت (Western & Cakes) -->
+      <!-- TAB 2 CONTENT: الحلويات الغربية والتورت والمخبوزات (Western & Cakes) -->
       <div id="westernMenuContent" class="menu-tab-pane hidden space-y-12">
         
         <!-- Sub-section A: تورتات دائرية -->
         <div class="bg-white/90 rounded-3xl p-6 sm:p-8 border border-brand-gold/30 shadow-md">
-          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-brand-gold/20">
-            <div class="w-10 h-10 rounded-xl bg-brand-amberLight flex items-center justify-center text-brand-gold text-xl">
-              <i class="fa-solid fa-circle-notch"></i>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-brand-gold/20">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-xl bg-brand-amberLight flex items-center justify-center text-brand-gold text-xl">
+                <i class="fa-solid fa-circle-notch"></i>
+              </div>
+              <div>
+                <h3 class="text-xl sm:text-2xl font-black text-brand-chocolate">التورتات الدائرية وتورت الأشكال</h3>
+                <p class="text-xs sm:text-sm text-gray-500">باندا، قلب، تفاحة ومقاسات دائرية متنوعة بالأسعار المعتمدة الرسمية</p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-xl sm:text-2xl font-black text-brand-chocolate">التورتات الدائرية اليومية</h3>
-              <p class="text-xs sm:text-sm text-gray-500">أشكال ومقاسات تناسب الجمعات العائلية وأعياد الميلاد اليومية</p>
+            <div class="self-start sm:self-center bg-brand-amberLight text-brand-chocolate text-xs font-bold px-3 py-1.5 rounded-xl border border-brand-gold/30">
+              <i class="fa-solid fa-star text-brand-gold ml-1"></i> بعض المقاسات اسبيشيال يضاف 70 ج.م
             </div>
           </div>
           <div id="circularTortesGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
@@ -855,11 +868,86 @@
             </div>
             <div>
               <h3 class="text-xl sm:text-2xl font-black text-brand-chocolate">قطع الجاتوه والدست الفاخرة</h3>
-              <p class="text-xs sm:text-sm text-gray-500">جاتوه لوكس، سوبر، ملفيه وإكلير طازج يومياً بالقطعة وبالدستة</p>
+              <p class="text-xs sm:text-sm text-gray-500">جاتوه لوكس، سوبر، اسبيشيال، أمواس، ملفيه وإكلير طازج يومياً بالقطعة وبالدستة</p>
             </div>
           </div>
-          <div id="gateauxGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div id="gateauxGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Sub-section D: المخبوزات ونواشف العيد والكحك -->
+        <div class="bg-white/90 rounded-3xl p-6 sm:p-8 border border-brand-gold/30 shadow-md">
+          <div class="flex items-center gap-3 mb-6 pb-4 border-b border-brand-gold/20">
+            <div class="w-10 h-10 rounded-xl bg-brand-gold/20 flex items-center justify-center text-brand-gold text-xl">
+              <i class="fa-solid fa-wheat-awn"></i>
+            </div>
+            <div>
+              <h3 class="text-xl sm:text-2xl font-black text-brand-chocolate">المخبوزات ونواشف الكحك والبسكويت</h3>
+              <p class="text-xs sm:text-sm text-gray-500">كحك سادة وسكر، بسكوت، سابليه فاخر، بيتي فور وغريبة دايبة بالسمن البلدي بالكيلو</p>
+            </div>
+          </div>
+          <div id="bakeryGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Populated via JS -->
+          </div>
+        </div>
+
+        <!-- Vodafone Cash Payment Callout inside Western Tab -->
+        <div class="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-red-950/80 via-brand-chocolate to-red-950/80 border-2 border-red-500/40 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+          <div class="flex items-center gap-3.5 text-center sm:text-right">
+            <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center text-2xl font-bold shadow-md flex-shrink-0">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div>
+              <div class="flex items-center justify-center sm:justify-start gap-2">
+                <span class="text-xs bg-red-600 text-white font-bold px-2 py-0.5 rounded-full">دفع سريع</span>
+                <h4 class="font-black text-sm sm:text-base text-red-200">الدفع عبر فودافون كاش</h4>
+              </div>
+              <p class="text-xs text-gray-300 mt-0.5">يمكنك تحويل قيمة حجز التورت والمناسبات مباشرة عبر فودافون كاش</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-xl border border-red-500/30">
+            <span class="text-xs text-gray-300">رقم فودافون كاش:</span>
+            <a href="tel:01093916372" class="font-outfit font-black text-base text-red-400 hover:text-white" dir="ltr">01093916372</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- TAB 3 CONTENT: المعلبات والحلويات الباردة (Canned & Chilled Desserts) -->
+      <div id="cannedMenuContent" class="menu-tab-pane hidden space-y-8">
+        
+        <!-- Canned Category Sub-Filter Pills -->
+        <div class="flex flex-wrap items-center justify-center gap-2 mb-8 text-xs font-bold">
+          <button onclick="filterCannedSubCategory('all')" class="canned-filter-btn active bg-brand-chocolate text-brand-gold px-3.5 py-1.5 rounded-xl border border-brand-gold/30 transition-all">الكل (14 صنف)</button>
+          <button onclick="filterCannedSubCategory('أكواب')" class="canned-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">أكواب وكبات</button>
+          <button onclick="filterCannedSubCategory('علب')" class="canned-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">علب عائلية</button>
+          <button onclick="filterCannedSubCategory('كيك')" class="canned-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">ديسباسيتو وكيك</button>
+          <button onclick="filterCannedSubCategory('أم علي')" class="canned-filter-btn bg-white text-brand-chocolate hover:bg-brand-amberLight px-3.5 py-1.5 rounded-xl border border-gray-200 transition-all">أم علي وقشطوطة</button>
+        </div>
+
+        <!-- Canned Items Grid (Populated Dynamically via JS with full 14 items) -->
+        <div id="cannedGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+          <!-- Items inserted via JS -->
+        </div>
+
+        <!-- Vodafone Cash Payment Callout inside Canned Tab -->
+        <div class="mt-8 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-red-950/80 via-brand-chocolate to-red-950/80 border-2 border-red-500/40 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-lg">
+          <div class="flex items-center gap-3.5 text-center sm:text-right">
+            <div class="w-12 h-12 rounded-xl bg-red-600 text-white flex items-center justify-center text-2xl font-bold shadow-md flex-shrink-0">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div>
+              <div class="flex items-center justify-center sm:justify-start gap-2">
+                <span class="text-xs bg-red-600 text-white font-bold px-2 py-0.5 rounded-full">دفع سريع</span>
+                <h4 class="font-black text-sm sm:text-base text-red-200">الدفع عبر فودافون كاش</h4>
+              </div>
+              <p class="text-xs text-gray-300 mt-0.5">يمكنك تحويل قيمة أوردرات العلب والحلويات عبر فودافون كاش بسهولة</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 bg-black/40 px-4 py-2 rounded-xl border border-red-500/30">
+            <span class="text-xs text-gray-300">رقم فودافون كاش:</span>
+            <a href="tel:01093916372" class="font-outfit font-black text-base text-red-400 hover:text-white" dir="ltr">01093916372</a>
           </div>
         </div>
 
@@ -1123,18 +1211,18 @@
             <div class="space-y-3 bg-brand-cream p-4 rounded-2xl border border-brand-gold/20 mb-6">
               <div class="flex items-center justify-between text-sm">
                 <span class="text-gray-600 flex items-center gap-2">
-                  <i class="fa-brands fa-whatsapp text-green-600"></i> خدمة التوصيل / واتساب:
+                  <i class="fa-solid fa-phone text-brand-chocolate"></i> تواصل وطلبات الفرع:
                 </span>
-                <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D8%B9%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84" target="_blank" rel="noopener noreferrer" class="font-bold text-green-700 hover:text-green-800 font-outfit" dir="ltr">
-                  01093916372
+                <a href="tel:01559291095" class="font-bold text-brand-chocolate hover:text-brand-gold font-outfit" dir="ltr">
+                  01559291095
                 </a>
               </div>
               <div class="flex items-center justify-between text-sm pt-2 border-t border-gray-200">
                 <span class="text-gray-600 flex items-center gap-2">
-                  <i class="fa-solid fa-headset text-brand-berry"></i> خط الشكاوى والمقترحات:
+                  <i class="fa-brands fa-whatsapp text-green-600"></i> خدمة التوصيل / واتساب:
                 </span>
-                <a href="tel:01093916372" class="font-bold text-brand-berry hover:underline font-outfit" dir="ltr">
-                  01093916372
+                <a href="https://wa.me/201559291095?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%20%D9%81%D8%B1%D8%B9%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%B2%D8%BA%D9%84%D9%88%D9%84%20%D9%81%D9%8A%D8%D8%D8%B3%D8%AA%D9%8A%D9%81%D8%A7%D9%84%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B9%D9%85%D9%84%20%D8%B7%D9%84%D8%A8" target="_blank" rel="noopener noreferrer" class="font-bold text-green-700 hover:text-green-800 font-outfit" dir="ltr">
+                  01559291095
                 </a>
               </div>
             </div>
@@ -1142,10 +1230,10 @@
 
           <!-- Action Buttons for Branch 2 -->
           <div class="grid grid-cols-2 gap-3 pt-2">
-            <a href="tel:01093916372" class="bg-brand-chocolate hover:bg-brand-brown text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
-              <i class="fa-solid fa-phone"></i> اتصال هاتفي
+            <a href="tel:01559291095" class="bg-brand-chocolate hover:bg-brand-brown text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
+              <i class="fa-solid fa-phone"></i> اتصال بالفرع
             </a>
-            <a href="https://wa.me/201093916372?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%81%D8%B1%D8%B9%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%B2%D8%BA%D9%84%D9%88%D9%84" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
+            <a href="https://wa.me/201559291095?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%A7%D9%84%D8%B7%D9%84%D8%A8%20%D9%85%D9%86%20%D9%81%D8%B1%D8%B9%20%D8%B4%D8%A7%D8%B1%D8%B9%20%D8%B2%D8%BA%D9%84%D9%88%D9%84" target="_blank" rel="noopener noreferrer" class="bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl font-bold text-xs sm:text-sm text-center flex items-center justify-center gap-2 transition-all shadow-sm">
               <i class="fa-brands fa-whatsapp text-base"></i> اطلب من الفرع
             </a>
           </div>
@@ -1236,16 +1324,20 @@
               <span>يومياً: من 9:00 صباحاً حتى 2:00 بعد منتصف الليل</span>
             </div>
             <div class="flex items-center justify-center md:justify-start gap-2">
-              <i class="fa-solid fa-phone text-brand-amber"></i>
-              <span>الأرضي: <strong class="font-outfit text-white" dir="ltr">0233866415</strong></span>
+              <i class="fa-solid fa-store text-brand-gold"></i>
+              <span>فرع اللبيني: <strong class="font-outfit text-white" dir="ltr">0233866415</strong> / <strong class="font-outfit text-white" dir="ltr">01093916372</strong></span>
+            </div>
+            <div class="flex items-center justify-center md:justify-start gap-2">
+              <i class="fa-solid fa-store text-brand-amber"></i>
+              <span>فرع شارع زغلول (طلبات): <strong class="font-outfit text-white" dir="ltr">01559291095</strong></span>
             </div>
             <div class="flex items-center justify-center md:justify-start gap-2">
               <i class="fa-brands fa-whatsapp text-green-400"></i>
-              <span>موبايل وواتساب: <strong class="font-outfit text-white" dir="ltr">01093916372</strong></span>
+              <span>واتساب زغلول: <strong class="font-outfit text-green-300" dir="ltr">01559291095</strong></span>
             </div>
             <div class="flex items-center justify-center md:justify-start gap-2">
-              <i class="fa-solid fa-headset text-brand-gold"></i>
-              <span>خدمة العملاء والطلبات الخاصة: <strong class="font-outfit text-white" dir="ltr">+201093916372</strong></span>
+              <i class="fa-solid fa-wallet text-red-400"></i>
+              <span>فودافون كاش & إدارة: <strong class="font-outfit text-white" dir="ltr">01093916372</strong></span>
             </div>
           </div>
         </div>
@@ -1495,43 +1587,78 @@
       { id: 'o-23', name: 'عزيزية', price: '120 ج.م', numPrice: 120, category: 'أصناف شرقية', desc: 'عزيزية مكرونة بالحليب والقشطة محمرة في الفرن', badge: '' },
     ];
 
-    // 2. الحلويات الغربية والتورت (Western & Cakes)
-    // A. تورتات دائرية
+    // 2. الحلويات الغربية والتورت والمخبوزات (Western & Cakes & Bakery)
+    // A. تورتات دائرية وتورت الأشكال
     const circularTortes = [
-      { id: 'tc-2', name: 'تورتة مدور مقاس 18', price: '170 - 190 ج.م', numPrice: 180, desc: 'مقاس مناسب لـ 4 إلى 6 أفراد بتشكيلة فواكه أو شوكولاتة' },
-      { id: 'tc-3', name: 'تورتة مدور مقاس 20', price: '220 - 250 ج.م', numPrice: 235, desc: 'مقاس مناسب لـ 6 إلى 8 أفراد نكهات متعددة' },
-      { id: 'tc-4', name: 'تورتة مدور مقاس 22', price: '290 ج.م', numPrice: 290, desc: 'مقاس عائلي لـ 8 إلى 10 أفراد تشكيلات ميكس' },
+      { id: 'tc-1', name: 'تورتة باندة', price: '170 ج.م', numPrice: 170, desc: 'تورتة باندا بشكل كرتوني محبب للأطفال بطعم كريمة وشوكولاتة لذيذة', badge: 'شكل كرتوني' },
+      { id: 'tc-2', name: 'تورتة مدور مقاس 18', price: '190 ج.م', numPrice: 190, desc: 'مقاس مناسب لـ 4 إلى 6 أفراد بتشكيلة فواكه أو شوكولاتة غنية' },
+      { id: 'tc-3', name: 'تورتة مدور مقاس 20', price: '250 ج.م', numPrice: 250, desc: 'مقاس مناسب لـ 6 إلى 8 أفراد نكهات متعددة فواكه ومكسرات' },
+      { id: 'tc-4', name: 'تورتة مدور مقاس 22', price: '290 ج.م', numPrice: 290, desc: 'مقاس عائلي لـ 8 إلى 10 أفراد تشكيلات ميكس شوكولاتة وكريمة' },
       { id: 'tc-5', name: 'تورتة مدور مقاس 24', price: '370 ج.م', numPrice: 370, desc: 'مقاس كبير لـ 10 إلى 12 فرد فواكه وشوكولاتة ولوتس' },
-      { id: 'tc-6', name: 'تورتة مدور مقاس 26', price: '420 ج.م', numPrice: 420, desc: 'مقاس حفلات لـ 12 إلى 15 فرد تزيين ملكي' },
-      { id: 'tc-7', name: 'تورتة مدور مقاس 28', price: '450 ج.م', numPrice: 450, desc: 'المقاس الدائري الأكبر لـ 15 إلى 18 فرد' },
+      { id: 'tc-6', name: 'تورتة مدور مقاس 26', price: '420 ج.م', numPrice: 420, desc: 'مقاس حفلات لـ 12 إلى 15 فرد تزيين ملكي مميز' },
+      { id: 'tc-7', name: 'تورتة مدور مقاس 28', price: '450 ج.م', numPrice: 450, desc: 'المقاس الدائري الأكبر لـ 15 إلى 18 فرد لمناسباتكم السعيدة' },
+      { id: 'tc-8', name: 'تورتة قلب كبير', price: '450 ج.م', numPrice: 450, desc: 'تورتة مجسمة على شكل قلب أحمر أو شوكولاتة حجم كبير', badge: 'رومانسي' },
+      { id: 'tc-9', name: 'تورتة قلب وسط', price: '390 ج.م', numPrice: 390, desc: 'تورتة قلب مقاس وسط للمناسبات الخاصة والاحتفالات', badge: 'رومانسي' },
+      { id: 'tc-10', name: 'تورتة قلب صغير', price: '270 ج.م', numPrice: 270, desc: 'تورتة قلب مقاس صغير هدية رقيقة ومميزة لشخصين', badge: 'رومانسي' },
+      { id: 'tc-11', name: 'تورتة تفاحة كبير', price: '450 ج.م', numPrice: 450, desc: 'تصميم ثلاثي الأبعاد مجسم ومبهج على شكل تفاحة مقاس كبير', badge: '3D كيك' },
+      { id: 'tc-12', name: 'تورتة تفاحة وسط', price: '350 ج.م', numPrice: 350, desc: 'تصميم مجسم على شكل تفاحة مقاس وسط للأعياد والمفاجآت', badge: '3D كيك' },
     ];
 
-    // B. تورت المناسبات والأحجام الخاصة
+    // B. تورت المناسبات والأحجام الكبيرة
     const specialTortes = [
-      { id: 'ts-1', name: 'تورتة مقاس 30×20', price: 'من غير صورة 450 ج.م / بصورة 520 ج.م', numPrice: 450, desc: 'تورتة مستطيلة للحفلات الصغيرة، إمكانية إضافة صورة صالحة للأكل' },
-      { id: 'ts-2', name: 'تورتة مقاس 30×30', price: 'من غير صورة 550 ج.م / بصورة 620 ج.م', numPrice: 550, desc: 'تورتة مربعة فخمة لأعياد الميلاد والتخرج' },
-      { id: 'ts-3', name: 'تورتة مقاس 40×30', price: 'من غير صورة 850 ج.م / بصورة 920 ج.م', numPrice: 850, desc: 'حجم كبير مخصص للمناسبات والعزائم تكفي حتى 25 فرد' },
-      { id: 'ts-4', name: 'تورتة مقاس 40×40', price: 'من غير صورة 950 ج.م / بصورة 1050 ج.م', numPrice: 950, desc: 'تورتة مربعة ضخمة تكفي حتى 35 فرد تزيين خاص' },
-      { id: 'ts-5', name: 'تورتة مقاس 60×40', price: 'من غير صورة 1300 ج.م / بصورة 1400 ج.م', numPrice: 1300, desc: 'مقاس أفراح واحتفالات كبرى تكفي أكثر من 50 فرد' },
-      { id: 'ts-6', name: 'تورتة مقاس 60×60', price: 'من غير صورة 2200 ج.م / بصورة 2300 ج.م', numPrice: 2200, desc: 'أضخم تورتة مناسبات بالهرم تكفي حتى 80 فرد' },
-      { id: 'ts-7', name: 'تورتة قلب رومانسية', price: 'كبير 450 ج.م - وسط 390 ج.م - صغير 270 ج.م', numPrice: 390, desc: 'تورتة قلب للأعياد الرومانسية والمناسبات الخاصة' },
-      { id: 'ts-8', name: 'تورتة تفاحة مبهجة', price: 'كبير 450 ج.م - وسط 350 ج.م', numPrice: 350, desc: 'تصميم ثلاثي الأبعاد مجسم على شكل تفاحة شيك' },
+      { id: 'ts-1', name: 'تورتة مقاس 20×30', price: 'من غير صورة: 450 ج.م / بصورة: 520 ج.م', numPrice: 450, desc: 'تورتة مستطيلة للحفلات، إمكانية إضافة صورة صالحة للأكل بدقة عالية' },
+      { id: 'ts-2', name: 'تورتة مقاس 30×30', price: 'من غير صورة: 550 ج.م / بصورة: 620 ج.م', numPrice: 550, desc: 'تورتة مربعة فخمة لأعياد الميلاد والتخرج والتفوق' },
+      { id: 'ts-3', name: 'تورتة مقاس 30×40', price: 'من غير صورة: 850 ج.م / بصورة: 920 ج.م', numPrice: 850, desc: 'حجم كبير مخصص للمناسبات والعزائم تكفي حتى 25 فرد' },
+      { id: 'ts-4', name: 'تورتة مقاس 40×40', price: 'من غير صورة: 950 ج.م / بصورة: 1050 ج.م', numPrice: 950, desc: 'تورتة مربعة ضخمة تكفي حتى 35 فرد بتزيين خاص' },
+      { id: 'ts-5', name: 'تورتة مقاس 40×60', price: 'من غير صورة: 1300 ج.م / بصورة: 1400 ج.م', numPrice: 1300, desc: 'مقاس أفراح واحتفالات كبرى تكفي أكثر من 50 فرد' },
+      { id: 'ts-6', name: 'تورتة مقاس 60×60', price: 'من غير صورة: 2200 ج.م / بصورة: 2300 ج.م', numPrice: 2200, desc: 'أضخم تورتة مناسبات بالهرم تكفي حتى 80 فرد' },
     ];
 
     // C. قطع الجاتوه والدست
     const gateauxItems = [
-      { id: 'g-1', name: 'قطعة جاتو لوكس', price: '15.00 ج.م', numPrice: 15, desc: 'قطعة جاتوه كلاسيك طازجة شوكولاتة أو فانيليا أو فراولة' },
-      { id: 'g-2', name: 'قطعة جاتو سوبر', price: '20.00 ج.م', numPrice: 20, desc: 'قطعة جاتوه سوبر فاخرة بطبقات موس غنية وصوصات خاصة' },
-      { id: 'g-3', name: 'قطعة ملفية', price: '25.00 ج.م', numPrice: 25, desc: 'رقائق ملفيه فرنسي مقرمش بحشوة الباستري كريم والسكر البودرة' },
-      { id: 'g-4', name: 'قطعة إكلير', price: '25.00 ج.م', numPrice: 25, desc: 'إكلير فرنسي طازج محشو كريمة غنية ومغطى بجناش شوكولاتة' },
-      { id: 'g-5', name: 'دستة جاتوه لوكس', price: '180.00 ج.م', numPrice: 180, desc: 'علبة دستة (12 قطعة) منوعة من تشكيلات الجاتوه اللوكس' },
-      { id: 'g-6', name: 'دستة جاتوه سوبر لوكس', price: '240.00 ج.م', numPrice: 240, desc: 'دستة فاخرة (12 قطعة) تشمل سوبر لوكس وإكلير وملفيه' },
+      { id: 'g-1', name: 'قطعة جاتوه لوكس', price: '17 ج.م', numPrice: 17, desc: 'قطعة جاتوه كلاسيك طازجة شوكولاتة أو فانيليا أو فاكهة' },
+      { id: 'g-2', name: 'قطعة جاتوه سوبر', price: '25 ج.م', numPrice: 25, desc: 'قطعة جاتوه سوبر فاخرة بطبقات موس غنية وصوصات خاصة' },
+      { id: 'g-3', name: 'قطعة جاتوه أمواس', price: '30 ج.م', numPrice: 30, desc: 'موس فرنسي ناعم وغني بالشوكولاتة أو الفواكه الفاخرة' },
+      { id: 'g-4', name: 'قطعة جاتوه إكلير', price: '30 ج.م', numPrice: 30, desc: 'إكلير فرنسي طازج محشو كريمة غنية ومغطى بجناش شوكولاتة' },
+      { id: 'g-5', name: 'قطعة جاتوه ملفيه', price: '30 ج.م', numPrice: 30, desc: 'رقائق ملفيه فرنسي مقرمش بحشوة الباستري كريم والسكر البودرة' },
+      { id: 'g-6', name: 'دستة جاتوه لوكس (12 قطعة)', price: '190 ج.م', numPrice: 190, desc: 'علبة دستة (12 قطعة) منوعة من تشكيلات الجاتوه اللوكس الطازج' },
+      { id: 'g-7', name: 'دستة جاتوه سوبر لوكس (12 قطعة)', price: '280 ج.م', numPrice: 280, desc: 'دستة سوبر فاخرة (12 قطعة) تشمل قطع السوبر والإكلير والملفيه' },
+      { id: 'g-8', name: 'دستة جاتوه اسبيشيال (12 قطعة)', price: '350 ج.م', numPrice: 350, desc: 'أرقى وأفخم دستة جاتوه فيستيفال مع تشكيلات أمواس وإكلير وسوبر منتقاة' },
+    ];
+
+    // D. المخبوزات ونواشف العيد والكحك
+    const bakeryItems = [
+      { id: 'b-1', name: 'كيلو كحك سادة', price: '230 ج.م', numPrice: 230, desc: 'كحك دايب ومرمل بالسمن البلدي الطبيعي ورائحة الكحك الأصيلة' },
+      { id: 'b-2', name: 'كيلو كحك سكر', price: '190 ج.م', numPrice: 190, desc: 'كحك ناعم ومغطى بالسكر البودرة الفاخر بالسمن البلدي' },
+      { id: 'b-3', name: 'كيلو بسكوت', price: '190 ج.م', numPrice: 190, desc: 'بسكويت نشادر وماربل مقرمش وهش خفيف للشاي' },
+      { id: 'b-4', name: 'كيلو سابليه', price: '320 ج.م', numPrice: 320, desc: 'سابليه فرنسي فاخر محشو مربى وجناش شوكولاتة ومكسرات' },
+      { id: 'b-5', name: 'كيلو بتي فور', price: '250 ج.م', numPrice: 250, desc: 'بيتي فور مشكل فاخر بالشوكولاتة والمكسرات والفارماسيل' },
+      { id: 'b-6', name: 'كيلو غريبة', price: '270 ج.م', numPrice: 270, desc: 'غريبة بيضاء ناعمة دايبة دوبان بالسمن البلدي ومزينة بالفستق' },
+    ];
+
+    // 3. المعلبات والحلويات الباردة (Canned & Chilled Sweets - 14 Items)
+    const cannedItems = [
+      { id: 'c-1', name: 'كب ريد فالفيت', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كب كيك ريد فالفيت فاخر بطبقات الكريمة المخفوقة الغنية', badge: 'كوب بارد' },
+      { id: 'c-2', name: 'كب كنافة مانجا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'طبقات كنافة ذهبية مقرمشة مع قطع مانجو فريش وكريمة', badge: 'الأكثر طلباً' },
+      { id: 'c-3', name: 'كب كنافة نوتيلا', price: '35 ج.م', numPrice: 35, category: 'أكواب', desc: 'كنافة مقرمشة مغطاة بشوكولاتة نوتيلا أصلية وبندق', badge: 'عشاق النوتيلا' },
+      { id: 'c-4', name: 'علبة مدلعة كبيرة', price: '60 ج.م', numPrice: 60, category: 'علب', desc: 'علبة حجم عائلي من المدلعة الشهيرة؛ بسبوسة وكنافة وقشطة وكراميل', badge: 'حجم كبير' },
+      { id: 'c-5', name: 'علبة كنافة مانجا كبيرة', price: '70 ج.م', numPrice: 70, category: 'علب', desc: 'علبة كبيرة تكفي العائلة من كنافة المانجو الطازجة بالكريمة الغنية', badge: 'حجم عائلي' },
+      { id: 'c-6', name: 'ديسباسيتو كبير', price: '70 ج.م', numPrice: 70, category: 'كيك', desc: 'كيكة الديسباسيتو البرازيلية الغارقة في صوص الشوكولاتة الغني حجم كبير', badge: 'شوكولاتة مكثفة' },
+      { id: 'c-7', name: 'ديسباسيتو صغير', price: '35 ج.م', numPrice: 35, category: 'كيك', desc: 'كيكة ديسباسيتو فردية غارقة في جناش الشوكولاتة اللذيذ', badge: 'فردي' },
+      { id: 'c-8', name: 'مولتن كيك كبير', price: '70 ج.م', numPrice: 70, category: 'كيك', desc: 'مولتن كيك دافئ غني ببركان الشوكولاتة البلجيكية السائلة حجم كبير', badge: 'بركان شوكولاتة' },
+      { id: 'c-9', name: 'قشطوطة كبيرة', price: '70 ج.م', numPrice: 70, category: 'أم علي', desc: 'قشطوطة الحليب والقشطة الغنية بصوصات الكراميل والمكسرات حجم كبير', badge: 'مميز فيستيفال' },
+      { id: 'c-10', name: 'تشيز كيك', price: '45 ج.م', numPrice: 45, category: 'أكواب', desc: 'تشيز كيك بارد كريمي مع صوص البلوبيري أو الفراولة اللذيذ', badge: 'بارد ولذيذ' },
+      { id: 'c-11', name: 'فادج كيك', price: '35 ج.م', numPrice: 35, category: 'كيك', desc: 'قطعة فادج شوكولاتة كثيفة وغنية لعشاق الشوكولاتة الداكنة', badge: '' },
+      { id: 'c-12', name: 'فانوس رمضان', price: '40 ج.م', numPrice: 40, category: 'أكواب', desc: 'تصميم فانوس مبهج محشو بطبقات الحلوى والكريمة الشهية', badge: 'مبهج' },
+      { id: 'c-13', name: 'ام علي مكسرات', price: '45 ج.م', numPrice: 45, category: 'أم علي', desc: 'طاجن أم علي بالحليب الساخن والقشطة البلدية وتشكيلة مكسرات محمصة', badge: 'طاجن ساخن' },
+      { id: 'c-14', name: 'ام علي سادة', price: '35 ج.م', numPrice: 35, category: 'أم علي', desc: 'طاجن أم علي كلاسيك بالحليب المغلي ورقائق الملفيه والقشطة', badge: 'كلاسيك' },
     ];
 
     // ==========================================
     // RENDER FUNCTIONS
     // ==========================================
     let currentOrientalFilter = 'all';
+    let currentCannedFilter = 'all';
     let searchQuery = '';
 
     function renderOrientalMenu() {
@@ -1585,69 +1712,166 @@
     function renderWesternMenu() {
       // 1. Circular Tortes
       const circGrid = document.getElementById('circularTortesGrid');
-      circGrid.innerHTML = '';
-      circularTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
-        const card = document.createElement('div');
-        card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
-        card.innerHTML = `
-          <div>
-            <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
-            <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
-          </div>
-          <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
-            <span class="text-xs font-black text-brand-berry font-outfit">${item.price}</span>
-            <div class="flex items-center gap-1">
-              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+      if (circGrid) {
+        circGrid.innerHTML = '';
+        circularTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const card = document.createElement('div');
+          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.innerHTML = `
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-base text-brand-chocolate">${item.name}</h4>
+                ${item.badge ? `<span class="bg-brand-gold/20 text-brand-brown text-[10px] font-bold px-2 py-0.5 rounded-full">${item.badge}</span>` : ''}
+              </div>
+              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
             </div>
-          </div>
-        `;
-        circGrid.appendChild(card);
-      });
+            <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+              <span class="text-xs font-black text-brand-berry font-outfit">${item.price}</span>
+              <div class="flex items-center gap-1">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+              </div>
+            </div>
+          `;
+          circGrid.appendChild(card);
+        });
+      }
 
       // 2. Special Tortes
       const specGrid = document.getElementById('specialTortesGrid');
-      specGrid.innerHTML = '';
-      specialTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
-        const card = document.createElement('div');
-        card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
-        card.innerHTML = `
-          <div>
-            <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
-            <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
-          </div>
-          <div class="pt-2 border-t border-brand-gold/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <span class="text-xs font-black text-brand-berry font-outfit leading-tight">${item.price}</span>
-            <div class="flex items-center gap-1 self-end sm:self-auto">
-              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+      if (specGrid) {
+        specGrid.innerHTML = '';
+        specialTortes.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const card = document.createElement('div');
+          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.innerHTML = `
+            <div>
+              <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
+              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
             </div>
-          </div>
-        `;
-        specGrid.appendChild(card);
-      });
+            <div class="pt-2 border-t border-brand-gold/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <span class="text-xs font-black text-brand-berry font-outfit leading-tight">${item.price}</span>
+              <div class="flex items-center gap-1 self-end sm:self-auto">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+              </div>
+            </div>
+          `;
+          specGrid.appendChild(card);
+        });
+      }
 
       // 3. Gateaux
       const gatGrid = document.getElementById('gateauxGrid');
-      gatGrid.innerHTML = '';
-      gateauxItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+      if (gatGrid) {
+        gatGrid.innerHTML = '';
+        gateauxItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const card = document.createElement('div');
+          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.innerHTML = `
+            <div>
+              <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
+              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+            </div>
+            <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+              <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
+              <div class="flex items-center gap-1">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+              </div>
+            </div>
+          `;
+          gatGrid.appendChild(card);
+        });
+      }
+
+      // 4. Bakery & Cookies (المخبوزات ونواشف العيد)
+      const bakGrid = document.getElementById('bakeryGrid');
+      if (bakGrid) {
+        bakGrid.innerHTML = '';
+        bakeryItems.filter(i => !searchQuery || i.name.includes(searchQuery) || i.desc.includes(searchQuery)).forEach(item => {
+          const card = document.createElement('div');
+          card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+          card.innerHTML = `
+            <div>
+              <div class="flex items-start justify-between gap-2 mb-1">
+                <h4 class="font-bold text-base text-brand-chocolate">${item.name}</h4>
+                <span class="bg-brand-amberLight text-brand-brown text-[10px] font-bold px-2 py-0.5 rounded-full">سمن بلدي</span>
+              </div>
+              <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+            </div>
+            <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
+              <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
+              <div class="flex items-center gap-1">
+                <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+              </div>
+            </div>
+          `;
+          bakGrid.appendChild(card);
+        });
+      }
+    }
+
+    // 5. Render Canned Sweets (المعلبات والحلويات الباردة)
+    function renderCannedMenu() {
+      const grid = document.getElementById('cannedGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      const filtered = cannedItems.filter(item => {
+        const matchesCategory = currentCannedFilter === 'all' || item.category === currentCannedFilter;
+        const matchesSearch = !searchQuery || item.name.includes(searchQuery) || item.desc.includes(searchQuery);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-12 text-gray-500">
+            <i class="fa-solid fa-box-open text-4xl text-gray-300 mb-2"></i>
+            <p class="font-bold">لم نجد أصنافاً مطابقة للبحث في المعلبات</p>
+          </div>
+        `;
+        return;
+      }
+
+      filtered.forEach(item => {
         const card = document.createElement('div');
-        card.className = "bg-brand-creamSoft rounded-2xl p-5 border border-brand-gold/30 shadow-sm hover:shadow-md transition-all flex flex-col justify-between";
+        card.className = "bg-white rounded-2xl p-5 border border-brand-gold/25 shadow-sm hover:shadow-card-hover hover:border-brand-gold transition-all duration-300 flex flex-col justify-between group";
         card.innerHTML = `
           <div>
-            <h4 class="font-bold text-base text-brand-chocolate mb-1">${item.name}</h4>
-            <p class="text-xs text-gray-600 mb-3">${item.desc}</p>
+            <div class="flex items-start justify-between gap-2 mb-2">
+              <h4 class="font-bold text-base sm:text-lg text-brand-chocolate group-hover:text-brand-gold transition-colors">${item.name}</h4>
+              ${item.badge ? `<span class="bg-brand-amberLight text-brand-amber text-[10px] font-black px-2 py-0.5 rounded-full whitespace-nowrap">${item.badge}</span>` : ''}
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed mb-4">${item.desc}</p>
           </div>
-          <div class="pt-2 border-t border-brand-gold/20 flex items-center justify-between gap-2">
-            <span class="text-base font-black text-brand-berry font-outfit">${item.price}</span>
-            <div class="flex items-center gap-1">
-              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="p-1.5 rounded-lg bg-white border border-brand-gold/40 text-xs hover:bg-brand-gold hover:text-white" title="أضف للسلة"><i class="fa-solid fa-plus"></i></button>
-              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate text-brand-gold text-xs font-bold px-2.5 py-1.5 rounded-lg flex items-center gap-1"><i class="fa-brands fa-whatsapp text-green-400"></i> اطلب</button>
+          <div class="pt-3 border-t border-gray-100 flex items-center justify-between gap-2">
+            <span class="font-black text-brand-berry text-base font-outfit">${item.price}</span>
+            <div class="flex items-center gap-1.5">
+              <button onclick="addToCart('${item.id}', '${item.name}', '${item.price}', ${item.numPrice})" class="w-8 h-8 rounded-lg bg-brand-cream border border-brand-gold/40 text-brand-chocolate hover:bg-brand-gold hover:text-white transition-colors flex items-center justify-center text-xs" title="أضف للسلة">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+              <button onclick="orderViaWhatsApp('${item.name}', '${item.price}')" class="bg-brand-chocolate hover:bg-brand-brown text-brand-gold text-xs font-bold px-3 py-1.5 rounded-lg flex items-center gap-1 transition-all" title="اطلب عبر واتساب">
+                <i class="fa-brands fa-whatsapp text-green-400"></i>
+                <span>اطلب</span>
+              </button>
             </div>
           </div>
         `;
-        gatGrid.appendChild(card);
+        grid.appendChild(card);
       });
+    }
+
+    function filterCannedSubCategory(cat) {
+      currentCannedFilter = cat;
+      document.querySelectorAll('.canned-filter-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-brand-chocolate', 'text-brand-gold');
+        btn.classList.add('bg-white', 'text-brand-chocolate');
+      });
+      event.target.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
+      event.target.classList.remove('bg-white', 'text-brand-chocolate');
+      renderCannedMenu();
     }
 
     // ==========================================
@@ -1656,23 +1880,41 @@
     function switchMenuTab(tab) {
       const btnOri = document.getElementById('tabBtnOriental');
       const btnWes = document.getElementById('tabBtnWestern');
+      const btnCan = document.getElementById('tabBtnCanned');
       const paneOri = document.getElementById('orientalMenuContent');
       const paneWes = document.getElementById('westernMenuContent');
+      const paneCan = document.getElementById('cannedMenuContent');
+
+      // Reset all buttons
+      [btnOri, btnWes, btnCan].forEach(b => {
+        if (b) {
+          b.classList.remove('active', 'bg-brand-chocolate', 'text-brand-gold');
+          b.classList.add('bg-white', 'text-brand-chocolate');
+        }
+      });
+      // Hide all panes
+      [paneOri, paneWes, paneCan].forEach(p => {
+        if (p) p.classList.add('hidden');
+      });
 
       if (tab === 'oriental') {
-        btnOri.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
-        btnOri.classList.remove('bg-white', 'text-brand-chocolate');
-        btnWes.classList.remove('active', 'bg-brand-chocolate', 'text-brand-gold');
-        btnWes.classList.add('bg-white', 'text-brand-chocolate');
-        paneOri.classList.remove('hidden');
-        paneWes.classList.add('hidden');
-      } else {
-        btnWes.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
-        btnWes.classList.remove('bg-white', 'text-brand-chocolate');
-        btnOri.classList.remove('active', 'bg-brand-chocolate', 'text-brand-gold');
-        btnOri.classList.add('bg-white', 'text-brand-chocolate');
-        paneWes.classList.remove('hidden');
-        paneOri.classList.add('hidden');
+        if (btnOri) {
+          btnOri.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
+          btnOri.classList.remove('bg-white', 'text-brand-chocolate');
+        }
+        if (paneOri) paneOri.classList.remove('hidden');
+      } else if (tab === 'western') {
+        if (btnWes) {
+          btnWes.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
+          btnWes.classList.remove('bg-white', 'text-brand-chocolate');
+        }
+        if (paneWes) paneWes.classList.remove('hidden');
+      } else if (tab === 'canned') {
+        if (btnCan) {
+          btnCan.classList.add('active', 'bg-brand-chocolate', 'text-brand-gold');
+          btnCan.classList.remove('bg-white', 'text-brand-chocolate');
+        }
+        if (paneCan) paneCan.classList.remove('hidden');
       }
     }
 
@@ -1698,6 +1940,7 @@
       }
       renderOrientalMenu();
       renderWesternMenu();
+      renderCannedMenu();
     }
 
     function clearSearch() {
@@ -1707,6 +1950,7 @@
       document.getElementById('clearSearchBtn').classList.add('hidden');
       renderOrientalMenu();
       renderWesternMenu();
+      renderCannedMenu();
     }
 
     // ==========================================
@@ -1830,7 +2074,10 @@
       }
       message += `%0Aيرجى تأكيد الطلب ووقت التوصيل. شكراً لكم!`;
 
-      window.open(`https://wa.me/201093916372?text=${message}`, '_blank');
+      // Dynamic WhatsApp routing:
+      // فرع شارع زغلول -> 01559291095 | فرع اللبيني -> 01093916372
+      const targetPhone = branch.includes('زغلول') ? '201559291095' : '201093916372';
+      window.open(`https://wa.me/${targetPhone}?text=${message}`, '_blank');
     }
 
     function orderViaWhatsApp(itemName, itemPrice = '') {
@@ -2041,6 +2288,7 @@
     document.addEventListener('DOMContentLoaded', () => {
       renderOrientalMenu();
       renderWesternMenu();
+      renderCannedMenu();
       initWelcomeSplash();
     });
   </script>
