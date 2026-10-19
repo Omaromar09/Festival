@@ -112,9 +112,9 @@
 
 ### 7. الفوتر وحقوق التطوير (Footer & Developer Credits)
 - رابط صفحة فيسبوك الرسمية: `https://www.facebook.com/share/19nLkgnVAB/`
-- شريط حقوق التصميم والتطوير:
-  **Directed & Developed By: Omar Dev | Phone: +201221576360**
-  مع روابط مباشرة للاتصال الهاتفي والمحادثة عبر واتساب.
+- شريط حقوق الإخراج والتطوير والبورتفوليو:
+  **Directed by OMAR | Portfolio: [7pstudio.tech](https://7pstudio.tech) | Phone: +201221576360**
+  مع روابط مباشرة للبورتفوليو، الاتصال الهاتفي، والمحادثة عبر واتساب.
 
 ---
 
